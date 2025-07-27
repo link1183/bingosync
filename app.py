@@ -189,6 +189,9 @@ class BroadcastWebSocket(tornado.websocket.WebSocketHandler):
         super().__init__(*args, **kwargs)
         self.last_pong = datetime.datetime.now()
 
+    def open(self, *args, **kwargs):
+        print(">>> WebSocket opened")
+
     def __repr__(self):
         return "Socket(" + str(self.last_pong) + ")"
 
@@ -205,12 +208,14 @@ class BroadcastWebSocket(tornado.websocket.WebSocketHandler):
         self.last_pong = datetime.datetime.now()
 
     def on_message(self, message):
+        print("Incoming message:", message)
         try:
             message_dict = json.loads(message)
             socket_key = message_dict["socket_key"]
             room_uuid, player_uuid = load_player_data(socket_key)
             ROUTER.register(room_uuid, player_uuid, self)
-        except:
+        except Exception as e:
+            print("Exception in on_message:", repr(e))
             self.send(
                 '{"type": "error", "error": "unable to authenticate, try refreshing"}'
             )

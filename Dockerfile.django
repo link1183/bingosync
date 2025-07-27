@@ -20,3 +20,5 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY bingosync-app/ .
 
 RUN mkdir -p /static
+
+CMD ["sh", "-c", "python manage.py migrate && gunicorn bingosync.wsgi:application --bind 0.0.0.0:8000"]

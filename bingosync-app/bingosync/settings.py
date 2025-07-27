@@ -40,7 +40,7 @@ DEBUG = not IS_PROD
 
 IS_TEST = len(sys.argv) > 1 and sys.argv[1] == "test"
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["*"]
 
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 25
@@ -231,24 +231,31 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static/"),)
 
 if IS_PROD:
-    STATIC_ROOT = "/var/www/bingosync.com/static/"
+    STATIC_ROOT = "/app/bingosync-app/static"
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://bingosync.com",
-    "https://*.bingosync.com",
-    "https://*.127.0.0.1",
+    "http://localhost",
+    "https://localhost",
+    "http://127.0.0.1",
+    "https://127.0.0.1",
+    "https://192.168.2.34",  # your LAN IP
+    "http://192.168.2.34",  # your LAN IP
 ]
 
-INTERNAL_SOCKETS_URL = "http://websocket:8888"
-PUBLIC_SOCKETS_URL = "sockets.bingosync.com"
+INTERNAL_SOCKETS_URL = (
+    "websocket:8888"  # for Django server to talk to websocket container
+)
+PUBLIC_SOCKETS_URL = "localhost"  # what the browser should connect to
+
+SOCKETS_PUBLISH_URL = "http://" + INTERNAL_SOCKETS_URL
 
 if IS_PROD:
     SOCKETS_URL = "wss://" + PUBLIC_SOCKETS_URL
 else:
-    SOCKETS_URL = "ws://" + INTERNAL_SOCKETS_URL
+    SOCKETS_URL = "ws://" + PUBLIC_SOCKETS_URL
 
 # used for publishing events from django to tornado, so can always go across localhost
 SOCKETS_PUBLISH_URL = "http://" + INTERNAL_SOCKETS_URL
