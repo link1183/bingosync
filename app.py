@@ -26,10 +26,6 @@ DEFAULT_RETRY_COUNT = 5
 # whether we should clean up the broadcast sockets dictionary as people disconnect
 CLEANUP_SOCKETS_DICT_ON_DISCONNECT = True
 
-print(
-    "#########################################################################################################################"
-)
-
 
 def load_player_data(socket_key):
     url = SOCKET_VERIFICATION_URL + socket_key

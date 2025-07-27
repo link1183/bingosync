@@ -242,7 +242,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.127.0.0.1",
 ]
 
-INTERNAL_SOCKETS_URL = "websocket:8888"
+INTERNAL_SOCKETS_URL = "http://websocket:8888"
 PUBLIC_SOCKETS_URL = "sockets.bingosync.com"
 
 if IS_PROD:
