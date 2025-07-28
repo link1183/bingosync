@@ -1,0 +1,14 @@
+FROM nginx:stable
+
+# Set working directory
+WORKDIR /etc/nginx
+
+# Copy nginx config
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Copy certs and static files
+COPY certs /etc/nginx/certs
+COPY bingosync-app/static /app/bingosync-app/static
+
+# Expose HTTPS port
+EXPOSE 443
