@@ -1,10 +1,11 @@
+import logging
+import re
+from enum import Enum, unique
+
 from django.db import models
 
-from enum import Enum, unique
-import re
-import logging
-
 FILLER_WORD = "bingo"
+
 
 class FilteredPattern(models.Model):
     pattern = models.CharField(max_length=255)
@@ -21,6 +22,7 @@ class FilteredPattern(models.Model):
                 logging.exception("Regex pattern: " + filtered_pattern.pattern)
 
         return string
+
 
 @unique
 class NoticeType(Enum):
@@ -39,6 +41,7 @@ class NoticeType(Enum):
     @staticmethod
     def choices():
         return [(t.value, str(t)) for t in NoticeType]
+
 
 class SiteNotice(models.Model):
     notice_type = models.IntegerField(choices=NoticeType.choices())

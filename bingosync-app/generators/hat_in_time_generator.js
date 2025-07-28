@@ -5,14 +5,14 @@ var bingoList = [];
 bingoList[1] = [
   { name: "Collect 1 Roulette Token", types: ["token"] },
   { name: "Open 4 Chests in Mafia Town", types: ["mafia"] },
-  { name: "Open the Red Mafia Vault" , types: ["mafia"] },
+  { name: "Open the Red Mafia Vault", types: ["mafia"] },
 ];
 bingoList[2] = [
   { name: "Buy 1 Badge", types: ["badge"] },
-  { name: "Open the Blue Mafia Vault" , types: ["mafia"] },
+  { name: "Open the Blue Mafia Vault", types: ["mafia"] },
 ];
 bingoList[3] = [
-  { name: "Beach Selfie" , types: ["selfie"] },
+  { name: "Beach Selfie", types: ["selfie"] },
   { name: "Collect 5 Relics", types: ["relic"] },
   { name: "Collect 15 Yarn", types: ["yarn"] },
 ];
@@ -23,25 +23,29 @@ bingoList[4] = [
 ];
 bingoList[5] = [
   { name: "Collect 3 Badges", types: ["badge"] },
-  { name: "Juice Bar? Selfie" , types: ["mafia"] },
+  { name: "Juice Bar? Selfie", types: ["mafia"] },
   { name: "Open 3 Chests in Subcon", types: ["subcon"] },
 ];
 bingoList[6] = [
-  { name: "Repair 1 Relic" , types: ["relic"] },
+  { name: "Repair 1 Relic", types: ["relic"] },
   { name: "Collect 3 Roulette Tokens", types: ["token"] },
   { name: "Collect 5 Yarns in Subcon", types: ["subcon"] },
-  { name: "Open the Green Mafia Vault" , types: ["mafia"] },
+  { name: "Open the Green Mafia Vault", types: ["mafia"] },
 ];
-bingoList[7] = [
-  { name: "Get 2 Time Pieces from Time Rifts", types: ["rift"] },
-];
+bingoList[7] = [{ name: "Get 2 Time Pieces from Time Rifts", types: ["rift"] }];
 bingoList[8] = [
   { name: "Complete 1 Pink Time Rift", types: ["rift"] },
-  { name: "Collect all the Photo Album pieces from Mafia of Cooks", types: ["rift"] },
+  {
+    name: "Collect all the Photo Album pieces from Mafia of Cooks",
+    types: ["rift"],
+  },
 ];
 bingoList[9] = [
   { name: "Complete all 4 endorsements in Picture Perfect", types: ["botb"] },
-  { name: "Hit DJ Grooves in Three Different Places in Dead Bird Studio", types: ["botb"] },
+  {
+    name: "Hit DJ Grooves in Three Different Places in Dead Bird Studio",
+    types: ["botb"],
+  },
   { name: "Repair 2 Relics", types: ["relic"] },
 ];
 bingoList[10] = [
@@ -52,7 +56,10 @@ bingoList[10] = [
 bingoList[11] = [
   { name: "Get 4 Time Pieces from Time Rifts", types: ["rift"] },
   { name: "Open 3 chests in Dead Bird Studio", types: ["botb"] },
-  { name: "Hit The Conductor in Three Different Places in Dead Bird Studio", types: ["botb"] },
+  {
+    name: "Hit The Conductor in Three Different Places in Dead Bird Studio",
+    types: ["botb"],
+  },
 ];
 bingoList[12] = [
   { name: "Get all photo album pieces from DBS Rift", types: ["rift"] },
@@ -63,11 +70,12 @@ bingoList[13] = [
   { name: "Storytime Selfie", types: ["subcon"] },
   { name: "Collect 8 Relics", types: ["relic"] },
 ];
-bingoList[14] = [
-  { name: "The Village Rift", types: ["subcon"] },
-];
+bingoList[14] = [{ name: "The Village Rift", types: ["subcon"] }];
 bingoList[15] = [
-  { name: "Gather 3 Pieces of Evidence in Murder on the Owl Express", types: ["botb"] },
+  {
+    name: "Gather 3 Pieces of Evidence in Murder on the Owl Express",
+    types: ["botb"],
+  },
 ];
 bingoList[16] = [
   { name: "Vanessa Selfie", types: ["subcon"] },
@@ -102,9 +110,7 @@ bingoList[23] = [
   { name: "Complete the Big Parade", types: ["botb"] },
   { name: "Kill the Toilet of Doom", types: ["boss"] },
 ];
-bingoList[24] = [
-  { name: "Defeat Snatcher", types: ["subcon"] },
-];
+bingoList[24] = [{ name: "Defeat Snatcher", types: ["subcon"] }];
 bingoList[25] = [
   { name: "Complete the Battle of the Birds Award Ceremony", types: ["botb"] },
   { name: "Beat 3 Bosses", types: ["Boss"] },

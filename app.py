@@ -6,7 +6,6 @@ from tornado.httpclient import AsyncHTTPClient
 from collections import defaultdict
 import datetime
 import json
-import random
 import requests
 import pprint
 
@@ -19,7 +18,7 @@ DISCONNECTION_URL = BASE_API_URL + "disconnected/"
 
 PING_PERIOD_SECONDS = 5
 PING_PERIOD_MILLIS = PING_PERIOD_SECONDS * 1000
-TIMEOUT_THRESHOLD = datetime.timedelta(seconds=60)
+TIMEOUT_THRESHOLD = datetime.timedelta(minutes=10)
 
 DEFAULT_RETRY_COUNT = 5
 
@@ -188,9 +187,6 @@ class BroadcastWebSocket(tornado.websocket.WebSocketHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.last_pong = datetime.datetime.now()
-
-    def open(self, *args, **kwargs):
-        print(">>> WebSocket opened")
 
     def __repr__(self):
         return "Socket(" + str(self.last_pong) + ")"

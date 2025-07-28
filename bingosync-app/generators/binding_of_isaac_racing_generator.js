@@ -4,7 +4,7 @@ var bingoList = [];
 
 var easyChallenges = [
   { name: "2 eyeball items", types: ["collectItem"] },
-  { name: "2 items/trinkets with \"Head\" in the name", types: ["collectItem"] },
+  { name: '2 items/trinkets with "Head" in the name', types: ["collectItem"] },
   { name: "15 separate coins on floor in one room", types: ["coins"] },
   { name: "Find a permanent flying item", types: ["collectItem"] },
   { name: "Satisfy a slot machine", types: ["arcadeRoom"] },
@@ -39,7 +39,10 @@ var easyChallenges = [
   { name: "Small Rock from a tinted rock", types: ["collectItem"] },
   { name: "Go through a trapdoor", types: ["findRoom"] },
   { name: "Fear 3 mobs simultaneously", types: ["enemyStatusEffect"] },
-  { name: "Kill yourself using a blood donation machine", types: ["arcadeRoom"] },
+  {
+    name: "Kill yourself using a blood donation machine",
+    types: ["arcadeRoom"],
+  },
   { name: "Use 2 Emperors in one run", types: ["useCards"] },
   { name: "Kill double trouble boss", types: ["killBoss"] },
   { name: "Clear only one room in a floor", types: ["floor"] },
@@ -49,12 +52,10 @@ var easyChallenges = [
   { name: "Take ten hits in a room", types: ["playerDamage"] },
   { name: "Get 2 eternal hearts on one floor", types: ["health"] },
   { name: "Double trinket", types: ["getTrinkets"] },
-  { name: "No trinkets during a run", types: ["getTrinkets"] }
+  { name: "No trinkets during a run", types: ["getTrinkets"] },
 ];
 
 bingoList[1] = easyChallenges;
-
-
 
 var mediumChallenges = [
   { name: "Get a full Mega Satan Key by angels", types: ["angels"] },
@@ -83,7 +84,10 @@ var mediumChallenges = [
   { name: "5 followers", types: ["familiars"] },
   { name: "Yes Mother! transformation", types: ["transformation"] },
   { name: "Fire 5 tears at once", types: ["tearModifier"] },
-  { name: "Skip basement 1 treasure room and complete a run", types: ["skipItem"] },
+  {
+    name: "Skip basement 1 treasure room and complete a run",
+    types: ["skipItem"],
+  },
   { name: "Reroll your build after D2", types: ["changeBuild"] },
   { name: "69 damage at least on stats", types: ["stats"] },
   { name: "Refuse a good angel room item", types: ["angelRoom"] },
@@ -92,27 +96,38 @@ var mediumChallenges = [
   { name: "Get +80 tear delay and finish the run", types: ["completeGame"] },
   { name: "Proc Judas Shadow after Dead Cat", types: ["resurrection"] },
   { name: "Charm 3 mobs in the same room", types: ["enemyStatusEffect"] },
-  { name: "Play as 3 different characters in one run", types: ["resurrection"] },
+  {
+    name: "Play as 3 different characters in one run",
+    types: ["resurrection"],
+  },
   { name: "Beat a final boss with 1/2 health", types: ["health"] },
   { name: "Have 20 Dips simultaneously alive", types: ["poop"] },
   { name: "Reroll a single item pedestal 5 times", types: ["reroll"] },
   { name: "Full Meat Boy or Bandage Girl", types: ["familiar"] },
   { name: "Clear a floor without shooting a tear", types: ["floor"] },
   { name: "2 transformations at the same time", types: ["transformation"] },
-  { name: "Teleport to a boss room without using The Emperor card", types: ["teleport"] },
+  {
+    name: "Teleport to a boss room without using The Emperor card",
+    types: ["teleport"],
+  },
   { name: "2 Technology items", types: ["collectItem"] },
   { name: "3 status effects", types: ["statusEffect"] },
   { name: "Keep a full red heart during a run", types: ["completeGame"] },
-  { name: "Eat all the pills", types: ["pills"] }
+  { name: "Eat all the pills", types: ["pills"] },
 ];
 
 bingoList[2] = mediumChallenges;
 
-
 var hardChallenges = [
-  { name: "Kill Blue Baby without shooting/active items/bombs", types: ["killBossSpecial"] },
+  {
+    name: "Kill Blue Baby without shooting/active items/bombs",
+    types: ["killBossSpecial"],
+  },
   { name: "Beat Mom's Heart without treasure rooms", types: ["skipItem"] },
-  { name: "Beat Mom's Hearteart without gaining red heart containers", types: ["health"] },
+  {
+    name: "Beat Mom's Hearteart without gaining red heart containers",
+    types: ["health"],
+  },
   { name: "Beat the Lamb without opening any chests", types: ["chests"] },
   { name: "Beat the Lamb without using any keys", types: ["keys"] },
   { name: "Beat the Lamb without shopping", types: ["shop"] },
@@ -124,9 +139,15 @@ var hardChallenges = [
   { name: "Spill on Isaac", types: ["spillFart"] },
   { name: "Full clear Chest", types: ["fullClear"] },
   { name: "Don't take damage on Womb 2", types: ["takeDmg"] },
-  { name: "Sacrifice room to Dark Room and beat The Lamb", types: ["teleport"] },
+  {
+    name: "Sacrifice room to Dark Room and beat The Lamb",
+    types: ["teleport"],
+  },
   { name: "Defeat Hush", types: ["killBoss"] },
-  { name: "Kill boss with Blood Rights or Magic Fingers", types: ["killBossSpecial"] },
+  {
+    name: "Kill boss with Blood Rights or Magic Fingers",
+    types: ["killBossSpecial"],
+  },
   { name: "Defeat Mega Satan", types: ["killBoss"] },
   { name: "Finish a run, take no devil/angel deals", types: ["skipItem"] },
   { name: "Finish a run in less than 10 min", types: ["completeGame"] },
@@ -140,12 +161,21 @@ var hardChallenges = [
   { name: "100 damage stat", types: ["stats"] },
   { name: "Beat a run with the Keeper", types: ["character"] },
   { name: "Have a tear size bigger than the room", types: ["tearModifier"] },
-  { name: "Reach The Chest/Dark Room without Polaroid/Negative", types: ["skipItem"] },
+  {
+    name: "Reach The Chest/Dark Room without Polaroid/Negative",
+    types: ["skipItem"],
+  },
   { name: "Get all Guppy items", types: ["collectItem"] },
-  { name: "Beat BB/Lamb with Tiny Planet, Isaac's Heart or Soy Milk", types: ["killBossSpecial"] },
-  { name: "Complete a run with 10 or less passive items", types: ["completeGame"] },
+  {
+    name: "Beat BB/Lamb with Tiny Planet, Isaac's Heart or Soy Milk",
+    types: ["killBossSpecial"],
+  },
+  {
+    name: "Complete a run with 10 or less passive items",
+    types: ["completeGame"],
+  },
   { name: "Don't use active items", types: ["useItem"] },
-  { name: "6 Hearts or Less", types: ["health"] }
+  { name: "6 Hearts or Less", types: ["health"] },
 ];
 
 bingoList[3] = hardChallenges;
@@ -153,13 +183,11 @@ bingoList[3] = hardChallenges;
 // Added this manually because extra hard was missing
 bingoList[4] = hardChallenges;
 
-
 //extraHardChallenges = [
 //
 //];
 //
 //bingoList[4] = extraHardChallenges;
-
 
 // Types
 //collectItem, coins, arcadeRoom, killBoss, collectOrbital, keys, bombs, shop, beggar, health, useCards,

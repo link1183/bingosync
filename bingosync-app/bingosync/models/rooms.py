@@ -1,18 +1,24 @@
+import datetime
+from enum import Enum
+from uuid import uuid4
+
 from django.db import models, transaction
 from django.http import Http404
 from django.urls import reverse
 from django.utils import timezone
 
-import datetime
-from uuid import uuid4
-from enum import Enum, unique
-
-from bingosync.models.game_type import GameType
 from bingosync.models.colors import Color, CompositeColor
-from bingosync.models.events import Event, GoalEvent, ColorEvent, RevealedEvent, ConnectionEventType, ConnectionEvent
+from bingosync.models.events import (
+    ColorEvent,
+    ConnectionEvent,
+    ConnectionEventType,
+    Event,
+    GoalEvent,
+    RevealedEvent,
+)
+from bingosync.models.game_type import GameType
 from bingosync.settings import IS_PROD
-from bingosync.util import encode_uuid, decode_uuid
-
+from bingosync.util import decode_uuid, encode_uuid
 
 # Temporary hooks for disabling these in production until performance improvements land.
 DISABLE_IDLE_CHECK = IS_PROD
@@ -45,9 +51,8 @@ class Room(models.Model):
 
     def get_absolute_url(self):
         from bingosync.views import room_view
-        kwargs = {
-            "encoded_room_uuid": self.encoded_uuid
-        }
+
+        kwargs = {"encoded_room_uuid": self.encoded_uuid}
         return reverse(room_view, kwargs=kwargs)
 
     @staticmethod
@@ -57,7 +62,9 @@ class Room(models.Model):
         try:
             decoded_uuid = decode_uuid(encoded_room_uuid)
         except ValueError:
-            raise Room.DoesNotExist("Malformed encoded uuid: '" + str(encoded_room_uuid) + "'")
+            raise Room.DoesNotExist(
+                "Malformed encoded uuid: '" + str(encoded_room_uuid) + "'"
+            )
         return qs.get(uuid=decoded_uuid)
 
     @staticmethod
@@ -77,9 +84,21 @@ class Room(models.Model):
     @staticmethod
     def get_listed_rooms():
         active_rooms = Room.objects.filter(active=True).prefetch_related(
-            models.Prefetch("game_set", Game.objects.order_by("-created_date")[:1], to_attr="_current_game"),
-            models.Prefetch("player_set", Player.objects.order_by("created_date")[:1], to_attr="_creator"),
-            models.Prefetch("player_set", Player.connected_players_qs(), to_attr="_connected_players"),
+            models.Prefetch(
+                "game_set",
+                Game.objects.order_by("-created_date")[:1],
+                to_attr="_current_game",
+            ),
+            models.Prefetch(
+                "player_set",
+                Player.objects.order_by("created_date")[:1],
+                to_attr="_creator",
+            ),
+            models.Prefetch(
+                "player_set",
+                Player.connected_players_qs(),
+                to_attr="_connected_players",
+            ),
         )
         # use -len(players) so that high numbers of players are at the top
         # but otherwise names are sorted lexicographically descending
@@ -96,7 +115,9 @@ class Room(models.Model):
             "player_set",
         )
         if hide_solo:
-            return rooms.annotate(num_players=models.Count('player')).filter(num_players__gt=1)
+            return rooms.annotate(num_players=models.Count("player")).filter(
+                num_players__gt=1
+            )
         else:
             return rooms.all()
 
@@ -139,7 +160,9 @@ class Room(models.Model):
     def is_idle(self):
         if DISABLE_IDLE_CHECK:
             return False
-        idle_time = datetime.datetime.now(datetime.timezone.utc) - self.latest_event_timestamp
+        idle_time = (
+            datetime.datetime.now(datetime.timezone.utc) - self.latest_event_timestamp
+        )
         return idle_time > STALE_THRESHOLD
 
     @property
@@ -147,8 +170,13 @@ class Room(models.Model):
         if not self.hide_card:
             return False
         latest_game_start = self.current_game.created_date
-        latest_revealed_event = RevealedEvent.objects.filter(player__room=self).order_by("timestamp").last()
-        return not latest_revealed_event or latest_game_start >= latest_revealed_event.timestamp
+        latest_revealed_event = (
+            RevealedEvent.objects.filter(player__room=self).order_by("timestamp").last()
+        )
+        return (
+            not latest_revealed_event
+            or latest_game_start >= latest_revealed_event.timestamp
+        )
 
     def update_active(self):
         self.active = len(self.connected_players) > 0
@@ -187,6 +215,7 @@ class LockoutMode(Enum):
     def choices():
         return [(lockout_mode.value, str(lockout_mode)) for lockout_mode in LockoutMode]
 
+
 LOCKOUT_MODE_NAMES = {
     LockoutMode.non_lockout: "Non-Lockout",
     LockoutMode.lockout: "Lockout",
@@ -198,7 +227,11 @@ class Game(models.Model):
     seed = models.IntegerField()
     created_date = models.DateTimeField("Creation Time", default=timezone.now)
     game_type_value = models.IntegerField("Game Type", choices=GameType.choices)
-    lockout_mode_value = models.IntegerField("Lockout Mode", choices=LockoutMode.choices(), default=LockoutMode.default_value())
+    lockout_mode_value = models.IntegerField(
+        "Lockout Mode",
+        choices=LockoutMode.choices(),
+        default=LockoutMode.default_value(),
+    )
 
     class Meta:
         indexes = [
@@ -250,7 +283,6 @@ class Game(models.Model):
             if remove_color and square_color.colors != [color]:
                 return False
 
-
         if remove_color:
             square_color.remove(color)
         else:
@@ -258,8 +290,13 @@ class Game(models.Model):
         square.color = square_color
         square.save()
 
-        goal_event = GoalEvent(player=player, square=square, color_value=color.value,
-                               player_color_value=player.color.value, remove_color=remove_color)
+        goal_event = GoalEvent(
+            player=player,
+            square=square,
+            color_value=color.value,
+            player_color_value=player.color.value,
+            remove_color=remove_color,
+        )
         goal_event.save()
         return goal_event
 
@@ -267,14 +304,22 @@ class Game(models.Model):
 SLOT_RANGE = range(1, 26)
 SLOT_CHOICES = [(num, str(num)) for num in SLOT_RANGE]
 
+
 def validate_in_slot_range(slot):
     return slot in SLOT_RANGE
 
+
 class Square(models.Model):
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
-    slot = models.IntegerField(choices=SLOT_CHOICES, validators=[validate_in_slot_range])
+    slot = models.IntegerField(
+        choices=SLOT_CHOICES, validators=[validate_in_slot_range]
+    )
     goal = models.CharField(max_length=255)
-    color_value = models.IntegerField("Color", default=CompositeColor.goal_default().value, choices=CompositeColor.goal_choices())
+    color_value = models.IntegerField(
+        "Color",
+        default=CompositeColor.goal_default().value,
+        choices=CompositeColor.goal_choices(),
+    )
 
     class Meta:
         unique_together = (("game", "slot"),)
@@ -292,18 +337,16 @@ class Square(models.Model):
         return "slot" + str(self.slot)
 
     def to_json(self):
-        return {
-            "name": self.goal,
-            "slot": self.slot_name,
-            "colors": self.color.name
-        }
+        return {"name": self.goal, "slot": self.slot_name, "colors": self.color.name}
 
 
 class Player(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     uuid = models.UUIDField(default=uuid4, editable=False)
     name = models.CharField(max_length=50)
-    color_value = models.IntegerField("Color", default=Color.player_default().value, choices=Color.player_choices())
+    color_value = models.IntegerField(
+        "Color", default=Color.player_default().value, choices=Color.player_choices()
+    )
     created_date = models.DateTimeField("Creation Time", default=timezone.now)
     is_spectator = models.BooleanField("Is Spectator", default=False)
 
@@ -319,16 +362,23 @@ class Player(models.Model):
 
     @staticmethod
     def connected_players_qs():
-        con_events = ConnectionEvent.objects.filter(player=models.OuterRef("pk")).order_by("-timestamp")
+        con_events = ConnectionEvent.objects.filter(
+            player=models.OuterRef("pk")
+        ).order_by("-timestamp")
         return Player.objects.annotate(
-                con_state=models.Subquery(con_events.values("event")[:1])
-            ).filter(models.Q(con_state=ConnectionEventType.connected.value) | models.Q(con_state=None))
+            con_state=models.Subquery(con_events.values("event")[:1])
+        ).filter(
+            models.Q(con_state=ConnectionEventType.connected.value)
+            | models.Q(con_state=None)
+        )
 
     def __str__(self):
         return self.name
 
     def __repr__(self):
-        return "<Player: id: {!r}, uuid: {!r}, name: {!r}>".format(self.id, self.encoded_uuid, self.name)
+        return "<Player: id: {!r}, uuid: {!r}, name: {!r}>".format(
+            self.id, self.encoded_uuid, self.name
+        )
 
     @property
     def encoded_uuid(self):
@@ -343,12 +393,21 @@ class Player(models.Model):
     @property
     def connected(self):
         # TODO: try to continue using .last() here even with prefetch_related?
-        last_connection_event = max(self.connectionevent_set.all(), default=None, key=lambda ce: ce.timestamp)
-        return not last_connection_event or last_connection_event.event_type == ConnectionEventType.connected
+        last_connection_event = max(
+            self.connectionevent_set.all(), default=None, key=lambda ce: ce.timestamp
+        )
+        return (
+            not last_connection_event
+            or last_connection_event.event_type == ConnectionEventType.connected
+        )
 
     def update_color(self, color):
         with transaction.atomic():
-            color_event = ColorEvent(player=self, player_color_value=self.color.value, color_value=color.value)
+            color_event = ColorEvent(
+                player=self,
+                player_color_value=self.color.value,
+                color_value=color.value,
+            )
             color_event.save()
             self.color_value = color.value
             self.save()
@@ -359,5 +418,5 @@ class Player(models.Model):
             "uuid": self.encoded_uuid,
             "name": self.name,
             "color": self.color.name,
-            "is_spectator": self.is_spectator
+            "is_spectator": self.is_spectator,
         }

@@ -3,55 +3,55 @@
 {% load app_filters %}
 
 <!-- bingosync.html doesn't use the same layout conventiona s the rest of the
-     site because the main layout flexboxes screw with the fill-parent based
-     layout that the chat and sidebar use
- -->
+  site because the main layout flexboxes screw with the fill-parent based
+  layout that the chat and sidebar use
+-->
 {% block page_body %}
 <div class="container" style="height: 97vh">
-    <div style="position: relative">
-        <h1 style="display: inline-block;"><a href="{% url 'rooms' %}">Bingosync</a> - {{ room.name }}</h1>
-        <h4 style="display: inline-block; position: absolute; right: 0; bottom: 0;">
-            {% if player.is_spectator %}Spectating{% else %}Playing{% endif %} as: {{ player.name }}
-            <a class="btn btn-default" href="{% url 'room_disconnect' room.encoded_uuid %}">
-                Disconnect
-            </a>
-        </h4>
-    </div>
-    <div class="row m-b-l" style="height: calc(100% - 70px);">
-        <div class="col-md-6">
-            <div class="fill-parent" style="text-align: center">
-                    {% include 'bingosync/color_chooser.html' %}
-                <div class="board-container{{ room.hide_card|yesno:" hidden-card," }}">
-                    {% include 'bingosync/board.html' %}
-                    <div class="board-cover">
-                        <div class="board-cover-text unselectable">
-                            Click to Reveal
-                        </div>
-                    </div>
-                </div>
+  <div style="position: relative">
+    <h1 style="display: inline-block;"><a href="{% url 'rooms' %}">Bingosync</a> - {{ room.name }}</h1>
+    <h4 style="display: inline-block; position: absolute; right: 0; bottom: 0;">
+      {% if player.is_spectator %}Spectating{% else %}Playing{% endif %} as: {{ player.name }}
+      <a class="btn btn-default" href="{% url 'room_disconnect' room.encoded_uuid %}">
+        Disconnect
+      </a>
+    </h4>
+  </div>
+  <div class="row m-b-l" style="height: calc(100% - 70px);">
+    <div class="col-md-6">
+      <div class="fill-parent" style="text-align: center">
+        {% include 'bingosync/color_chooser.html' %}
+        <div class="board-container{{ room.hide_card|yesno:" hidden-card," }}">
+          {% include 'bingosync/board.html' %}
+          <div class="board-cover">
+            <div class="board-cover-text unselectable">
+              Click to Reveal
             </div>
+          </div>
         </div>
-        <div class="col-md-6" style="height: 93%">
-            <div class="row" style="height: 100%">
-                <div class="col-md-8" style="height: 100%">
-                    {% include 'bingosync/chat_panel.html' %}
-                </div>
-                <div class="col-md-4" style="height: 100%">
-                    <div class="flex-col-container">
-                        <div class="flex-col-content m-b-l">
-                            {% include 'bingosync/players_panel.html' %}
-                        </div>
-                        <div class="flex-col-footer m-b-l" id="room-settings-container">
-                            {% include 'bingosync/room_settings_panel.html' %}
-                        </div>
-                        <div class="flex-col-footer">
-                            {% include 'bingosync/chat_settings_panel.html' %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-md-6" style="height: 93%">
+      <div class="row" style="height: 100%">
+        <div class="col-md-8" style="height: 100%">
+          {% include 'bingosync/chat_panel.html' %}
+        </div>
+        <div class="col-md-4" style="height: 100%">
+          <div class="flex-col-container">
+            <div class="flex-col-content m-b-l">
+              {% include 'bingosync/players_panel.html' %}
+            </div>
+            <div class="flex-col-footer m-b-l" id="room-settings-container">
+              {% include 'bingosync/room_settings_panel.html' %}
+            </div>
+            <div class="flex-col-footer">
+              {% include 'bingosync/chat_settings_panel.html' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% include 'bingosync/new_card_dialog.html' %}
 <script src="{% static "bingosync/room/util.js" %}"></script>
@@ -64,59 +64,59 @@
 <script src="{% static "bingosync/room/chat_socket.js" %}"></script>
 <script src="{% static "bingosync/bingosync.js" %}"></script>
 <script>
-    $(document).ready(function() {
-        ROOM_SETTINGS = JSON.parse('{{ room.settings|jsonify|escapejs }}');
-        var player = JSON.parse('{{ player.to_json|jsonify|escapejs }}');
-        window.sessionStorage.setItem("room", "{{ room.encoded_uuid }}");
+  $(document).ready(function() {
+    ROOM_SETTINGS = JSON.parse('{{ room.settings|jsonify|escapejs }}');
+    var player = JSON.parse('{{ player.to_json|jsonify|escapejs }}');
+    window.sessionStorage.setItem("room", "{{ room.encoded_uuid }}");
 
-        var boardUrl = "{% url 'room_board' room.encoded_uuid %}";
-        var chatHistoryUrl = "{% url 'room_feed' room.encoded_uuid %}";
-        var chatUrl = "{% url 'chat_message' %}";
-        var colorSelectedUrl = "{% url 'select_color' %}";
-        var socketsUrl = "{{ sockets_url }}/broadcast";
-        var goalSelectedUrl = "{% url 'goal_selected' %}";
-        var boardRevealedUrl = "{% url 'board_revealed' %}";
-        var roomSettingsUrl = "{% url 'room_settings' room.encoded_uuid %}";
-        var temporarySocketKey = "{{ temporary_socket_key }}";
+    var boardUrl = "{% url 'room_board' room.encoded_uuid %}";
+    var chatHistoryUrl = "{% url 'room_feed' room.encoded_uuid %}";
+    var chatUrl = "{% url 'chat_message' %}";
+    var colorSelectedUrl = "{% url 'select_color' %}";
+    var socketsUrl = "{{ sockets_url }}/broadcast";
+    var goalSelectedUrl = "{% url 'goal_selected' %}";
+    var boardRevealedUrl = "{% url 'board_revealed' %}";
+    var roomSettingsUrl = "{% url 'room_settings' room.encoded_uuid %}";
+    var temporarySocketKey = "{{ temporary_socket_key }}";
 
-        // Construct all of the UI components
-        var colorChooser = new ColorChooser($("#color-chooser"), player, colorSelectedUrl);
-        var board = new Board($("#bingo"), player, colorChooser, boardUrl, goalSelectedUrl);
-        var boardCover = new BoardCover($(".board-container"), ROOM_SETTINGS.hide_card, boardRevealedUrl);
-        var playersPanel = new PlayersPanel($("#players-panel"));
-        var roomSettingsPanel = new RoomSettingsPanel($("#room-settings-container"), roomSettingsUrl);
-        var chatPanel = new ChatPanel($("#bingo-chat"), $("#chat-settings"), chatUrl, chatHistoryUrl);
-        initializeChatSettings($("#chat-settings"), $("#bingo-chat"));
+    // Construct all of the UI components
+    var colorChooser = new ColorChooser($("#color-chooser"), player, colorSelectedUrl);
+    var board = new Board($("#bingo"), player, colorChooser, boardUrl, goalSelectedUrl);
+    var boardCover = new BoardCover($(".board-container"), ROOM_SETTINGS.hide_card, boardRevealedUrl);
+    var playersPanel = new PlayersPanel($("#players-panel"));
+    var roomSettingsPanel = new RoomSettingsPanel($("#room-settings-container"), roomSettingsUrl);
+    var chatPanel = new ChatPanel($("#bingo-chat"), $("#chat-settings"), chatUrl, chatHistoryUrl);
+    initializeChatSettings($("#chat-settings"), $("#bingo-chat"));
 
-        var chatSocket = new ChatSocket(chatPanel, board, playersPanel, socketsUrl);
+    var chatSocket = new ChatSocket(chatPanel, board, playersPanel, socketsUrl);
 
-        // hacky callback to trigger an update of the playersPanel counters whenever we update the board.
-        var updateGoalCounters = function() {
-            playersPanel.updateGoalCounters(board);
-        };
+    // hacky callback to trigger an update of the playersPanel counters whenever we update the board.
+    var updateGoalCounters = function() {
+      playersPanel.updateGoalCounters(board);
+    };
 
-        // initialize magic global hack hooks
-        refreshBoard = function () {
-            roomSettingsPanel.reloadSettings();
-            board.reloadBoard(updateGoalCounters);
-        };
-        hideBoard = function() {
-            boardCover.setBoardHidden(true);
-        };
-        revealBoard = function() {
-            boardCover.setBoardHidden(false);
-            $("#the-seed").text(ROOM_SETTINGS.seed);
-            var $seedHidden = $("#bingo-chat .new-card-message .seed-hidden");
-            $seedHidden.text(ROOM_SETTINGS.seed).removeClass('seed-hidden').addClass('seed');
-            board.refitGoalText();
-        };
-        window.addEventListener('resize', function() { board.refitGoalText(); }, false);
+    // initialize magic global hack hooks
+    refreshBoard = function () {
+      roomSettingsPanel.reloadSettings();
+      board.reloadBoard(updateGoalCounters);
+    };
+    hideBoard = function() {
+      boardCover.setBoardHidden(true);
+    };
+    revealBoard = function() {
+      boardCover.setBoardHidden(false);
+      $("#the-seed").text(ROOM_SETTINGS.seed);
+      var $seedHidden = $("#bingo-chat .new-card-message .seed-hidden");
+      $seedHidden.text(ROOM_SETTINGS.seed).removeClass('seed-hidden').addClass('seed');
+      board.refitGoalText();
+    };
+    window.addEventListener('resize', function() { board.refitGoalText(); }, false);
 
-        // Load in all of the actual data
-        board.reloadBoard(updateGoalCounters);
-        chatPanel.reloadChatHistory(/*full=*/false);
-        chatSocket.init(temporarySocketKey);
-    });
+    // Load in all of the actual data
+    board.reloadBoard(updateGoalCounters);
+    chatPanel.reloadChatHistory(/*full=*/false);
+    chatSocket.init(temporarySocketKey);
+  });
 </script>
 {% endblock %}
 

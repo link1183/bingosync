@@ -47,33 +47,57 @@ bingoList[1] = [
 bingoList[2] = [
   { name: "Defeat 5 Fiery Blowhogs", types: ["fiery"], child: "no" },
   { name: "Defeat 4 regular Wollywogs", types: ["wolly"], child: "no" },
-  { name: "Defeat all 24 Pellet Posies in the Impact Site (after Day 1)", types: ["is"], child: "no" },
+  {
+    name: "Defeat all 24 Pellet Posies in the Impact Site (after Day 1)",
+    types: ["is"],
+    child: "no",
+  },
 ];
 bingoList[3] = [
   { name: "Defeat 6 Spotty Bulborbs", types: ["grubdog"], child: "no" },
-  { name: "Defeat a Spotty Bulborb using bomb rocks", types: ["grubdog", "bomb"], child: "no" },
-  { name: "Defeat the Wogpoles in Forest of Hope", types: ["wogpole"], child: "no" },
+  {
+    name: "Defeat a Spotty Bulborb using bomb rocks",
+    types: ["grubdog", "bomb"],
+    child: "no",
+  },
+  {
+    name: "Defeat the Wogpoles in Forest of Hope",
+    types: ["wogpole"],
+    child: "no",
+  },
   { name: "Defeat 6 Shearwigs", types: ["shear"], child: "no" },
 ];
 bingoList[4] = [
   { name: "Extraordinary Bolt", types: ["extraordinary"], child: "no" },
   { name: "Hit 3 Honeywisps", types: ["nectar"], child: "no" },
   { name: "Hit an Iridescent Flint Beetle", types: ["beetle"], child: "no" },
-  { name: "Have a Blue Pikmin 'lifeguard' a drowning Pikmin", types: ["lifeguard"], child: "no" },
+  {
+    name: "Have a Blue Pikmin 'lifeguard' a drowning Pikmin",
+    types: ["lifeguard"],
+    child: "no",
+  },
   { name: "Pluck a flowered Pikmin", types: ["is"], child: "no" },
 ];
 bingoList[5] = [
   { name: "Shock Absorber", types: ["absorber"], child: "no" },
-  { name: "Shock Absorber without defeating the Spotty Bulborb", types: [], child: "no" },
+  {
+    name: "Shock Absorber without defeating the Spotty Bulborb",
+    types: [],
+    child: "no",
+  },
   { name: "Sagittarius", types: ["sagi"], child: "no" },
   { name: "Sagittarius without Blue Pikmin", types: ["sagi"], child: "no" },
 ];
 bingoList[6] = [
-  { name: "Leave 30 Pikmin behind in one night", types: ["night"], child: "no" },
-  { name: "Automatic Gear", types: ["gear"], child: "no"},
+  {
+    name: "Leave 30 Pikmin behind in one night",
+    types: ["night"],
+    child: "no",
+  },
+  { name: "Automatic Gear", types: ["gear"], child: "no" },
   { name: "Space Float", types: ["un"], child: "no" },
   { name: "Nova Blaster", types: ["un"], child: "no" },
-  { name: "Build 4 Geysers", types: ["geysers"], child: "no"},
+  { name: "Build 4 Geysers", types: ["geysers"], child: "no" },
 ];
 bingoList[7] = [
   { name: "Omega Stabilizer", types: ["puffstool"], child: "no" },
@@ -81,15 +105,23 @@ bingoList[7] = [
 ];
 bingoList[8] = [
   { name: "Positron Generator", types: ["is"], child: "no" },
-  { name: "Defeat a Pearly Clam-Clamp in one cycle", types: ["is"], child: "no" },
+  {
+    name: "Defeat a Pearly Clam-Clamp in one cycle",
+    types: ["is"],
+    child: "no",
+  },
 ];
 bingoList[9] = [
   { name: "Gravity Jumper", types: ["jumper"], child: "no" },
   { name: "Kill a mushroom Pikmin", types: ["puffstool"], child: "no" },
   { name: "Defeat 7 Water Dumples", types: ["grubdog"], child: "no" },
-  { name: "Radiation Canopy", types: ["acb"] , child: "no"},
-  { name: "Collect an Armored Cannon Beetle corpse", types: ["acb"] , child: "no"},
-  { name: "Hit Puffstool with a bomb rock", types: ["puffstool"] , child: "no"},
+  { name: "Radiation Canopy", types: ["acb"], child: "no" },
+  {
+    name: "Collect an Armored Cannon Beetle corpse",
+    types: ["acb"],
+    child: "no",
+  },
+  { name: "Hit Puffstool with a bomb rock", types: ["puffstool"], child: "no" },
 ];
 bingoList[10] = [
   { name: "Libra", types: ["libra"], child: "no" },
@@ -100,47 +132,99 @@ bingoList[11] = [
   { name: "#1 Ionium Jet", types: ["ionium1"], child: "no" },
 ];
 bingoList[12] = [
-  { name: "Build 3 climbable sticks in Forest Navel in one day", types: ["sticks"], child: "no" },
+  {
+    name: "Build 3 climbable sticks in Forest Navel in one day",
+    types: ["sticks"],
+    child: "no",
+  },
   { name: "Repair-type Bolt", types: ["repair"], child: "no" },
   { name: "Collect a 5-pellet of each color", types: ["pellet"], child: "no" },
   { name: "Collect a 20-pellet of each color", types: ["pellet"], child: "no" },
 ];
 bingoList[13] = [
-  { name: "Break 3 stone gates in Forest Navel", types: ["obstacle"], child: "no" },
-  { name: "Build all 5 bridges in Forest Navel", types: ["obstacle"], child: "no" },
-  { name: "Break all gates in Forest of Hope", types: ["obstacle"], child: "no" },
-  { name: "Build 3 bridges in Distant Spring", types: ["obstacle"], child: "no" },
+  {
+    name: "Break 3 stone gates in Forest Navel",
+    types: ["obstacle"],
+    child: "no",
+  },
+  {
+    name: "Build all 5 bridges in Forest Navel",
+    types: ["obstacle"],
+    child: "no",
+  },
+  {
+    name: "Break all gates in Forest of Hope",
+    types: ["obstacle"],
+    child: "no",
+  },
+  {
+    name: "Build 3 bridges in Distant Spring",
+    types: ["obstacle"],
+    child: "no",
+  },
 ];
 bingoList[14] = [
-  { name: "Defeat any Wollywog without Pikmin", types: ["hands", "wolly"], child: "no" },
-  { name: "Defeat a Fiery Blowhog without Pikmin", types: ["hands", "fiery"], child: "no" },
-  { name: "Defeat a Spotty Bulbear using bomb rocks", types: ["bear", "grubdog", "bomb"], child: "no" },
-  { name: "Defeat Beady Long Legs without Yellow Pikmin", types: ["bll"], child: "no" },
+  {
+    name: "Defeat any Wollywog without Pikmin",
+    types: ["hands", "wolly"],
+    child: "no",
+  },
+  {
+    name: "Defeat a Fiery Blowhog without Pikmin",
+    types: ["hands", "fiery"],
+    child: "no",
+  },
+  {
+    name: "Defeat a Spotty Bulbear using bomb rocks",
+    types: ["bear", "grubdog", "bomb"],
+    child: "no",
+  },
+  {
+    name: "Defeat Beady Long Legs without Yellow Pikmin",
+    types: ["bll"],
+    child: "no",
+  },
 ];
 bingoList[15] = [
   { name: "Have 200 Red Pikmin", types: ["count"], child: "no" },
   { name: "Have 150 Blue Pikmin", types: ["count"], child: "no" },
   { name: "Have 150 Yellow Pikmin", types: ["count"], child: "no" },
-  { name: "Have 75 of each type of Pikmin", types: ["count"], child: "no"},
+  { name: "Have 75 of each type of Pikmin", types: ["count"], child: "no" },
 ];
 bingoList[16] = [
-  { name: "Defeat 3 Yellow Wollywogs", types: ["wolly"], child: "no"},
-  { name: "Defeat 2 Puffy Blowhogs", types: ["puffy"], child: "no"},
+  { name: "Defeat 3 Yellow Wollywogs", types: ["wolly"], child: "no" },
+  { name: "Defeat 2 Puffy Blowhogs", types: ["puffy"], child: "no" },
   { name: "Interstellar Radio", types: ["puffy"], child: "no" },
 ];
 bingoList[17] = [
-  { name: "Throw 20 Pikmin in a Candypop Bud", types: ["candypop"], child: "no" },
-  { name: "Never exceed 100 total Pikmin alive", types: ["count"], child: "no" },
-  { name: "Have Olimar lose all of his health", types: ["health"], child: "no" },
+  {
+    name: "Throw 20 Pikmin in a Candypop Bud",
+    types: ["candypop"],
+    child: "no",
+  },
+  {
+    name: "Never exceed 100 total Pikmin alive",
+    types: ["count"],
+    child: "no",
+  },
+  {
+    name: "Have Olimar lose all of his health",
+    types: ["health"],
+    child: "no",
+  },
 ];
 bingoList[18] = [
   { name: "All parts in Forest of Hope", types: ["all_parts"], child: "no" },
-  { name: "Geiger Counter", types: ["snagret"], child: "no"},
+  { name: "Geiger Counter", types: ["snagret"], child: "no" },
   { name: "Anti-Dioxin Filter", types: ["dioxin"], child: "no" },
 ];
 bingoList[19] = [
   { name: "Pilot’s Seat", types: ["pilot"], child: "no" },
-  { name: "Defeat 3 different species of grubdog", types: ["grubdog"] , child: "no"},
+  {
+    name: "Defeat 3 different species of grubdog",
+    types: ["grubdog"],
+    child: "no",
+  },
   { name: "Defeat Mamuta", types: ["is"], child: "no" },
   { name: "Defeat Goolix", types: ["is"], child: "no" },
 ];
@@ -151,15 +235,19 @@ bingoList[20] = [
 ];
 bingoList[21] = [
   { name: "Never use nectar", types: ["nectar"], child: "no" },
-  { name: "Defeat 4 Spotty Bulbears", types: ["bear", "grubdog"], child: "no"},
-  { name: "Have a Swooping Snitchbug plant a Pikmin of each color", types: ["snitchbug"], child: "no"},
+  { name: "Defeat 4 Spotty Bulbears", types: ["bear", "grubdog"], child: "no" },
+  {
+    name: "Have a Swooping Snitchbug plant a Pikmin of each color",
+    types: ["snitchbug"],
+    child: "no",
+  },
 ];
 bingoList[22] = [
   { name: "Zirconium Rotor", types: ["zirconium"], child: "no" },
   { name: "#2 Ionium Jet", types: ["ionium2"], child: "no" },
 ];
 bingoList[23] = [
-  { name: "Defeat both Armored Cannon Beetles", types: ["acb"], child: "no"},
+  { name: "Defeat both Armored Cannon Beetles", types: ["acb"], child: "no" },
   { name: "Defeat 3 Burrowing Snagrets", types: ["snagret"], child: "no" },
 ];
 bingoList[24] = [
@@ -169,5 +257,5 @@ bingoList[24] = [
 bingoList[25] = [
   { name: "Defeat Smoky Progg", types: ["smoky"], child: "no" },
   { name: "Chronos Reactor", types: ["chronos"], child: "no" },
-  { name: "Bowsprit", types: ["acb"] , child: "no"},
+  { name: "Bowsprit", types: ["acb"], child: "no" },
 ];

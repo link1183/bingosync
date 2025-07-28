@@ -3,7 +3,10 @@ bingoGenerator = require("./generators/generator_bases/srl_generator_v8.js");
 var bingoList = [];
 bingoList[1] = [
   { name: "Make a Legendary Wooden Sword", types: [] },
-  { name: "Decorate a house with at least 3 pieces of furniture, outside the requirements", types: ["houses"] },
+  {
+    name: "Decorate a house with at least 3 pieces of furniture, outside the requirements",
+    types: ["houses"],
+  },
   { name: "Wear Cactus Armor", types: [] },
   { name: "Never upgrade your axe", types: ["restrictions"] },
 ];
@@ -22,7 +25,10 @@ bingoList[3] = [
 bingoList[4] = [
   { name: "Have 5 different Pickaxes", types: [] },
   { name: "Stay upside down in Space for 3 minutes", types: [] },
-  { name: "Find a Floating Island House, and a Floating Island Lake", types: ["island"] },
+  {
+    name: "Find a Floating Island House, and a Floating Island Lake",
+    types: ["island"],
+  },
   { name: "Have 2 different Spears", types: [] },
 ];
 bingoList[5] = [
@@ -45,7 +51,10 @@ bingoList[7] = [
 ];
 bingoList[8] = [
   { name: "Make Sunglasses", types: [] },
-  { name: "Kill EoC using throwing weapons without explosives", types: ["eye"] },
+  {
+    name: "Kill EoC using throwing weapons without explosives",
+    types: ["eye"],
+  },
   { name: "Kill an NPC with the Dungeon Guardian", types: ["houses"] },
   { name: "Defeat King Slime with True Melee", types: ["slime"] },
 ];
@@ -76,7 +85,7 @@ bingoList[12] = [
 bingoList[13] = [
   { name: "Drain Both Oceans into the Underworld", types: [] },
   { name: "Make a Mana Flower", types: [] },
-  { name: "Never make NPC Houses", types: ["houses","restrictions"] },
+  { name: "Never make NPC Houses", types: ["houses", "restrictions"] },
   { name: "Never use a Hook", types: ["restrictions"] },
 ];
 bingoList[14] = [
@@ -94,14 +103,17 @@ bingoList[15] = [
 bingoList[16] = [
   { name: "Obtain 3 different Slime Banners", types: ["banners"] },
   { name: "Make the Star Cannon", types: [] },
-  { name: "Fish up a Reaver Shark, Sawtooth Shark, and a Rock Fish", types: ["fishing"] },
+  {
+    name: "Fish up a Reaver Shark, Sawtooth Shark, and a Rock Fish",
+    types: ["fishing"],
+  },
   { name: "Make Diving Gear", types: [] },
 ];
 bingoList[17] = [
   { name: "Defeat Skeletron", types: ["skeletron"] },
   { name: "Make the following Biome: Ice Jungle", types: ["biomes"] },
   { name: "Open 3 Golden Chests", types: ["fishing"] },
-  { name: "Defeat EoC and Queen Bee at the same time", types: ["eye","bee"] },
+  { name: "Defeat EoC and Queen Bee at the same time", types: ["eye", "bee"] },
 ];
 bingoList[18] = [
   { name: "Obtain 3 Different Sentry Rods", types: ["ooa"] },
@@ -118,7 +130,10 @@ bingoList[19] = [
 bingoList[20] = [
   { name: "Obtain 3 different Boss Masks", types: [] },
   { name: "Obtain a Balloon Animal", types: [] },
-  { name: "Purify your world until there is less than 5% world evil", types: [] },
+  {
+    name: "Purify your world until there is less than 5% world evil",
+    types: [],
+  },
   { name: "Kill Skeletron during the day", types: ["skeletron"] },
 ];
 bingoList[21] = [
@@ -129,7 +144,10 @@ bingoList[21] = [
 ];
 bingoList[22] = [
   { name: "Collect 2 Guide Voodoo Dolls", types: [] },
-  { name: "Kill unique bosses with each of the following: Melee, Ranged, Mage, Summoner", types: [] },
+  {
+    name: "Kill unique bosses with each of the following: Melee, Ranged, Mage, Summoner",
+    types: [],
+  },
   { name: "Have 3 different Pets", types: [] },
   { name: "Place 3 Boss Trophies", types: [] },
 ];
@@ -148,6 +166,9 @@ bingoList[24] = [
 bingoList[25] = [
   { name: "Defeat WoF", types: [] },
   { name: "Wear the Plumbers Set", types: [] },
-  { name: "Wear the Bee Set, Honeycomb, Hive Wand, and Bee Mount at the same time", types: [] },
+  {
+    name: "Wear the Bee Set, Honeycomb, Hive Wand, and Bee Mount at the same time",
+    types: [],
+  },
   { name: "Obtain 8 unique Banners", types: ["banners"] },
 ];

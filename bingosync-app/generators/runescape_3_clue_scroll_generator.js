@@ -6,7 +6,7 @@ bingoList[1] = [
   { name: "Have 2 Fortunates in the same casket", types: [""] },
   { name: "Fight Uri 5 times", types: [] },
   { name: "Complete 10 steps with a spade", types: [] },
-  { name: "Obtain 3 drops from fighting Wizards" , types: ["wizard"]}
+  { name: "Obtain 3 drops from fighting Wizards", types: ["wizard"] },
 ];
 bingoList[2] = [
   { name: "Find 3 god pages from the same casket", types: ["rng"] },
@@ -16,7 +16,7 @@ bingoList[2] = [
 ];
 bingoList[3] = [
   { name: "Complete 5 steps by searching drawers", types: ["drawers"] },
-  { name: "Complete a Uri step without needing to fight Uri", types: ["uri"]},
+  { name: "Complete a Uri step without needing to fight Uri", types: ["uri"] },
   { name: "Obtain 3 reroll tokens from caskets", types: ["reroll"] },
   { name: "Obtain a piece of elegant clothing", types: [""] },
 ];
@@ -54,7 +54,7 @@ bingoList[9] = [
   { name: "Complete 20 easy clues", types: ["completion"] },
   { name: "Complete a clue step off not on the main continent", types: [""] },
   { name: "complete 10 lockbox steps", types: [""] },
-  { name:  "complete steps by talking to 20 npcs", types: [""] },
+  { name: "complete steps by talking to 20 npcs", types: [""] },
 ];
 bingoList[10] = [
   { name: "Complete a clue step on Crandor", types: ["location"] },
@@ -65,10 +65,16 @@ bingoList[10] = [
 ];
 bingoList[11] = [
   { name: "Obtain a dragon mask from a casket.", types: ["search"] },
-  { name: "Obtain a casket from Morytania, Misthalin, and Kandarin", types: [""] },
+  {
+    name: "Obtain a casket from Morytania, Misthalin, and Kandarin",
+    types: [""],
+  },
   { name: "Complete a clue step on Daemonheim ", types: ["location"] },
   { name: "Complete 2 emote clues requiring nothing equip.", types: [""] },
-  { name: "Complete an easy, medium, hard, elite, and master clue in order.", types: [""] },
+  {
+    name: "Complete an easy, medium, hard, elite, and master clue in order.",
+    types: [""],
+  },
 ];
 bingoList[12] = [
   { name: "obtain 3 Heraldic Shields", types: ["search"] },
@@ -92,7 +98,7 @@ bingoList[14] = [
   { name: "Fight all factions of Wizards", types: ["completion"] },
 ];
 bingoList[15] = [
-  { name: "Obtain 10 Heraldic Items", types: ["search" , "rng"] },
+  { name: "Obtain 10 Heraldic Items", types: ["search", "rng"] },
   { name: "Complete 5 clues step on the Arc", types: ["location"] },
   { name: "Obtain 5 reroll tokens from caskets.", types: ["reroll"] },
   { name: "Obtain 15 Master clues from Caskets", types: ["rng", "master"] },
@@ -104,7 +110,10 @@ bingoList[16] = [
   { name: "Obtain 2 rewards from the same costume Set", types: ["rng"] },
 ];
 bingoList[17] = [
-  { name: "Obtain a puzzle, knot, and costume skipping ticket from Caskets", types: ["search", "tickets"] },
+  {
+    name: "Obtain a puzzle, knot, and costume skipping ticket from Caskets",
+    types: ["search", "tickets"],
+  },
   { name: "Complete the clue step next to ED2", types: ["location"] },
   { name: "Complete 50 Easies", types: ["completion"] },
   { name: "Complete 25 Mediums", types: ["completion"] },
@@ -135,12 +144,18 @@ bingoList[21] = [
 ];
 bingoList[22] = [
   { name: "Obtain a god page from each faction", types: ["rng", "pages"] },
-  { name: "Obtain knot, costume, puzzle, tower, and lockbox tickets from Caskets", types: ["search" , "tickets"] },
+  {
+    name: "Obtain knot, costume, puzzle, tower, and lockbox tickets from Caskets",
+    types: ["search", "tickets"],
+  },
   { name: "Obtain all 5 colors of firelighter", types: ["fire", "rng"] },
   { name: "Complete an elite clue in under 3 minutes igt", types: ["time"] },
 ];
 bingoList[23] = [
-  { name: "Complete a clue step on Karamja, Entrana, and Mos le harmless/Braindeath Island.", types: [""] },
+  {
+    name: "Complete a clue step on Karamja, Entrana, and Mos le harmless/Braindeath Island.",
+    types: [""],
+  },
   { name: "Complete 1 of each type of clue step. (15 total)", types: ["long"] },
   { name: "Obtain flared trousers from a casket", types: ["rng"] },
   { name: "Obtain 3 rewards from the same costume set.", types: ["rng"] },
@@ -152,9 +167,15 @@ bingoList[24] = [
   { name: "Obtain a heated tea flask", types: ["search"] },
 ];
 bingoList[25] = [
-  { name: "Obtain a golden thread and 1 piece of Robin Hood gear", types: ["search", "rng"] },
+  {
+    name: "Obtain a golden thread and 1 piece of Robin Hood gear",
+    types: ["search", "rng"],
+  },
   { name: "Obtain 50 Fortunates", types: ["fortunate", "completion", "long"] },
   { name: "Complete a set of Heraldic gear", types: ["Long", "rng"] },
   { name: "Obtain a broadcast from a casket", types: ["Long"] },
-  { name: "Obtain a matching mask and staff from caskets", types: ["Long", "rng"] },
+  {
+    name: "Obtain a matching mask and staff from caskets",
+    types: ["Long", "rng"],
+  },
 ];

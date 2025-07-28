@@ -5,78 +5,78 @@
 {% load app_filters %}
 
 {% block page_content %}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            History
-            <a class="pull-right" href="{% toggle_params request.get_full_path hide_solo='true' %}"
-               title="{{ hide_solo|yesno:"Show,Hide" }} rooms with only one player">
-                {{ hide_solo|yesno:"Show,Hide" }} Solo Rooms
-            </a>
-        </div>
-        <div class="panel-body">
-            {% if rooms %}
-                <div class="table-wrapper" style="margin: 5px; min-height: 120px; border-radius: 5px">
-                    <table class="table">
-                        <thead>
-                            <th>Room</th>
-                            <th>Creator</th>
-                            <th>Created</th>
-                            <th>Game</th>
-                            <th>Seed</th>
-                            <th>Players</th>
-                        </thead>
-                        <tbody>
-                        {% for room in rooms %}
-                            <tr>
-                                <td><a href="{{ room.get_absolute_url }}">{{ room.name }}</a></td>
-                                <td>{{ room.creator.name }}</td>
-                                <td title="{{ room.created_date }}">{{ room.created_date|timesince }} ago</td>
-                                <td>{{ room.current_game.game_type|hovertext_game_type }}</td>
-                                {% if room.is_seed_hidden %}
-                                    <td>Hidden</td>
-                                {% else %}
-                                    <td>{{ room.current_game.seed }}</td>
-                                {% endif %}
-                                <td>{{ room.players|length }}</td>
-                            </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                <div style="width: 100%; text-align: center; overflow: auto; position: relative;">
-                    <span class="pull-left">
-                        {% if rooms.has_previous %}
-                            <a class="btn btn-primary"
-                               href="{% add_params request.get_full_path page=1 %}">|&lt;</a>
-                            <a class="btn btn-primary"
-                               href="{% add_params request.get_full_path page=rooms.previous_page_number %}">&lt;</a>
-                        {% else %}
-                            <span class="btn hidden">&lt;</span>
-                        {% endif %}
-                    </span>
-
-                    <span style=";">
-                        Page {{ rooms.number }} of {{ rooms.paginator.num_pages }}.
-                    </span>
-
-                    <span class="pull-right">
-                        {% if rooms.has_next %}
-                            <a class="btn btn-primary"
-                               href="{% add_params request.get_full_path page=rooms.next_page_number %}">&gt;</a>
-                            <a class="btn btn-primary"
-                               href="{% add_params request.get_full_path page=rooms.paginator.num_pages %}">&gt;|</a>
-                        {% else %}
-                            <span class="btn hidden">&gt;</span>
-                        {% endif %}
-                    </span>
-                </div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    History
+    <a class="pull-right" href="{% toggle_params request.get_full_path hide_solo='true' %}"
+                          title="{{ hide_solo|yesno:"Show,Hide" }} rooms with only one player">
+      {{ hide_solo|yesno:"Show,Hide" }} Solo Rooms
+    </a>
+  </div>
+  <div class="panel-body">
+    {% if rooms %}
+    <div class="table-wrapper" style="margin: 5px; min-height: 120px; border-radius: 5px">
+      <table class="table">
+        <thead>
+          <th>Room</th>
+          <th>Creator</th>
+          <th>Created</th>
+          <th>Game</th>
+          <th>Seed</th>
+          <th>Players</th>
+        </thead>
+        <tbody>
+          {% for room in rooms %}
+          <tr>
+            <td><a href="{{ room.get_absolute_url }}">{{ room.name }}</a></td>
+            <td>{{ room.creator.name }}</td>
+            <td title="{{ room.created_date }}">{{ room.created_date|timesince }} ago</td>
+            <td>{{ room.current_game.game_type|hovertext_game_type }}</td>
+            {% if room.is_seed_hidden %}
+            <td>Hidden</td>
             {% else %}
-                <div>
-                    No rooms ever :O
-                </div>
+            <td>{{ room.current_game.seed }}</td>
             {% endif %}
-        </div>
+            <td>{{ room.players|length }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
+    <div style="width: 100%; text-align: center; overflow: auto; position: relative;">
+      <span class="pull-left">
+        {% if rooms.has_previous %}
+        <a class="btn btn-primary"
+           href="{% add_params request.get_full_path page=1 %}">|&lt;</a>
+        <a class="btn btn-primary"
+           href="{% add_params request.get_full_path page=rooms.previous_page_number %}">&lt;</a>
+        {% else %}
+        <span class="btn hidden">&lt;</span>
+        {% endif %}
+      </span>
+
+      <span style=";">
+        Page {{ rooms.number }} of {{ rooms.paginator.num_pages }}.
+      </span>
+
+      <span class="pull-right">
+        {% if rooms.has_next %}
+        <a class="btn btn-primary"
+           href="{% add_params request.get_full_path page=rooms.next_page_number %}">&gt;</a>
+        <a class="btn btn-primary"
+           href="{% add_params request.get_full_path page=rooms.paginator.num_pages %}">&gt;|</a>
+        {% else %}
+        <span class="btn hidden">&gt;</span>
+        {% endif %}
+      </span>
+    </div>
+    {% else %}
+    <div>
+      No rooms ever :O
+    </div>
+    {% endif %}
+  </div>
+</div>
 {% endblock %}
 
 

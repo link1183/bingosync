@@ -8,7 +8,10 @@ import random
 
 from bingosync.generators import InvalidBoardException
 from bingosync.models import Room, GameType, LockoutMode, Game, Player, FilteredPattern
-from bingosync.goals_converter import download_and_get_converted_goal_list, DEFAULT_DOWNLOAD_URL
+from bingosync.goals_converter import (
+    download_and_get_converted_goal_list,
+    DEFAULT_DOWNLOAD_URL,
+)
 from bingosync.widgets import GroupedSelect
 
 from crispy_forms.helper import FormHelper
@@ -17,9 +20,11 @@ from crispy_forms.layout import Field
 
 logger = logging.getLogger(__name__)
 
+
 def make_read_only_char_field(*args, **kwargs):
     kwargs["widget"] = forms.TextInput(attrs={"readonly": "readonly"})
     return forms.CharField(*args, **kwargs)
+
 
 ROOM_NAME_MAX_LENGTH = Room._meta.get_field("name").max_length
 PLAYER_NAME_MAX_LENGTH = Player._meta.get_field("name").max_length
@@ -30,17 +35,33 @@ CUSTOM_JSON_PLACEHOLDER_TEXT = """Paste the board as a JSON list of goals, e.g:
   {"name": "Catch a Pokemon while Surfing"},
   ... ]"""
 
+
 class RoomForm(forms.Form):
     room_name = forms.CharField(label="Room Name", max_length=ROOM_NAME_MAX_LENGTH)
     passphrase = forms.CharField(label="Password", widget=forms.PasswordInput())
     nickname = forms.CharField(label="Nickname", max_length=PLAYER_NAME_MAX_LENGTH)
     game_type = forms.ChoiceField(label="Game", choices=GameType.game_choices())
-    variant_type = forms.ChoiceField(label="Variant", choices=GameType.variant_choices(), widget=GroupedSelect,
-                           help_text="No other variants available", required=False)
-    custom_json = forms.CharField(label="Board", widget=forms.Textarea(attrs={'rows': 6, 'placeholder': CUSTOM_JSON_PLACEHOLDER_TEXT}), required=False)
+    variant_type = forms.ChoiceField(
+        label="Variant",
+        choices=GameType.variant_choices(),
+        widget=GroupedSelect,
+        help_text="No other variants available",
+        required=False,
+    )
+    custom_json = forms.CharField(
+        label="Board",
+        widget=forms.Textarea(
+            attrs={"rows": 6, "placeholder": CUSTOM_JSON_PLACEHOLDER_TEXT}
+        ),
+        required=False,
+    )
     lockout_mode = forms.ChoiceField(label="Mode", choices=LockoutMode.choices())
-    seed = forms.CharField(label="Seed", widget=forms.NumberInput(attrs={"min": 0, "max": 2147483647}),
-                           help_text="Leave blank for a random seed", required=False)
+    seed = forms.CharField(
+        label="Seed",
+        widget=forms.NumberInput(attrs={"min": 0, "max": 2147483647}),
+        help_text="Leave blank for a random seed",
+        required=False,
+    )
     is_spectator = forms.BooleanField(label="Create as Spectator", required=False)
     hide_card = forms.BooleanField(label="Hide Card Initially", required=False)
 
@@ -49,12 +70,12 @@ class RoomForm(forms.Form):
         self.helper = FormHelper(self)
         self.helper.form_tag = False
 
-        self.helper.form_class = 'form-horizontal'
-        self.helper.label_class = 'col-md-3'
-        self.helper.field_class = 'col-md-9'
+        self.helper.form_class = "form-horizontal"
+        self.helper.label_class = "col-md-3"
+        self.helper.field_class = "col-md-9"
         # variant and custom_json hidden by default
-        self.helper['variant_type'].wrap(Field, wrapper_class='hidden')
-        self.helper['custom_json'].wrap(Field, wrapper_class='hidden')
+        self.helper["variant_type"].wrap(Field, wrapper_class="hidden")
+        self.helper["custom_json"].wrap(Field, wrapper_class="hidden")
 
     def clean(self):
         cleaned_data = super(RoomForm, self).clean()
@@ -98,11 +119,18 @@ class RoomForm(forms.Form):
 
         encrypted_passphrase = hashers.make_password(passphrase)
         with transaction.atomic():
-            room = Room(name=room_name, passphrase=encrypted_passphrase, hide_card=hide_card)
+            room = Room(
+                name=room_name, passphrase=encrypted_passphrase, hide_card=hide_card
+            )
             room.save()
 
-            game = Game.from_board(board_json, room=room, game_type_value=game_type.value,
-                    lockout_mode_value=lockout_mode.value, seed=seed)
+            game = Game.from_board(
+                board_json,
+                room=room,
+                game_type_value=game_type.value,
+                lockout_mode_value=lockout_mode.value,
+                seed=seed,
+            )
 
             creator = Player(room=room, name=nickname, is_spectator=is_spectator)
             creator.save()
@@ -110,10 +138,17 @@ class RoomForm(forms.Form):
             room.update_active()
         return room
 
+
 class JoinRoomForm(forms.Form):
-    encoded_room_uuid = forms.CharField(label="Room UUID", max_length=128, widget=forms.HiddenInput())
-    room_name = make_read_only_char_field(label="Room Name", max_length=ROOM_NAME_MAX_LENGTH)
-    creator_name = make_read_only_char_field(label="Creator", max_length=PLAYER_NAME_MAX_LENGTH)
+    encoded_room_uuid = forms.CharField(
+        label="Room UUID", max_length=128, widget=forms.HiddenInput()
+    )
+    room_name = make_read_only_char_field(
+        label="Room Name", max_length=ROOM_NAME_MAX_LENGTH
+    )
+    creator_name = make_read_only_char_field(
+        label="Creator", max_length=PLAYER_NAME_MAX_LENGTH
+    )
     game_name = make_read_only_char_field(label="Game")
     player_name = forms.CharField(label="Nickname", max_length=PLAYER_NAME_MAX_LENGTH)
     passphrase = forms.CharField(label="Password", widget=forms.PasswordInput())
@@ -177,7 +212,9 @@ class GoalListConverterForm(forms.Form):
             json_str = "var bingoList = " + json_str
             self.json_str = json_str
         except Exception as e:
-            logger.error("failed to download url: " + str(spreadsheet_url), exc_info=True)
+            logger.error(
+                "failed to download url: " + str(spreadsheet_url), exc_info=True
+            )
             raise forms.ValidationError("Unable to get goal list")
 
     def get_goal_list(self):

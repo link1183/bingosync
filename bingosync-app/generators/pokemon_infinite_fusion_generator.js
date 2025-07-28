@@ -22,8 +22,14 @@ bingoList[2] = [
 bingoList[3] = [
   { name: "Revive a fossil", types: ["Gift"] },
   { name: "Fully evolve 5 Pokes", types: ["Evolve"] },
-  { name: "Fuse two diff pokes to make one with 1 type and one or no weakness", types: ["Fuse"] },
-  { name: "Obtain a Moon Stone from the dancing Clefairy", types: ["Item","Time"] },
+  {
+    name: "Fuse two diff pokes to make one with 1 type and one or no weakness",
+    types: ["Fuse"],
+  },
+  {
+    name: "Obtain a Moon Stone from the dancing Clefairy",
+    types: ["Item", "Time"],
+  },
   { name: "Release your starting Poke before it's level 11", types: ["Deny"] },
   { name: "Use a Rare Candy to revive a fainted Poke", types: ["Item"] },
   { name: "Do Mt. Moon without using Repel items", types: ["Deny"] },
@@ -40,7 +46,10 @@ bingoList[4] = [
 bingoList[5] = [
   { name: "Get the $2000 item pickup on Route 11", types: ["Item"] },
   { name: "Learn 10 different moves from tutors", types: ["Move"] },
-  { name: "Fuse two diff pokes to make one with 2 types and six or seven weaknesses", types: ["Fuse"] },
+  {
+    name: "Fuse two diff pokes to make one with 2 types and six or seven weaknesses",
+    types: ["Fuse"],
+  },
   { name: "Inflict an opposing Poke with burn", types: ["Battle"] },
   { name: "Use a 4x super effective damaging move", types: ["Battle"] },
   { name: "Use a stone to evolve a Poke", types: ["Evolve"] },
@@ -71,7 +80,10 @@ bingoList[8] = [
   { name: "Defeat a Gym Leader with only Ground Type Pokes", types: ["Type"] },
   { name: "Defeat a Gym Leader with only Psychic Type Pokes", types: ["Type"] },
   { name: "Defeat all Celedon Gym trainers (9)", types: ["Gym"] },
-  { name: "Train a gift Poke to level 30 (no super splicer)", types: ["Battle"] },
+  {
+    name: "Train a gift Poke to level 30 (no super splicer)",
+    types: ["Battle"],
+  },
 ];
 bingoList[9] = [
   { name: "Defeat all trainers in Rocket Sewer (14)", types: ["Battle"] },
@@ -86,7 +98,7 @@ bingoList[10] = [
   { name: "Defeat all Fuscia Gym trainers (7)", types: ["Gym"] },
   { name: "Defeat Koga before Erika", types: ["Gym"] },
   { name: "Catch 2 Pokes from Safari Zone", types: ["Catch"] },
-  { name: "Toss a Lucky Egg", types: ["Hotel","Item"] },
+  { name: "Toss a Lucky Egg", types: ["Hotel", "Item"] },
   { name: "Revive three fossils", types: ["Gift"] },
   { name: "Defeat all trainers on Route 17 (10)", types: ["Battle"] },
   { name: "Have your Poke become confused by their own move", types: ["Move"] },
@@ -103,7 +115,10 @@ bingoList[11] = [
 bingoList[12] = [
   { name: "Defeat a Gym Leader with only Dragon Type Pokes", types: ["Type"] },
   { name: "Defeat a Gym Leader with only Steel Type Pokes", types: ["Type"] },
-  { name: "Defeat a Gym Leader with only Electric Type Pokes", types: ["Type"] },
+  {
+    name: "Defeat a Gym Leader with only Electric Type Pokes",
+    types: ["Type"],
+  },
   { name: "Defeat a Gym Leader with only Rock Type Pokes", types: ["Type"] },
   { name: "Defeat all Saffron Gym trainers (6)", types: ["Gym"] },
   { name: "Defeat Sabrina before Koga", types: ["Gym"] },
@@ -133,12 +148,18 @@ bingoList[15] = [
   { name: "Obtain 15 different TMs", types: ["TMs"] },
   { name: "Catch or faint Moltres encounter", types: ["Overworld"] },
   { name: "Catch a Poke using all three fishing rods", types: ["Catch"] },
-  { name: "Have 6 different HM moves learned by your party Pokes", types: ["Move"] },
+  {
+    name: "Have 6 different HM moves learned by your party Pokes",
+    types: ["Move"],
+  },
   { name: "Defeat a gym leader with a baby stage Poke", types: ["Deny"] },
 ];
 bingoList[16] = [
   { name: "Defeat a Gym Leader with only Ice Type Pokes", types: ["Type"] },
-  { name: "Defeat a Gym Leader with only Fighting Type Pokes", types: ["Type"] },
+  {
+    name: "Defeat a Gym Leader with only Fighting Type Pokes",
+    types: ["Type"],
+  },
   { name: "Defeat a Gym Leader with only Dark Type Pokes", types: ["Type"] },
   { name: "Defeat a Gym Leader with only Fairy Type Pokes", types: ["Type"] },
   { name: "Defeat a Gym Leader with only Ghost Type Pokes", types: ["Type"] },
@@ -155,30 +176,51 @@ bingoList[17] = [
   { name: "Reach Cinnabar Island from Seafoam Island", types: ["Deny"] },
 ];
 bingoList[18] = [
-  { name: "Defeat Zapmolcuno without multi-target moves", types: ["Zapmolcuno","Move"] },
+  {
+    name: "Defeat Zapmolcuno without multi-target moves",
+    types: ["Zapmolcuno", "Move"],
+  },
   { name: "Have all 18 types among your caught Pokes", types: ["Type"] },
   { name: "Have 12 different types among your party Pokes", types: ["Types"] },
   { name: "Complete 10 different trades (no wonder trade)", types: ["Trade"] },
   { name: "Use a Master Ball to catch a Poke on Route 1", types: ["Catch"] },
   { name: "Defeat a trainer only using 2-turn moves", types: ["Move"] },
-  { name: "Defeat a trainer only using Counter or Mirror Coat", types: ["Deny"] },
+  {
+    name: "Defeat a trainer only using Counter or Mirror Coat",
+    types: ["Deny"],
+  },
 ];
 bingoList[19] = [
   { name: "Catch or faint Entei encounter", types: ["Overworld"] },
   { name: "See a successful 5th turn Rollout", types: ["Move"] },
   { name: "Defeat Zapmolcuno before Blaine", types: ["Zapmolcuno"] },
-  { name: "Defeat all trainers in a gym with only 1 Poke in your party", types: ["Deny"] },
+  {
+    name: "Defeat all trainers in a gym with only 1 Poke in your party",
+    types: ["Deny"],
+  },
   { name: "Catch or faint Mimikyu encounter", types: ["Overworld"] },
   { name: "Buy and release three black market pokes", types: ["Deny"] },
-  { name: "Obtain Tequila and use it on a level 21 or higher poke in battle", types: ["Item"] },
+  {
+    name: "Obtain Tequila and use it on a level 21 or higher poke in battle",
+    types: ["Item"],
+  },
 ];
 bingoList[20] = [
   { name: "Complete 15 Hotel Quests", types: ["Hotel"] },
   { name: "Get to Fuscia City without using a bike", types: ["Deny"] },
-  { name: "Catch and/or faint 2 overworld legendary encounters", types: ["Overworld"] },
-  { name: "Use level evolution at level 30+ for a trade/happy evolve Poke", types: ["Evolve"] },
+  {
+    name: "Catch and/or faint 2 overworld legendary encounters",
+    types: ["Overworld"],
+  },
+  {
+    name: "Use level evolution at level 30+ for a trade/happy evolve Poke",
+    types: ["Evolve"],
+  },
   { name: "Catch 5 Pokes in Safari Zone", types: ["Catch"] },
-  { name: "Have 6 non-egg gift Pokes in your party (fossils okay)", types: ["Gift"] },
+  {
+    name: "Have 6 non-egg gift Pokes in your party (fossils okay)",
+    types: ["Gift"],
+  },
   { name: "Catch 10 Stage 3 Pokes", types: ["Catch"] },
 ];
 bingoList[21] = [
@@ -192,7 +234,10 @@ bingoList[21] = [
 ];
 bingoList[22] = [
   { name: "Obtain 30 different TMs", types: ["Item"] },
-  { name: "Catch and/or faint 3 overworld legendary encounters", types: ["Overworld"] },
+  {
+    name: "Catch and/or faint 3 overworld legendary encounters",
+    types: ["Overworld"],
+  },
   { name: "Have 5 eggs in your party at one time", types: ["Egg"] },
   { name: "Fuse two different baby pokes together", types: ["Fuse"] },
   { name: "Have a Poke with 4 damaging moves its weak to", types: ["Move"] },
@@ -200,22 +245,49 @@ bingoList[22] = [
   { name: "Do Victory Road without Repel items", types: ["Deny"] },
 ];
 bingoList[23] = [
-  { name: "Have a Poke with four maxed stat increases in a battle", types: ["Move"] },
+  {
+    name: "Have a Poke with four maxed stat increases in a battle",
+    types: ["Move"],
+  },
   { name: "Complete 15 different trades (no wonder trade)", types: ["Trade"] },
-  { name: "Use Baton Pass while the Poke has a maxed stat increase", types: ["Move"] },
-  { name: "Defeat a Poke with Perish Song/Destiny Bond/OHKO Move", types: ["Move"] },
+  {
+    name: "Use Baton Pass while the Poke has a maxed stat increase",
+    types: ["Move"],
+  },
+  {
+    name: "Defeat a Poke with Perish Song/Destiny Bond/OHKO Move",
+    types: ["Move"],
+  },
   { name: "Fuse two different legendary pokes together", types: ["Fuse"] },
-  { name: "Defeat a trainer's last Poke while yours is asleep (1v1)", types: ["Status"] },
+  {
+    name: "Defeat a trainer's last Poke while yours is asleep (1v1)",
+    types: ["Status"],
+  },
   { name: "Have at least $100,000", types: ["Money"] },
 ];
 bingoList[24] = [
-  { name: "Defeat Elite 4 Champion", types: ["Gym","Credits"] },
-  { name: "Have a Poke with a stat value lower than its level", types: ["Stat"] },
+  { name: "Defeat Elite 4 Champion", types: ["Gym", "Credits"] },
+  {
+    name: "Have a Poke with a stat value lower than its level",
+    types: ["Stat"],
+  },
   { name: "Defeat Robot R.E.D.", types: ["Credits"] },
-  { name: "Release a level 60 or higher Poke (no super splicer)", types: ["Deny"] },
-  { name: "Catch and/or faint 4 overworld legendary encounters", types: ["Overworld"] },
-  { name: "Defeat an Elite 4 member without swapping your Poke", types: ["Deny"] },
-  { name: "Defeat an Elite 4 member without one of your Pokes fainting", types: ["Deny"] },
+  {
+    name: "Release a level 60 or higher Poke (no super splicer)",
+    types: ["Deny"],
+  },
+  {
+    name: "Catch and/or faint 4 overworld legendary encounters",
+    types: ["Overworld"],
+  },
+  {
+    name: "Defeat an Elite 4 member without swapping your Poke",
+    types: ["Deny"],
+  },
+  {
+    name: "Defeat an Elite 4 member without one of your Pokes fainting",
+    types: ["Deny"],
+  },
 ];
 bingoList[25] = [
   { name: "Have 50 Pokes with different type combos", types: ["Catch"] },
@@ -223,6 +295,12 @@ bingoList[25] = [
   { name: "See an opponent's Poke use Struggle", types: ["Deny"] },
   { name: "Have 100 unfused Pokes", types: ["Catch"] },
   { name: "Have 50 fused Pokes", types: ["Fuse"] },
-  { name: "Fuse two diff pokes to make one with 2 types and one or no weakness", types: ["Fuse"] },
-  { name: "Fuse two diff pokes to make one with 1 type and four or five weaknesses", types: ["Fuse"] },
+  {
+    name: "Fuse two diff pokes to make one with 2 types and one or no weakness",
+    types: ["Fuse"],
+  },
+  {
+    name: "Fuse two diff pokes to make one with 1 type and four or five weaknesses",
+    types: ["Fuse"],
+  },
 ];

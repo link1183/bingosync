@@ -2,18 +2,18 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Bingosync</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     {% block page_head_meta_description %}
-        <meta name="description" content="Bingosync is a tool for speedrunners that lets you collaboratively view and edit 'bingo boards' during speedrun races.">
+    <meta name="description" content="Bingosync is a tool for speedrunners that lets you collaboratively view and edit 'bingo boards' during speedrun races.">
     {% endblock %}
     <meta name="keywords" content="bingo sync, bingosync, zelda bingo, ocarina of time bingo, speedrunning">
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, minimum-scale=.85, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     {% block page_head_styles %}
-        <link rel="stylesheet" type="text/css" href="{% static "bingosync/bootstrap.min.css" %}">
-        <link rel="stylesheet" type="text/css" href="{% static "bingosync/style.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bingosync/bootstrap.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bingosync/style.css" %}">
     {% endblock %}
     <link rel="shortcut icon" href="{% static "bingosync/favicon-32x32.png" %}">
     <script src="{% static "jquery.min.js" %}"></script>
@@ -21,37 +21,37 @@
     <script src="{% static "bingosync/modal.min.js" %}"></script>
     {% block page_head %}
     {% endblock %}
-</head>
-<body>
+  </head>
+  <body>
     {% block page_body %}
-        <div class="container">
-            <div class="flex-col-container page-container">
-                <div class="flex-col-header">
-                    {% block page_header %}
-                            <a href="{% url 'rooms' %}">
-                                <h1>Bingosync</h1>
-                            </a>
-                    {% endblock %}
-                </div>
-                <div class="flex-col-content">
-                    {% block page_content %}
-                    {% endblock %}
-                </div>
-                <div class="flex-col-footer m-b-l">
-                    {% block page_footer %}
-                        <div class="footer-bar">
-                            <a href="{% url 'history' %}">Room History</a>
-                            ·
-                            <a href="{% url 'about' %}">About</a>
-                            ·
-                            <a href="https://github.com/kbuzsaki/bingosync">Github</a>
-                        </div>
-                    {% endblock %}
-                </div>
-            </div>
+    <div class="container">
+      <div class="flex-col-container page-container">
+        <div class="flex-col-header">
+          {% block page_header %}
+          <a href="{% url 'rooms' %}">
+            <h1>Bingosync</h1>
+          </a>
+          {% endblock %}
         </div>
+        <div class="flex-col-content">
+          {% block page_content %}
+          {% endblock %}
+        </div>
+        <div class="flex-col-footer m-b-l">
+          {% block page_footer %}
+          <div class="footer-bar">
+            <a href="{% url 'history' %}">Room History</a>
+            ·
+            <a href="{% url 'about' %}">About</a>
+            ·
+            <a href="https://github.com/kbuzsaki/bingosync">Github</a>
+          </div>
+          {% endblock %}
+        </div>
+      </div>
+    </div>
     {% endblock %}
-</body>
+  </body>
 </html>
 
 

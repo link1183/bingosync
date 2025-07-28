@@ -32,7 +32,10 @@ bingoList[4] = [
   { name: "Floria Waterfall Bird Statue", types: ["Faron", "Statues"] },
   { name: "Both Deep Woods Statues", types: ["Faron", "Statues"] },
   { name: "Finish the Sword Tutorial", types: ["Skyloft"] },
-  { name: "Two Lumpy Pumpkin Scattered Crystals", types: ["Crystals", "Pumpkin"] },
+  {
+    name: "Two Lumpy Pumpkin Scattered Crystals",
+    types: ["Crystals", "Pumpkin"],
+  },
   { name: "Skyview Temple Heart Piece", types: ["Skyview", "Hearts"] },
 ];
 bingoList[5] = [
@@ -102,7 +105,10 @@ bingoList[12] = [
 bingoList[13] = [
   { name: "Zelda's Heart Piece", types: ["End", "Hearts", "Sailcloth"] },
   { name: "25 Gratitude Crystals", types: ["Crystals"] },
-  { name: "Zelda's Gratitude Crystal", types: ["End", "Crystals", "Sailcloth"] },
+  {
+    name: "Zelda's Gratitude Crystal",
+    types: ["End", "Crystals", "Sailcloth"],
+  },
   { name: "Peatrice's Gratitude Crystals", types: ["Crystals"] },
   { name: "Clear a Thrill Digger Board", types: ["Eldin"] },
   { name: "6 Eldin Goddess Cubes", types: ["Cubes", "Eldin"] },
@@ -204,5 +210,8 @@ bingoList[25] = [
   { name: "Air Potion", types: ["Potions", "Scale", "BiT"] },
   { name: "Sacred Shield", types: ["Shields", "Imp", "Harp"] },
   { name: "Lake Floria Goddess Cube", types: ["Harp", "BiT", "Scale"] },
-  { name: "All 10 Faron Bird Statues", types: ["Harp", "BiT", "Scale", "Statues"] },
+  {
+    name: "All 10 Faron Bird Statues",
+    types: ["Harp", "BiT", "Scale", "Statues"],
+  },
 ];

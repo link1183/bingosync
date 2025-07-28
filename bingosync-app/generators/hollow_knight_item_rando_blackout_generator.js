@@ -1,71 +1,71 @@
 bingoGenerator = require("./generators/generator_bases/synerGen.js");
 
 var bingoList = {
-  "bingoTypes": {
-    "Tiebreaker": {"Max": 1}
+  bingoTypes: {
+    Tiebreaker: { Max: 1 },
   },
-  "maxScore": 9.5,
-  
+  maxScore: 9.5,
+
   //Sorted alphabetically and grouped
   //Bosses. Dream versions grouped instead of alphabetical
 
   "2DreamBosses": {
-    "Desc": "Defeat two Dream Bosses",
-	"Excludes": ["LostKin", "FChamp", "SoulTyrant"]
+    Desc: "Defeat two Dream Bosses",
+    Excludes: ["LostKin", "FChamp", "SoulTyrant"],
   },
 
-  "BVessel": {
-    "Desc": "Defeat Broken Vessel",
-    "Excludes": ["LostKin"]
+  BVessel: {
+    Desc: "Defeat Broken Vessel",
+    Excludes: ["LostKin"],
   },
 
-  "LostKin": {
-    "Desc": "Defeat Lost Kin",
-    "Excludes": ["BVessel"]
+  LostKin: {
+    Desc: "Defeat Lost Kin",
+    Excludes: ["BVessel"],
   },
 
-  "CG1": {
-    "Desc": "Defeat Crystal Guardian",
-    "Excludes": ["CG2"]
+  CG1: {
+    Desc: "Defeat Crystal Guardian",
+    Excludes: ["CG2"],
   },
 
-  "CG2": {
-    "Desc": "Defeat Enraged Guardian",
-    "Excludes": ["CG1"]
+  CG2: {
+    Desc: "Defeat Enraged Guardian",
+    Excludes: ["CG1"],
   },
 
-  "Collector": {
-    "Desc": "Defeat Collector",
-    "Excludes": ["KEGrubs", "LoveKey", "Vitruvian", "VisitTower"],
-	"Score": 1.30
+  Collector: {
+    Desc: "Defeat Collector",
+    Excludes: ["KEGrubs", "LoveKey", "Vitruvian", "VisitTower"],
+    Score: 1.3,
   },
 
-  "DDefender": {
-    "Desc": "Defeat Dung Defender",
-    "Excludes": ["WhiteDefender"]
+  DDefender: {
+    Desc: "Defeat Dung Defender",
+    Excludes: ["WhiteDefender"],
   },
 
-  "WhiteDefender": {
-    "Desc": "Defeat White Defender",
-    "Types": ["Tiebreaker"],
-    "Excludes": ["DDefender", "MrMushroom1"]
+  WhiteDefender: {
+    Desc: "Defeat White Defender",
+    Types: ["Tiebreaker"],
+    Excludes: ["DDefender", "MrMushroom1"],
   },
 
-  "FChamp": {
-    "Desc": "Defeat Failed Champion",
-	"Excludes": ["Maggots", "FKnight_BMawlek"]
+  FChamp: {
+    Desc: "Defeat Failed Champion",
+    Excludes: ["Maggots", "FKnight_BMawlek"],
   },
 
-  "FKnight_BMawlek": {
-    "Desc": "Defeat False Knight and Brooding Mawlek",
-	"Excludes": ["Maggots", "FChamp"]
+  FKnight_BMawlek: {
+    Desc: "Defeat False Knight and Brooding Mawlek",
+    Excludes: ["Maggots", "FChamp"],
   },
 
-  "Flukemarm": {
-    "Desc": "Defeat Flukemarm"
+  Flukemarm: {
+    Desc: "Defeat Flukemarm",
   },
 
-/*
+  /*
   "GPZote": {
     "Desc": "Defeat Grey Prince Zote",
     "Types": ["Tiebreaker"],
@@ -73,26 +73,26 @@ var bingoList = {
   },
  */
 
-  "HiveKnight": {
-    "Desc": "Defeat Hive Knight",
-    "Excludes": ["HiveMask"]
+  HiveKnight: {
+    Desc: "Defeat Hive Knight",
+    Excludes: ["HiveMask"],
   },
 
-  "Hornet2": {
-    "Desc": "Defeat Hornet Sentinel",
-    "Excludes": ["VisitQueensShell"]
+  Hornet2: {
+    Desc: "Defeat Hornet Sentinel",
+    Excludes: ["VisitQueensShell"],
   },
 
-  "MLords": {
-    "Desc": "Defeat Mantis Lords"
+  MLords: {
+    Desc: "Defeat Mantis Lords",
   },
 
-  "Nosk": {
-    "Desc": "Defeat Nosk",
-    "Excludes": ["PaleOreCheck"]
+  Nosk: {
+    Desc: "Defeat Nosk",
+    Excludes: ["PaleOreCheck"],
   },
 
-/*
+  /*
   "OroMato": {
     "Desc": "Defeat Oro and Mato",
     "Types": ["Tiebreaker"],
@@ -100,11 +100,11 @@ var bingoList = {
   },
   */
 
-  "PaleLurker": {
-    "Desc": "Defeat Pale Lurker"
+  PaleLurker: {
+    Desc: "Defeat Pale Lurker",
   },
 
-/*
+  /*
   "PaintmasterSheo": {
     "Desc": "Defeat Paintmaster Sheo",
     "Types": ["Tiebreaker"],
@@ -119,121 +119,114 @@ var bingoList = {
 
 */
 
-  "Radiant": { 
-    "Desc": "Defeat any one Radiant Boss",
-    "Excludes": ["Godhome", "Ordeal20"]
+  Radiant: {
+    Desc: "Defeat any one Radiant Boss",
+    Excludes: ["Godhome", "Ordeal20"],
   },
 
-  "SoulMaster": {
-    "Desc": "Defeat Soul Master",
-    "Excludes": ["SoulTyrant", "LoreSanctum"]
+  SoulMaster: {
+    Desc: "Defeat Soul Master",
+    Excludes: ["SoulTyrant", "LoreSanctum"],
   },
 
-  "SoulTyrant": {
-    "Desc": "Defeat Soul Tyrant",
-    "Excludes": ["SoulMaster", "LoreSanctum"]
+  SoulTyrant: {
+    Desc: "Defeat Soul Tyrant",
+    Excludes: ["SoulMaster", "LoreSanctum"],
   },
 
-  "TLord": {
-    "Desc": "Defeat Traitor Lord",
-    "Excludes": ["WhiteLady", "ClothQuest"]
+  TLord: {
+    Desc: "Defeat Traitor Lord",
+    Excludes: ["WhiteLady", "ClothQuest"],
   },
 
-  "TMGrimm": {
-    "Desc": "Defeat Troupe Master Grimm",
-	"Excludes": ["NKGrimm", "CarefreeMelody", "TMGrimm", "Brumm"]
+  TMGrimm: {
+    Desc: "Defeat Troupe Master Grimm",
+    Excludes: ["NKGrimm", "CarefreeMelody", "TMGrimm", "Brumm"],
   },
 
-  "NKGrimm": {
-    "Desc": "Defeat Nightmare King Grimm",
-    "Types": ["Tiebreaker"],
-    "Excludes": ["CarefreeMelody", "TMGrimm", "Brumm"]
+  NKGrimm: {
+    Desc: "Defeat Nightmare King Grimm",
+    Types: ["Tiebreaker"],
+    Excludes: ["CarefreeMelody", "TMGrimm", "Brumm"],
   },
 
-  "Uumuu": {
-    "Desc": "Defeat Uumuu",
-	"Excludes": ["Lumafly", "LoreArchives"]
+  Uumuu: {
+    Desc: "Defeat Uumuu",
+    Excludes: ["Lumafly", "LoreArchives"],
   },
 
-  "WK": {
-    "Desc": "Defeat Watcher Knights",
-	"Excludes": ["Telescope", "LoreCity"]
+  WK: {
+    Desc: "Defeat Watcher Knights",
+    Excludes: ["Telescope", "LoreCity"],
   },
 
-  "VK_MMC": {
-    "Desc": "Defeat Vengefly King and Massive Moss Charger"
+  VK_MMC: {
+    Desc: "Defeat Vengefly King and Massive Moss Charger",
   },
-
-
-
 
   //Dream Warriors
 
-
   "2DreamWarriors": {
-    "Desc": "Defeat two dream warriors"
+    Desc: "Defeat two dream warriors",
   },
 
-  "Galien": {
-    "Desc": "Defeat Galien"
+  Galien: {
+    Desc: "Defeat Galien",
   },
 
-  "Gorb": {
-    "Desc": "Defeat Gorb",
-	"Excludes": ["LoreCliffs"]
+  Gorb: {
+    Desc: "Defeat Gorb",
+    Excludes: ["LoreCliffs"],
   },
 
-  "Hu": {
-    "Desc": "Defeat Elder Hu"
+  Hu: {
+    Desc: "Defeat Elder Hu",
   },
 
-  "Marmu": {
-    "Desc": "Defeat Marmu"
+  Marmu: {
+    Desc: "Defeat Marmu",
   },
 
-  "Markoth": {
-    "Desc": "Defeat Markoth"
+  Markoth: {
+    Desc: "Defeat Markoth",
   },
 
-  "NoEyes": {
-    "Desc": "Defeat No Eyes"
+  NoEyes: {
+    Desc: "Defeat No Eyes",
   },
 
-  "Xero": {
-    "Desc": "Defeat Xero"
+  Xero: {
+    Desc: "Defeat Xero",
   },
-
-
-
 
   //Enemies
 
   "2Warriors": {
-    "Desc": "Kill two Soul Warriors",
-    "Excludes": ["SSoulCheck"]
+    Desc: "Kill two Soul Warriors",
+    Excludes: ["SSoulCheck"],
   },
 
   "3Sentries": {
-    "Desc": "Kill three different Great Husk Sentries",
-    "Excludes": ["GHusk"]
+    Desc: "Kill three different Great Husk Sentries",
+    Excludes: ["GHusk"],
   },
 
-/*
+  /*
   "Aluba": {
     "Desc": "Kill an Aluba"
   },
   */
 
-  "Aluba2": {
-    "Desc": "Kill two different Alubas"
+  Aluba2: {
+    Desc: "Kill two different Alubas",
   },
 
-  "Colo1": {
-    "Desc": "Complete Colosseum 1",
-    "Excludes": ["ColoZote", "GPZote"]
+  Colo1: {
+    Desc: "Complete Colosseum 1",
+    Excludes: ["ColoZote", "GPZote"],
   },
 
-/*
+  /*
   "Colo3": {
     "Desc": "Colosseum 3",
     "Types": ["Tiebreaker"]
@@ -241,135 +234,131 @@ var bingoList = {
 
 */
 
-  "ColoZote": {
-    "Desc": "Defeat Zote in the Colosseum",
-    "Excludes": ["Colo1", "GPZote"]
+  ColoZote: {
+    Desc: "Defeat Zote in the Colosseum",
+    Excludes: ["Colo1", "GPZote"],
   },
 
-  "CrystalCrawler": {
-    "Desc": "Kill a Crystal Crawler"
+  CrystalCrawler: {
+    Desc: "Kill a Crystal Crawler",
   },
 
-  "Devout": {
-    "Desc": "Kill 6 different Stalking Devouts"
+  Devout: {
+    Desc: "Kill 6 different Stalking Devouts",
   },
 
-/*
+  /*
   "Durandoo": {
     "Desc": "Kill a Durandoo",
     "Excludes": ["Gulka"]
   },
   */
 
-  "GHopper": {
-    "Desc": "Kill a Great Hopper",
-	"Excludes": ["HopperHell", "420Rock", "AncientNailsmith"]
+  GHopper: {
+    Desc: "Kill a Great Hopper",
+    Excludes: ["HopperHell", "420Rock", "AncientNailsmith"],
   },
 
-  "GHusk": {
-    "Desc": "Kill Gorgeous Husk",
-    "Excludes": ["3Sentries"]
+  GHusk: {
+    Desc: "Kill Gorgeous Husk",
+    Excludes: ["3Sentries"],
   },
 
-/*
+  /*
   "Gulka": {
     "Desc": "Kill a Gulka with its own projectile",
     "Excludes": ["Durandoo"]
   },
   */
 
-  "Kingsmould": {
-    "Desc": "Kill a Kingsmould",
-    "Excludes": ["PoP"],
-    "Score": 0.88
+  Kingsmould: {
+    Desc: "Kill a Kingsmould",
+    Excludes: ["PoP"],
+    Score: 0.88,
   },
 
-  "Lightseed": {
-    "Desc": "Kill a Lightseed"
+  Lightseed: {
+    Desc: "Kill a Lightseed",
   },
 
-  "Maggots": { //No more doEsFalSEkNiGhtCoUNtAsaMaGgOT
-    "Desc": "Kill the two mourning Maggots",
-	"Excludes": ["FChamp", "FKnight_BMawlek"]
+  Maggots: {
+    //No more doEsFalSEkNiGhtCoUNtAsaMaGgOT
+    Desc: "Kill the two mourning Maggots",
+    Excludes: ["FChamp", "FKnight_BMawlek"],
   },
 
-  "Marissa": {
-    "Desc": "Dream Nail Marissa",
-    "Excludes": ["Springs", "2Keys"]
+  Marissa: {
+    Desc: "Dream Nail Marissa",
+    Excludes: ["Springs", "2Keys"],
   },
 
-  "Millibelle": {
-    "Desc": "Slash Millibelle in Pleasure House",
-    "Excludes": ["Bank"]
+  Millibelle: {
+    Desc: "Slash Millibelle in Pleasure House",
+    Excludes: ["Bank"],
   },
 
-  "Mimics": {
-    "Desc": "Check/Kill 4 Mimics",
-	"Excludes": ["DirtmouthElevator"]
+  Mimics: {
+    Desc: "Check/Kill 4 Mimics",
+    Excludes: ["DirtmouthElevator"],
   },
 
-  "Myla": {
-    "Desc": "Kill Myla",
-    "Score": 1.18
+  Myla: {
+    Desc: "Kill Myla",
+    Score: 1.18,
   },
-
-
-
 
   //Items. Different types (Dreamers/Skills/Keys/etc) grouped together
 
-  "Herrah": {
-    "Desc": "Obtain Herrah",
-    "Score": 1.30
+  Herrah: {
+    Desc: "Obtain Herrah",
+    Score: 1.3,
   },
 
-  "Lurien": {
-    "Desc": "Obtain Lurien",
-    "Score": 1.30
+  Lurien: {
+    Desc: "Obtain Lurien",
+    Score: 1.3,
   },
 
-  "Monomon": {
-    "Desc": "Obtain Monomon",
-    "Score": 1.30
+  Monomon: {
+    Desc: "Obtain Monomon",
+    Score: 1.3,
   },
 
-
-  "DeepStag": {
-    "Desc": "Ride the stag to Distant Village",
-    "Excludes": ["Midwife", "VisitDistantHive"],
-    "Score": 1.30
+  DeepStag: {
+    Desc: "Ride the stag to Distant Village",
+    Excludes: ["Midwife", "VisitDistantHive"],
+    Score: 1.3,
   },
 
-  "GardenStag": {
-    "Desc": "Ride the stag to Queen's Gardens",
-	"Excludes": ["VisitQueensShell"],
-    "Score": 1.30
+  GardenStag: {
+    Desc: "Ride the stag to Queen's Gardens",
+    Excludes: ["VisitQueensShell"],
+    Score: 1.3,
   },
 
-  "HiddenStag": {
-    "Desc": "Ride the stag to Hidden Station",
-    "Excludes": ["WPShadeSkip"],
-    "Score": 1.30
+  HiddenStag: {
+    Desc: "Ride the stag to Hidden Station",
+    Excludes: ["WPShadeSkip"],
+    Score: 1.3,
   },
 
-  "KingStag": {
-    "Desc": "Ride the stag to King's Station",
-    "Score": 1.30
+  KingStag: {
+    Desc: "Ride the stag to King's Station",
+    Score: 1.3,
   },
 
-  "QueensStag": {
-    "Desc": "Ride the stag to Queen's Station",
-    "Score": 1.30
-  },
-  
-  "StagNestStag": {
-    "Desc": "Ride the stag to Stag Nest",
-	"Excludes": ["StagVessel"],
-    "Score": 1.30
+  QueensStag: {
+    Desc: "Ride the stag to Queen's Station",
+    Score: 1.3,
   },
 
+  StagNestStag: {
+    Desc: "Ride the stag to Stag Nest",
+    Excludes: ["StagVessel"],
+    Score: 1.3,
+  },
 
-/*
+  /*
   "5Charms": {
     "Desc": "Have 5 or more Charms",
     "Score": 0.20
@@ -377,161 +366,157 @@ var bingoList = {
   */
 
   "5CharmsEquipped": {
-    "Desc": "Equip 5 Charms at the same time"
+    Desc: "Equip 5 Charms at the same time",
   },
 
-
-  "CarefreeMelody": {
-    "Desc": "Obtain Carefree Melody",
-    "Excludes": ["NKGrimm", "Brumm", "TMGrimm"]
+  CarefreeMelody: {
+    Desc: "Obtain Carefree Melody",
+    Excludes: ["NKGrimm", "Brumm", "TMGrimm"],
   },
 
-  "CompassSwarm": {
-    "Desc": "Obtain Wayward Compass or Gathering Swarm",
-    "Score": 1.06
+  CompassSwarm: {
+    Desc: "Obtain Wayward Compass or Gathering Swarm",
+    Score: 1.06,
   },
 
-  "DWielderShield": {
-    "Desc": "Obtain Dream Wielder or Dreamshield",
-    "Score": 1.06
+  DWielderShield: {
+    Desc: "Obtain Dream Wielder or Dreamshield",
+    Score: 1.06,
   },
 
-  "FCharms": {
-    "Desc": "Obtain all three Fragile charms",
-    "Score": 1.00
+  FCharms: {
+    Desc: "Obtain all three Fragile charms",
+    Score: 1.0,
   },
 
-  "FlukenestFury": {
-    "Desc": "Obtain Flukenest or Fury of the Fallen",
-    "Score": 1.06
+  FlukenestFury: {
+    Desc: "Obtain Flukenest or Fury of the Fallen",
+    Score: 1.06,
   },
 
-  "GrubsongElegy": {
-    "Desc": "Obtain Grubsong or Grubberfly's Elegy",
-    "Score": 1.06
+  GrubsongElegy: {
+    Desc: "Obtain Grubsong or Grubberfly's Elegy",
+    Score: 1.06,
   },
 
-  "GWombWeavers": {
-    "Desc": "Obtain Glowing Womb or Weaversong",
-    "Score": 1.06
+  GWombWeavers: {
+    Desc: "Obtain Glowing Womb or Weaversong",
+    Score: 1.06,
   },
 
-  "HeavyBlowSteady": {
-    "Desc": "Obtain Heavy Blow or Steady Body",
-    "Score": 1.06
+  HeavyBlowSteady: {
+    Desc: "Obtain Heavy Blow or Steady Body",
+    Score: 1.06,
   },
 
-  "HivebloodShadow": {
-    "Desc": "Obtain Hiveblood or Sharp Shadow",
-    "Score": 1.06
+  HivebloodShadow: {
+    Desc: "Obtain Hiveblood or Sharp Shadow",
+    Score: 1.06,
   },
 
-  "LifebloodCharms": {
-    "Desc": "Obtain two Lifeblood charms",
-    "Score": 1.00
+  LifebloodCharms: {
+    Desc: "Obtain two Lifeblood charms",
+    Score: 1.0,
   },
 
-  "Longnail": {
-    "Desc": "Obtain Longnail or Mark of Pride",
-    "Score": 1.06
+  Longnail: {
+    Desc: "Obtain Longnail or Mark of Pride",
+    Score: 1.06,
   },
 
-  "QSlashGlory": {
-    "Desc": "Obtain Quick Slash or Nailmaster's Glory",
-    "Score": 1.06
+  QSlashGlory: {
+    Desc: "Obtain Quick Slash or Nailmaster's Glory",
+    Score: 1.06,
   },
 
-  "QuickDeepFocus": {
-    "Desc": "Obtain Quick Focus or Deep Focus",
-    "Score": 1.06
+  QuickDeepFocus: {
+    Desc: "Obtain Quick Focus or Deep Focus",
+    Score: 1.06,
   },
 
-  "ShamanStoneTwister": {
-    "Desc": "Obtain Shaman Stone or Spell Twister",
-    "Score": 1.06
+  ShamanStoneTwister: {
+    Desc: "Obtain Shaman Stone or Spell Twister",
+    Score: 1.06,
   },
 
-  "SprintmasterDashmaster": {
-    "Desc": "Obtain Sprintmaster or Dashmaster",
-    "Score": 1.06
+  SprintmasterDashmaster: {
+    Desc: "Obtain Sprintmaster or Dashmaster",
+    Score: 1.06,
   },
 
-  "SoulTools": {
-    "Desc": "Obtain Soul Eater or Soul Catcher",
-    "Score": 1.06
+  SoulTools: {
+    Desc: "Obtain Soul Eater or Soul Catcher",
+    Score: 1.06,
   },
 
-  "ThornsStalwart": {
-    "Desc": "Obtain Thorns of Agony or Stalwart Shell",
-    "Score": 1.06
+  ThornsStalwart: {
+    Desc: "Obtain Thorns of Agony or Stalwart Shell",
+    Score: 1.06,
   },
 
-  "UnnShell": {
-    "Desc": "Obtain Shape of Unn or Baldur Shell",
-    "Score": 1.06
+  UnnShell: {
+    Desc: "Obtain Shape of Unn or Baldur Shell",
+    Score: 1.06,
   },
 
-  "LoveKey": {
-    "Desc": "Obtain the Love Key",
-    "Excludes": ["KEGrubs", "Collector", "Vitruvian"],
-    "Score": 1.30
+  LoveKey: {
+    Desc: "Obtain the Love Key",
+    Excludes: ["KEGrubs", "Collector", "Vitruvian"],
+    Score: 1.3,
   },
 
-
-  "DDark": {
-    "Desc": "Obtain Descending Dark",
-    "Score": 1.03
+  DDark: {
+    Desc: "Obtain Descending Dark",
+    Score: 1.03,
   },
 
-  "DNail": {
-    "Desc": "Obtain Dream Nail",
-    "Score": 0.80
+  DNail: {
+    Desc: "Obtain Dream Nail",
+    Score: 0.8,
   },
 
-  "DGate": {
-    "Desc": "Obtain Dream Gate",
-    "Score": 0.95
+  DGate: {
+    Desc: "Obtain Dream Gate",
+    Score: 0.95,
   },
 
-  "NailArts": {
-    "Desc": "Obtain 2 Nail Arts",
-    "Score": 1.00
+  NailArts: {
+    Desc: "Obtain 2 Nail Arts",
+    Score: 1.0,
   },
 
-  "Shriek": {
-    "Desc": "Obtain Abyss Shriek",
-    "Score": 1.03
+  Shriek: {
+    Desc: "Obtain Abyss Shriek",
+    Score: 1.03,
   },
 
-  "SSoul": {
-    "Desc": "Obtain Shade Soul",
-    "Score": 1.03
+  SSoul: {
+    Desc: "Obtain Shade Soul",
+    Score: 1.03,
   },
 
-  "Tear": {
-    "Desc": "Obtain Isma's Tear",
-    "Excludes": ["UnnSkip", "LoveKeySkip"],
-    "Score": 1.18
+  Tear: {
+    Desc: "Obtain Isma's Tear",
+    Excludes: ["UnnSkip", "LoveKeySkip"],
+    Score: 1.18,
   },
 
-  "VSpirit": {
-    "Desc": "Obtain Vengeful Spirit",
-    "Score": 0.96
+  VSpirit: {
+    Desc: "Obtain Vengeful Spirit",
+    Score: 0.96,
   },
 
-  "Wraiths": {
-    "Desc": "Obtain Howling Wraiths",
-    "Score": 0.96
+  Wraiths: {
+    Desc: "Obtain Howling Wraiths",
+    Score: 0.96,
   },
-
-
 
   "15Grub": {
-    "Desc": "Obtain 20 grubs",
-    "Excludes": ["KEGrubs", "35Grub"]
+    Desc: "Obtain 20 grubs",
+    Excludes: ["KEGrubs", "35Grub"],
   },
 
-/*
+  /*
   "35Grub": {
     "Desc": "Obtain 35 grubs",
     "Excludes": ["KEGrubs", "15Grub", "DeepnestGrubs", "BasinGrubs", "CrossroadsCanyonGrubs", "PeaksGrub", "QueenGrub", "WaterGrub", "FunGreenGrub"],
@@ -540,96 +525,94 @@ var bingoList = {
 */
 
   "2Ore": {
-    "Desc": "Obtain 3 Pale Ore",
-    "Excludes": ["Nail3", "Nail2"],
-    "Score": 0.80
+    Desc: "Obtain 3 Pale Ore",
+    Excludes: ["Nail3", "Nail2"],
+    Score: 0.8,
   },
 
   "2Keys": {
-    "Desc": "Use 2 Simple Keys",
-    "Excludes": ["Jiji", "Marissa"],
-    "Score": 0.89
+    Desc: "Use 2 Simple Keys",
+    Excludes: ["Jiji", "Marissa"],
+    Score: 0.89,
   },
 
   "3Maps": {
-    "Desc": "Have 5 different maps not counting Dirtmouth or Hive",
-    "Excludes": ["Cornifer3"]
+    Desc: "Have 5 different maps not counting Dirtmouth or Hive",
+    Excludes: ["Cornifer3"],
   },
 
-  "CollectorMap": {
-    "Desc": "Obtain Collector's Map",
-    "Score": 1.30
+  CollectorMap: {
+    Desc: "Obtain Collector's Map",
+    Score: 1.3,
   },
 
-  "Egg": {
-    "Desc": "Obtain 1 Arcane Egg",
-    "Score": 0.73
+  Egg: {
+    Desc: "Obtain 1 Arcane Egg",
+    Score: 0.73,
   },
 
-  "Godtuner": {
-    "Desc": "Obtain Godtuner",
-    "Score": 1.30
+  Godtuner: {
+    Desc: "Obtain Godtuner",
+    Score: 1.3,
   },
 
-  "Idols": {
-    "Desc": "Obtain 3 King's Idols",
-    "Score": 0.66
+  Idols: {
+    Desc: "Obtain 3 King's Idols",
+    Score: 0.66,
   },
 
-  "Journals": {
-    "Desc": "Obtain 6 Wanderer's Journals",
-    "Score": 0.51
+  Journals: {
+    Desc: "Obtain 6 Wanderer's Journals",
+    Score: 0.51,
   },
 
-  "Lantern": {
-    "Desc": "Obtain Lumafly Lantern",
-    "Excludes": ["JoniDarkRoom"],
-    "Score": 1.30
+  Lantern: {
+    Desc: "Obtain Lumafly Lantern",
+    Excludes: ["JoniDarkRoom"],
+    Score: 1.3,
   },
 
-  "Mask1": {
-    "Desc": "Obtain 2 extra masks",
-    "Score": 0.43
+  Mask1: {
+    Desc: "Obtain 2 extra masks",
+    Score: 0.43,
   },
 
-  "Notches": {
-    "Desc": "Have 6 Charm Notches total",
-    "Score": 0.41
+  Notches: {
+    Desc: "Have 6 Charm Notches total",
+    Score: 0.41,
   },
 
-/*
+  /*
   "RancidEggs": {
     "Desc": "Obtain 4 Rancid Eggs",
     "Score": 0.36
   },
   */
 
-  "Seals": {
-    "Desc": "Obtain 8 Hallownest Seals",
-    "Score": 0.44
+  Seals: {
+    Desc: "Obtain 8 Hallownest Seals",
+    Score: 0.44,
   },
 
-  "SoulVessel": {
-    "Desc": "Obtain 1 extra soul vessel",
-    "Score": 0.61
+  SoulVessel: {
+    Desc: "Obtain 1 extra soul vessel",
+    Score: 0.61,
   },
 
-  "TramPass": {
-    "Desc": "Obtain Tram Pass",
-    "Excludes": ["PinsAll", "KEGrubs"],
-    "Score": 1.30
+  TramPass: {
+    Desc: "Obtain Tram Pass",
+    Excludes: ["PinsAll", "KEGrubs"],
+    Score: 1.3,
   },
 
-  "WorldSense": {
-    "Desc": "Obtain World Sense",
-    "Score": 1.30
+  WorldSense: {
+    Desc: "Obtain World Sense",
+    Score: 1.3,
   },
-
-
 
   //Checks (Grubs are grouped)
 
-/*
+  /*
   "Cornifer3": {
     "Desc": "Interact with 3 Cornifer locations",
     "Excludes": ["3Maps"]
@@ -637,153 +620,152 @@ var bingoList = {
   },
   */
 
-  "CHeartCheck": {
-    "Desc": "Check Crystal Heart",
-	"Excludes": ["CPeaksChest"]
+  CHeartCheck: {
+    Desc: "Check Crystal Heart",
+    Excludes: ["CPeaksChest"],
   },
 
-  "CPeaksChest": {
-    "Desc": "Open the Crystal Peak chest",
-	"Excludes": ["CHeartCheck"]
+  CPeaksChest: {
+    Desc: "Open the Crystal Peak chest",
+    Excludes: ["CHeartCheck"],
   },
 
-  "DeepFocusCheck": {
-    "Desc": "Check Deep Focus"
+  DeepFocusCheck: {
+    Desc: "Check Deep Focus",
   },
 
-  "Dreamers": {
-    "Desc": "Get 2 Dreamer's checks (Requires Dream Nail)"
+  Dreamers: {
+    Desc: "Get 2 Dreamer's checks (Requires Dream Nail)",
   },
 
-  "GreenpathRoot": {
-    "Desc": "Complete the Greenpath Root"
+  GreenpathRoot: {
+    Desc: "Complete the Greenpath Root",
   },
 
-  "HallownestCrown": {
-    "Desc": "Dream Nail the Radiance statue on Hallownest's Crown"
+  HallownestCrown: {
+    Desc: "Dream Nail the Radiance statue on Hallownest's Crown",
   },
 
-  "Fountain": {
-    "Desc": "Buy the Basin fountain check",
-    "Excludes": ["3000", "4000", "5000"]
+  Fountain: {
+    Desc: "Buy the Basin fountain check",
+    Excludes: ["3000", "4000", "5000"],
   },
 
-  "FungalCoreElder": {
-    "Desc": "Bow to the Fungal Core Elder"
+  FungalCoreElder: {
+    Desc: "Bow to the Fungal Core Elder",
   },
 
-  "GWombSkip": {
-    "Desc": "Check Glowing Womb"
+  GWombSkip: {
+    Desc: "Check Glowing Womb",
   },
 
-  "HiveMask": {
-    "Desc": "Check the Hive Mask Shard",
-    "Excludes": ["HiveKnight", "KEGrubs"]
+  HiveMask: {
+    Desc: "Check the Hive Mask Shard",
+    Excludes: ["HiveKnight", "KEGrubs"],
   },
 
-  "JoniDarkRoom": {
-    "Desc": "Check Joni's Blessing",
-    "Excludes": ["Lantern"]
+  JoniDarkRoom: {
+    Desc: "Check Joni's Blessing",
+    Excludes: ["Lantern"],
   },
 
-  "KEdgeRoot": {
-    "Desc": "Complete the Kingdom's Edge Root",
-	"Excludes": ["Bardoon"]
+  KEdgeRoot: {
+    Desc: "Complete the Kingdom's Edge Root",
+    Excludes: ["Bardoon"],
   },
 
-  "LoveKeySkip": {
-    "Desc": "Check Love Key",
-    "Excludes": ["Tear"]
+  LoveKeySkip: {
+    Desc: "Check Love Key",
+    Excludes: ["Tear"],
   },
 
-  "Nailmasters": {
-    "Desc": "Check 2 Nailmasters"
+  Nailmasters: {
+    Desc: "Check 2 Nailmasters",
   },
 
-  "PaleOreCheck": {
-    "Desc": "Get two Pale Ore checks (Grubs/Essence excluded)",
-    "Excludes": ["Nosk"]
+  PaleOreCheck: {
+    Desc: "Get two Pale Ore checks (Grubs/Essence excluded)",
+    Excludes: ["Nosk"],
   },
 
-  "SanctuarySkip": {
-    "Desc": "Check the journal below Stone Sanctuary"
+  SanctuarySkip: {
+    Desc: "Check the journal below Stone Sanctuary",
   },
 
-  "Sheo": {
-    "Desc": "Check Sheo"
+  Sheo: {
+    Desc: "Check Sheo",
   },
 
-  "Shops": {
-    "Desc": "Visit all 4 shops (Sly, Iselda, Salubra and Leg Eater)",
-    "Excludes": ["Cloth"]
+  Shops: {
+    Desc: "Visit all 4 shops (Sly, Iselda, Salubra and Leg Eater)",
+    Excludes: ["Cloth"],
   },
 
-  "SpellLocations": {
-    "Desc": "Check three different spell locations",
-	"Excludes": ["HarderVisitMounds"]
+  SpellLocations: {
+    Desc: "Check three different spell locations",
+    Excludes: ["HarderVisitMounds"],
   },
 
-  "StagVessel": {
-    "Desc": "Check the Stag Nest vessel fragment",
-	"Excludes": ["StagNestStag"]
+  StagVessel: {
+    Desc: "Check the Stag Nest vessel fragment",
+    Excludes: ["StagNestStag"],
   },
 
-  "SSoulCheck": {
-    "Desc": "Check Shade Soul",
-    "Excludes": ["2Warriors"],
-    "Score": 1.30
+  SSoulCheck: {
+    Desc: "Check Shade Soul",
+    Excludes: ["2Warriors"],
+    Score: 1.3,
   },
 
-  "ShriekCheck": {
-    "Desc": "Get the Abyss Shriek check"
+  ShriekCheck: {
+    Desc: "Get the Abyss Shriek check",
   },
 
-  "TearCheck": {
-    "Desc": "Check Isma's Tear",
-	"Excludes": ["WaterwaysArenas"]
+  TearCheck: {
+    Desc: "Check Isma's Tear",
+    Excludes: ["WaterwaysArenas"],
   },
 
-  "Trees4": {
-    "Desc": "Complete 4 full whispering roots"
+  Trees4: {
+    Desc: "Complete 4 full whispering roots",
   },
 
-  "UnnSkip": {
-    "Desc": "Check Shape of Unn",
-    "Excludes": ["Tear"]
+  UnnSkip: {
+    Desc: "Check Shape of Unn",
+    Excludes: ["Tear"],
   },
 
-  "VillageJournal": {
-    "Desc": "Check the journal above Mantis Village",
-	"Excludes": ["LoreVillage"]
+  VillageJournal: {
+    Desc: "Check the journal above Mantis Village",
+    Excludes: ["LoreVillage"],
   },
 
-  "VoidHeart": {
-    "Desc": "Get the Void Heart check"
+  VoidHeart: {
+    Desc: "Get the Void Heart check",
   },
 
-
-  "BasinGrubs": {
-    "Desc": "Check/Free all grubs in Ancient Basin (2)"
-  },
-  
-  "NotAwfulKEGrubs": {
-    "Desc": "Check/Free all grubs in Kingdom's Edge (2) and in Hive (2)"
+  BasinGrubs: {
+    Desc: "Check/Free all grubs in Ancient Basin (2)",
   },
 
-  "CoTGrubs": {
-    "Desc": "Check/Free all grubs in City of Tears (5)"
+  NotAwfulKEGrubs: {
+    Desc: "Check/Free all grubs in Kingdom's Edge (2) and in Hive (2)",
   },
 
-  "CrossroadsCanyonGrubs": {
-    "Desc": "Check/Free all grubs in Crossroads (5) and in Fog Canyon (1)"
+  CoTGrubs: {
+    Desc: "Check/Free all grubs in City of Tears (5)",
   },
 
-  "DeepnestGrubs": {
-    "Desc": "Check/Free all grubs in Deepnest (5)"
+  CrossroadsCanyonGrubs: {
+    Desc: "Check/Free all grubs in Crossroads (5) and in Fog Canyon (1)",
   },
 
-  "FunGreenGrub": {
-    "Desc": "Check/Free all grubs in Greenpath (4) and in Fungal Wastes (2)"
+  DeepnestGrubs: {
+    Desc: "Check/Free all grubs in Deepnest (5)",
+  },
+
+  FunGreenGrub: {
+    Desc: "Check/Free all grubs in Greenpath (4) and in Fungal Wastes (2)",
   },
 
   /*
@@ -796,23 +778,20 @@ var bingoList = {
 
 */
 
-  "PeaksGrub": {
-    "Desc": "Check/Free all grubs in Crystal Peak (7)"
+  PeaksGrub: {
+    Desc: "Check/Free all grubs in Crystal Peak (7)",
   },
 
-  "QueenGrub": {
-    "Desc": "Check/Free all grubs in Queen's Gardens (3)"
+  QueenGrub: {
+    Desc: "Check/Free all grubs in Queen's Gardens (3)",
   },
 
-  "WaterGrub": {
-    "Desc": "Check/Free all grubs in Waterways (3)"
+  WaterGrub: {
+    Desc: "Check/Free all grubs in Waterways (3)",
   },
-
-
-
 
   //Misc.
-/*
+  /*
   "3Floors": {
     "Desc": "Break 3 floors using Dive",
     "Excludes": ["KEGrubs"]
@@ -821,256 +800,256 @@ var bingoList = {
   */
 
   "420Rock": {
-    "Desc": "Break the 420 geo rock in Kingdom's Edge",
-	"Excludes": ["AncientNailsmith", "GHopper", "HopperHell"]
+    Desc: "Break the 420 geo rock in Kingdom's Edge",
+    Excludes: ["AncientNailsmith", "GHopper", "HopperHell"],
   },
-  
-  "AncientNailsmith": {
-    "Desc": "Dream Nail the Ancient Nailsmith in Kingdom's Edge (Quick Slash corpse)",
-	"Excludes": ["420Rock", "GHopper", "HopperHell"]
+
+  AncientNailsmith: {
+    Desc: "Dream Nail the Ancient Nailsmith in Kingdom's Edge (Quick Slash corpse)",
+    Excludes: ["420Rock", "GHopper", "HopperHell"],
   },
 
   "800Essence": {
-    "Desc": "Collect 800 essence",
-	"Excludes": ["Seer"]
+    Desc: "Collect 800 essence",
+    Excludes: ["Seer"],
   },
 
-/*
+  /*
   "3000": {
     "Desc": "Spend 3000 geo",
     "Excludes": ["Fountain", "4000"]
   },
   */
 
-  "4000": {
-    "Desc": "Spend 4000 geo",
-    "Excludes": ["Fountain", "3000", "5000", "SlyKey", "Salubra"]
+  4000: {
+    Desc: "Spend 4000 geo",
+    Excludes: ["Fountain", "3000", "5000", "SlyKey", "Salubra"],
   },
 
-  "5000": {
-    "Desc": "Spend 6000 geo",
-    "Excludes": ["Fountain", "3000", "4000", "SlyKey", "Salubra"]
+  5000: {
+    Desc: "Spend 6000 geo",
+    Excludes: ["Fountain", "3000", "4000", "SlyKey", "Salubra"],
   },
 
-  "Bank": {
-    "Desc": "Have 1500 geo in the bank",
-    "Excludes": ["Millibelle"]
+  Bank: {
+    Desc: "Have 1500 geo in the bank",
+    Excludes: ["Millibelle"],
   },
 
-  "Bardoon": {
-    "Desc": "Talk to Bardoon",
-	"Excludes": ["KEdgeRoot"]
+  Bardoon: {
+    Desc: "Talk to Bardoon",
+    Excludes: ["KEdgeRoot"],
   },
 
-  "BrettaSly": {
-    "Desc": "Rescue Bretta and Sly"
+  BrettaSly: {
+    Desc: "Rescue Bretta and Sly",
   },
 
-  "Brumm": {
-    "Desc": "Get Brumm's flame",
-    "Excludes": ["CarefreeMelody", "TMGrimm", "NKGrimm"]
+  Brumm: {
+    Desc: "Get Brumm's flame",
+    Excludes: ["CarefreeMelody", "TMGrimm", "NKGrimm"],
   },
 
-/*
+  /*
   "Cloth": {
     "Desc": "Talk to Cloth",
     "Excludes": ["Shops"]
   },
   */
 
-  "ClothQuest": {
-    "Desc": "Complete either ending of the Cloth questline",
-    "Excludes": ["TLord", "WhiteLady"]
+  ClothQuest: {
+    Desc: "Complete either ending of the Cloth questline",
+    Excludes: ["TLord", "WhiteLady"],
   },
 
-  "CotQuirrel": {
-    "Desc": "Sit on the Quirrel bench in City of Tears"
+  CotQuirrel: {
+    Desc: "Sit on the Quirrel bench in City of Tears",
   },
 
-  "CrestElevator": {
-    "Desc": "Use City Crest and ride both large elevators in City of Tears",
-    "Score": 1.30
+  CrestElevator: {
+    Desc: "Use City Crest and ride both large elevators in City of Tears",
+    Score: 1.3,
   },
 
-  "DamnItGrimmchild": {
-    "Desc": "Kill 3 Oomas using a minion charm",
-    "Score": 0.87
+  DamnItGrimmchild: {
+    Desc: "Kill 3 Oomas using a minion charm",
+    Score: 0.87,
   },
 
-  "DeepnestZote": {
-    "Desc": "Rescue Zote in Deepnest",
-    "Excludes": ["GPZote"]
+  DeepnestZote: {
+    Desc: "Rescue Zote in Deepnest",
+    Excludes: ["GPZote"],
   },
 
-  "DefenderSign": {
-    "Desc": "Check/Read the Dung Defender's sign before Isma's Grove"
+  DefenderSign: {
+    Desc: "Check/Read the Dung Defender's sign before Isma's Grove",
   },
 
-  "DirtmouthElevator": {
-    "Desc": "Open the Dirtmouth/Crystal Peak elevator",
-	"Excludes": ["Mimics"]
+  DirtmouthElevator: {
+    Desc: "Open the Dirtmouth/Crystal Peak elevator",
+    Excludes: ["Mimics"],
   },
 
-  "ElderFlower": {
-    "Desc": "Give the Flower to Elderbug"
+  ElderFlower: {
+    Desc: "Give the Flower to Elderbug",
   },
 
-  "Emilitia": {
-    "Desc": "Talk to Eternal Emilitia"
+  Emilitia: {
+    Desc: "Talk to Eternal Emilitia",
   },
 
-  "FlukeHermit": {
-    "Desc": "Talk to the Fluke Hermit"
+  FlukeHermit: {
+    Desc: "Talk to the Fluke Hermit",
   },
 
-  "Godhome": {
-    "Desc": "Visit Godhome",
-    "Excludes": ["Ordeal20", "Radiant"]
+  Godhome: {
+    Desc: "Visit Godhome",
+    Excludes: ["Ordeal20", "Radiant"],
   },
 
-  "GoamGarpede": {
-    "Desc": "Check the Goam and Garpede Journal Entries"
+  GoamGarpede: {
+    Desc: "Check the Goam and Garpede Journal Entries",
   },
 
-  "Jiji": {
-    "Desc": "Open Jiji's Hut and buy out Jiji"
+  Jiji: {
+    Desc: "Open Jiji's Hut and buy out Jiji",
   },
 
-  "HopperHell": {
-    "Desc": "Hit the Oro scarecrow up until the hoppers spawn",
-	"Excludes": ["420Rock", "AncientNailsmith", "GHopper"]
+  HopperHell: {
+    Desc: "Hit the Oro scarecrow up until the hoppers spawn",
+    Excludes: ["420Rock", "AncientNailsmith", "GHopper"],
   },
 
-  "Lemm": {
-    "Desc": "Talk to Lemm in his shop with Defender's Crest equipped",
-    "Score": 1.30
+  Lemm: {
+    Desc: "Talk to Lemm in his shop with Defender's Crest equipped",
+    Score: 1.3,
   },
 
-  "LegEater": {
-    "Desc": "Buy out Leg Eater"
-  },
-  
-  "SlyKey": {
-    "Desc": "Buy out Sly after giving him his Key",
-	"Excludes": ["Salubra", "4000", "5000"],
-	"Score": 1.30
+  LegEater: {
+    Desc: "Buy out Leg Eater",
   },
 
-  "Lifeblood": {
-    "Desc": "10 Lifeblood masks at the same time"
+  SlyKey: {
+    Desc: "Buy out Sly after giving him his Key",
+    Excludes: ["Salubra", "4000", "5000"],
+    Score: 1.3,
   },
 
-  "LifebloodRoom": {
-    "Desc": "Enter the Lifeblood Core room without wearing any lifeblood charms"
+  Lifeblood: {
+    Desc: "10 Lifeblood masks at the same time",
   },
 
-  "LoreArchives": {
-    "Desc": "Check/Read three lore tablets in Teacher's Archives",
-	"Excludes": ["Uumuu", "Lumafly"]
+  LifebloodRoom: {
+    Desc: "Enter the Lifeblood Core room without wearing any lifeblood charms",
   },
 
-  "LoreBasin": {
-    "Desc": "Check/Read the lore tablet in Ancient Basin"
+  LoreArchives: {
+    Desc: "Check/Read three lore tablets in Teacher's Archives",
+    Excludes: ["Uumuu", "Lumafly"],
   },
 
-  "LoreCity": {
-    "Desc": "Check/Read two lore tablets in City of Tears proper (Entrance and Spire)",
-	"Excludes": ["WK", "Telescope"]
+  LoreBasin: {
+    Desc: "Check/Read the lore tablet in Ancient Basin",
   },
 
-  "LoreCliffs": {
-    "Desc": "Check/Read the lore tablet in Howling Cliffs",
-	"Excludes": ["Gorb"]
+  LoreCity: {
+    Desc: "Check/Read two lore tablets in City of Tears proper (Entrance and Spire)",
+    Excludes: ["WK", "Telescope"],
   },
 
-  "LoreGreenpath": {
-    "Desc": "Check/Read three lore tablets in Greenpath"
+  LoreCliffs: {
+    Desc: "Check/Read the lore tablet in Howling Cliffs",
+    Excludes: ["Gorb"],
   },
 
-  "LoreKEdge": {
-    "Desc": "Check/Read the lore tablet in Kingdom's Edge (requires Spore Shroom)",
-    "Score": 1.30
+  LoreGreenpath: {
+    Desc: "Check/Read three lore tablets in Greenpath",
   },
 
-  "LorePilgrims": {
-    "Desc": "Check/Read both Pilgrim's Way lore tablets"
+  LoreKEdge: {
+    Desc: "Check/Read the lore tablet in Kingdom's Edge (requires Spore Shroom)",
+    Score: 1.3,
   },
 
-  "LoreSanctum": {
-    "Desc": "Check/Read both lore tablets in Soul Sanctum",
-	"Excludes": ["SoulMaster", "SoulTyrant"]
+  LorePilgrims: {
+    Desc: "Check/Read both Pilgrim's Way lore tablets",
   },
 
-  "LoreVillage": {
-    "Desc": "Check/Read both lore tablets in Mantis Village",
-	"Excludes": ["VillageJournal"]	
+  LoreSanctum: {
+    Desc: "Check/Read both lore tablets in Soul Sanctum",
+    Excludes: ["SoulMaster", "SoulTyrant"],
   },
 
-  "Lumafly": {
-    "Desc": "Check the Charged Lumafly Journal Entry",
-	"Excludes": ["Uumuu", "LoreArchives"]
+  LoreVillage: {
+    Desc: "Check/Read both lore tablets in Mantis Village",
+    Excludes: ["VillageJournal"],
   },
 
-  "MaskMaker": {
-    "Desc": "Talk to Mask Maker"
+  Lumafly: {
+    Desc: "Check the Charged Lumafly Journal Entry",
+    Excludes: ["Uumuu", "LoreArchives"],
   },
 
-  "Midwife": {
-    "Desc": "Talk to Midwife",
-    "Excludes": ["DeepStag", "VisitDistantHive"]
+  MaskMaker: {
+    Desc: "Talk to Mask Maker",
   },
 
-  "MossProphet": {
-    "Desc": "Bow to Moss Prophet, dead or alive",
-	"Excludes": ["Caelif"]
+  Midwife: {
+    Desc: "Talk to Midwife",
+    Excludes: ["DeepStag", "VisitDistantHive"],
   },
 
-  "MrMushroom1": {
-    "Desc": "Interact with Mr. Mushroom once (Does not require Spore Shroom)",
-    "Score": 0.88
+  MossProphet: {
+    Desc: "Bow to Moss Prophet, dead or alive",
+    Excludes: ["Caelif"],
   },
 
-  "Nail2": {
-    "Desc": "Buy the Nailsmith's second offer",
-	"Excludes": ["2Ore", "Nail3TheObtain", "Nail3"],
-    "Score": 0.55
+  MrMushroom1: {
+    Desc: "Interact with Mr. Mushroom once (Does not require Spore Shroom)",
+    Score: 0.88,
   },
 
-  "Nail3": {
-    "Desc": "Buy the Nailsmith's third offer",
-    "Excludes": ["2Ore", "Nail2", "Nail3TheObtain"],
-    "Score": 0.78
-  },
-  
-  "Nail3TheObtain": {
-    "Desc": "Upgrade your Nail to Coiled Nail (Nail 3)",
-    "Excludes": ["2Ore", "Nail3", "Nail2"],
-    "Score": 1.30
+  Nail2: {
+    Desc: "Buy the Nailsmith's second offer",
+    Excludes: ["2Ore", "Nail3TheObtain", "Nail3"],
+    Score: 0.55,
   },
 
-  "NailHut": {
-    "Desc": "Use a Nail Art in its vanilla Nailmaster's Hut"
+  Nail3: {
+    Desc: "Buy the Nailsmith's third offer",
+    Excludes: ["2Ore", "Nail2", "Nail3TheObtain"],
+    Score: 0.78,
   },
 
-  "Ordeal20": {
-    "Desc": "Defeat 20 Zotes in the Eternal Ordeal",
-    "Types": ["Tiebreaker"],
-    "Excludes": ["Godhome", "Radiant"]
+  Nail3TheObtain: {
+    Desc: "Upgrade your Nail to Coiled Nail (Nail 3)",
+    Excludes: ["2Ore", "Nail3", "Nail2"],
+    Score: 1.3,
   },
 
-/*
+  NailHut: {
+    Desc: "Use a Nail Art in its vanilla Nailmaster's Hut",
+  },
+
+  Ordeal20: {
+    Desc: "Defeat 20 Zotes in the Eternal Ordeal",
+    Types: ["Tiebreaker"],
+    Excludes: ["Godhome", "Radiant"],
+  },
+
+  /*
   "Overcharm": {
     "Desc": "Talk to Salubra while overcharmed"
   },
   */
 
-  "PoP": {
-    "Desc": "Complete Path of Pain",
-    "Types": ["Tiebreaker"],
-    "Excludes": ["Kingsmould"]
+  PoP: {
+    Desc: "Complete Path of Pain",
+    Types: ["Tiebreaker"],
+    Excludes: ["Kingsmould"],
   },
 
-/*
+  /*
   "Pins": {
     "Desc": "Buy 6 map pins from Iselda (All but two)",
     "Excludes": ["PinsAll"],
@@ -1078,170 +1057,168 @@ var bingoList = {
   },
   */
 
-  "PinsAll": {
-    "Desc": "Buy all 8 map pins from Iselda",
-    "Excludes": ["Pins", "TramPass"],
-    "Score": 1.15
+  PinsAll: {
+    Desc: "Buy all 8 map pins from Iselda",
+    Excludes: ["Pins", "TramPass"],
+    Score: 1.15,
   },
 
-  "Revek": {
-    "Desc": "Parry Revek 3 times without dying (Spirits' Glade guard)",
-    "Excludes": ["ShrineOfBelievers"]
+  Revek: {
+    Desc: "Parry Revek 3 times without dying (Spirits' Glade guard)",
+    Excludes: ["ShrineOfBelievers"],
   },
 
-  "Salubra": {
-    "Desc": "Buy out Salubra",
-	"Excludes": ["SlyKey", "4000", "5000"]
+  Salubra: {
+    Desc: "Buy out Salubra",
+    Excludes: ["SlyKey", "4000", "5000"],
   },
 
-/*
+  /*
   "ShadeGates": {
     "Desc": "Slash two Shade Gates"
   },
   */
 
-  "Springs": {
-    "Desc": "Take a bath in 4 different Hot Springs",
-    "Excludes": ["Marissa", "SpringSplash"]
+  Springs: {
+    Desc: "Take a bath in 4 different Hot Springs",
+    Excludes: ["Marissa", "SpringSplash"],
   },
 
-  "SpringSplash": {
-    "Desc": "Splash the NPC in the Colosseum's hot spring"
+  SpringSplash: {
+    Desc: "Splash the NPC in the Colosseum's hot spring",
   },
 
-  "ShrineOfBelievers": {
-    "Desc": "Visit Shrine of Believers",
-    "Excludes": ["Revek"]
+  ShrineOfBelievers: {
+    Desc: "Visit Shrine of Believers",
+    Excludes: ["Revek"],
   },
 
-  "Telescope": {
-    "Desc": "Look through Lurien's telescope",
-	"Excludes": ["WK", "LoreCity"]
+  Telescope: {
+    Desc: "Look through Lurien's telescope",
+    Excludes: ["WK", "LoreCity"],
   },
 
-  "Tendrils": {
-    "Desc": "Check the Void Tendrils Journal Entry",
-	"Excludes": ["VoidPool"]
+  Tendrils: {
+    Desc: "Check the Void Tendrils Journal Entry",
+    Excludes: ["VoidPool"],
   },
 
-  "Tiso": {
-    "Desc": "Swat Tiso's shield away from his corpse"
+  Tiso: {
+    Desc: "Swat Tiso's shield away from his corpse",
   },
 
-  "Trilobite": {
-    "Desc": "Slash the Beast's Den Trilobite"
+  Trilobite: {
+    Desc: "Slash the Beast's Den Trilobite",
   },
 
-  "Tuk": {
-    "Desc": "Talk to Tuk"
+  Tuk: {
+    Desc: "Talk to Tuk",
   },
 
-  "VisitDistantHive": {
-    "Desc": "Visit Distant Village or Hive",
-    "Excludes": ["TramPass", "DeepStag", "Midwife"]
-
+  VisitDistantHive: {
+    Desc: "Visit Distant Village or Hive",
+    Excludes: ["TramPass", "DeepStag", "Midwife"],
   },
 
-/*
+  /*
   "VisitLakes": {
     "Desc": "Visit Lake of Unn or Blue Lake"
   },
   */
 
-  "VisitMounds": {
-    "Desc": "Visit Overgrown Mound or Crystalised Mound (Crystalised requires dive)",
-	"Excludes": ["HarderVisitMounds"]
-  },
-  
-  "HarderVisitMounds": {
-    "Desc": "Visit all 3 mounds (Crystalised requires dive)",
-	"Excludes": ["VisitMounds", "SpellLocations"]
+  VisitMounds: {
+    Desc: "Visit Overgrown Mound or Crystalised Mound (Crystalised requires dive)",
+    Excludes: ["HarderVisitMounds"],
   },
 
-  "VisitQueensShell": {
-    "Desc": "Visit Queen's Gardens or Cast-Off Shell",
-    "Excludes": ["Hornet2", "GardenStag"]
+  HarderVisitMounds: {
+    Desc: "Visit all 3 mounds (Crystalised requires dive)",
+    Excludes: ["VisitMounds", "SpellLocations"],
   },
 
-  "VisitSanctumWaterways": {
-    "Desc": "Visit Soul Sanctum or Royal Waterways"
+  VisitQueensShell: {
+    Desc: "Visit Queen's Gardens or Cast-Off Shell",
+    Excludes: ["Hornet2", "GardenStag"],
   },
 
-  "VisitTower": {
-    "Desc": "Visit Tower of Love (Love Key not required)",
-	"Excludes": ["Collector", "Vitruvian"]
+  VisitSanctumWaterways: {
+    Desc: "Visit Soul Sanctum or Royal Waterways",
   },
 
-  "VoidPool": {
-    "Desc": "Swim in a Void Pool",
-	"Excludes": ["Tendrils"]
+  VisitTower: {
+    Desc: "Visit Tower of Love (Love Key not required)",
+    Excludes: ["Collector", "Vitruvian"],
   },
 
-  "WhiteLady": {
-    "Desc": "Dream Nail White Lady",
-    "Excludes": ["TLord", "ClothQuest"]
+  VoidPool: {
+    Desc: "Swim in a Void Pool",
+    Excludes: ["Tendrils"],
   },
 
-  "Willow": {
-    "Desc": "Dream Nail Willoh's meal"
+  WhiteLady: {
+    Desc: "Dream Nail White Lady",
+    Excludes: ["TLord", "ClothQuest"],
   },
 
-  "WPShadeSkip": {
-    "Desc": "Sit down in Hidden Station",
-    "Excludes": ["HiddenStag", "Wings"]
+  Willow: {
+    Desc: "Dream Nail Willoh's meal",
   },
 
-  "Grubfather": {
-    "Desc": "Get all of the Grubfather's checks"
+  WPShadeSkip: {
+    Desc: "Sit down in Hidden Station",
+    Excludes: ["HiddenStag", "Wings"],
   },
 
-  "Seer": {
-    "Desc": "Get all of the Seer's checks",
-	"Excludes": ["800Essence"]
+  Grubfather: {
+    Desc: "Get all of the Grubfather's checks",
   },
-  
-  "ElderBaldurs": {
-    "Desc": "Kill all 4 Elder Baldurs"
+
+  Seer: {
+    Desc: "Get all of the Seer's checks",
+    Excludes: ["800Essence"],
   },
-  
-  "WaterwaysArenas": {
-    "Desc": "Defeat both arenas in Royal Waterways",
-	"Excludes": ["TearCheck"]
+
+  ElderBaldurs: {
+    Desc: "Kill all 4 Elder Baldurs",
   },
-  
-  "CityArenas": {
-    "Desc": "Defeat both arenas in City of Tears"
+
+  WaterwaysArenas: {
+    Desc: "Defeat both arenas in Royal Waterways",
+    Excludes: ["TearCheck"],
   },
-  
-  "DeepnestRoot": {
-    "Desc": "Complete the Deepnest Root",
-	"Excludes": ["WeaverSeal"]
+
+  CityArenas: {
+    Desc: "Defeat both arenas in City of Tears",
   },
-  
-  "WeaverSeal": {
-    "Desc": "Bow to the Seal of Binding in Weavers' Den",
-	"Excludes": ["DeepnestRoot"]
+
+  DeepnestRoot: {
+    Desc: "Complete the Deepnest Root",
+    Excludes: ["WeaverSeal"],
   },
-  
-  "SharpShadowCheck": {
-    "Desc": "Check Sharp Shadow"
+
+  WeaverSeal: {
+    Desc: "Bow to the Seal of Binding in Weavers' Den",
+    Excludes: ["DeepnestRoot"],
   },
-  
-  "Caelif": {
-    "Desc": "Dream Nail Caelif & Fera Orthop (Queen's Garden ghost)",
-	"Excludes": ["MossProphet"]
+
+  SharpShadowCheck: {
+    Desc: "Check Sharp Shadow",
   },
-  
-  "Vitruvian": {
-    "Desc": "Bow to the Vitruvian Grub (Collector's secret)",
-	"Excludes": ["Collector", "Lovekey", "VisitTower"],
-	"Score": 1.30
-  }
-  
+
+  Caelif: {
+    Desc: "Dream Nail Caelif & Fera Orthop (Queen's Garden ghost)",
+    Excludes: ["MossProphet"],
+  },
+
+  Vitruvian: {
+    Desc: "Bow to the Vitruvian Grub (Collector's secret)",
+    Excludes: ["Collector", "Lovekey", "VisitTower"],
+    Score: 1.3,
+  },
+
   /*
   "BadJoke": {
     "Desc": "Kill Menderbug or defeat Colosseum 3"
   }
   */
-
 };

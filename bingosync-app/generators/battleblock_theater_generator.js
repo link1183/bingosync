@@ -464,7 +464,7 @@ bingoList[6] = [
 bingoList[7] = [
   { name: "Kill 5 unique cats", types: [] },
   { name: "Kill 10 unique cats", types: [] },
-  { name: "Kill 5 pieces of toast", types: ["killenemy","toast"] },
+  { name: "Kill 5 pieces of toast", types: ["killenemy", "toast"] },
   { name: "Kill 1 raccalope", types: ["raccalope"] },
   { name: "Kill 2 raccalopes", types: ["raccalope"] },
   { name: "Kill 3 ducksharks", types: ["duckshark"] },
@@ -491,20 +491,29 @@ bingoList[9] = [
   { name: "3-1 WITHOUT any omega boosts", types: ["noob"] },
   { name: "Collect 4 gems in any 5 stages", types: ["runover"] },
   { name: "3-2 WITHOUT any of the yolo boosts", types: ["frog"] },
-  { name: "7-2, 7-3, 7-5 or 7-8 without any checkpoint skips", types: ["badatruns"] },
+  {
+    name: "7-2, 7-3, 7-5 or 7-8 without any checkpoint skips",
+    types: ["badatruns"],
+  },
   { name: "2-F2 without the frog clip", types: ["xenemy"] },
 ];
 bingoList[10] = [
   { name: "2-5 first ferdinand skip", types: ["skips"] },
   { name: "6-4 yolo boost through all these lasers", types: ["yolo"] },
   { name: "7-F1 journey through the boulder portals", types: ["boulders"] },
-  { name: "8-9 with that boost", types: ["plsno","why"] },
+  { name: "8-9 with that boost", types: ["plsno", "why"] },
   { name: "8-3 duckshark skip", types: ["ohgod"] },
 ];
 bingoList[11] = [
-  { name: "Have 5 paperplanes on screen at once", types: ["dupe","paperplane"] },
+  {
+    name: "Have 5 paperplanes on screen at once",
+    types: ["dupe", "paperplane"],
+  },
   { name: "Jam a rock between two blocks", types: ["boulders"] },
-  { name: "Stand infront of a fire cat without getting hit by its fire", types: ["touch"] },
+  {
+    name: "Stand infront of a fire cat without getting hit by its fire",
+    types: ["touch"],
+  },
 ];
 bingoList[12] = [
   { name: "Clear 3 Chapter 1 scenes", types: [] },
@@ -613,10 +622,19 @@ bingoList[24] = [
   { name: "Kill 5 cats with their own grenades", types: ["grenade"] },
   { name: "Lure 5 cats into raccalopes", types: ["raccalope"] },
   { name: "Set yourself on fire, then extinguish yourself", types: ["fire"] },
-  { name: "Bounce on 5 toxic bubbles without touching the ground", types: ["bubble"] },
-  { name: "Kill that one paperplane cat with its own paperplanes", types: ["paperplane"] },
+  {
+    name: "Bounce on 5 toxic bubbles without touching the ground",
+    types: ["bubble"],
+  },
+  {
+    name: "Kill that one paperplane cat with its own paperplanes",
+    types: ["paperplane"],
+  },
   { name: "Have a cat set another cat on fire", types: ["fire"] },
-  { name: "Push a cat to it's demise using only forceballs", types: ["forceball"] },
+  {
+    name: "Push a cat to it's demise using only forceballs",
+    types: ["forceball"],
+  },
 ];
 bingoList[25] = [
   { name: "Duckshark's Big Adventure", types: ["duckshark"] },

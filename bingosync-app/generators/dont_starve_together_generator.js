@@ -136,7 +136,10 @@ bingoList[12] = [
 ];
 
 bingoList[13] = [
-  { name: "Put a Lesser or Big Glowberry in an End Table", types: ["endtable"] },
+  {
+    name: "Put a Lesser or Big Glowberry in an End Table",
+    types: ["endtable"],
+  },
   { name: "Catch a Small Ocean Fish", types: ["fishing"] },
   { name: "Cook a Fruit Medley", types: ["cookbook"] },
   { name: "Place a Shadow Manipulator", types: ["magic"] },
@@ -177,7 +180,10 @@ bingoList[16] = [
 ];
 
 bingoList[17] = [
-  { name: "Fully Repair a Broken Ancient Pseudoscience Station ", types: ["ruins"] },
+  {
+    name: "Fully Repair a Broken Ancient Pseudoscience Station ",
+    types: ["ruins"],
+  },
   { name: "Get the Ruins Vase Blueprint", types: ["blueprint", "ruins"] },
   { name: "Get the Ruins Plate Blueprint", types: ["blueprint", "ruins"] },
   { name: "Get the Ruins Bowl Blueprint", types: ["blueprint", "ruins"] },
@@ -187,7 +193,6 @@ bingoList[17] = [
   { name: "Kill a Grass Gator", types: ["waterlogged", "sailing"] },
   { name: "Bath Bomb a Hot Spring", types: ["lunar"] },
   { name: "Turn a Saladmander into a Dragon Fruit", types: ["lunar"] },
-
 ];
 
 bingoList[18] = [
@@ -218,9 +223,7 @@ bingoList[20] = [
   { name: "Cook Lobster Dinner", types: ["cooking"] },
 ];
 
-bingoList[21] = [
-  { name: "Kill A Krampus", types: ["murder"] },
-];
+bingoList[21] = [{ name: "Kill A Krampus", types: ["murder"] }];
 
 bingoList[22] = [
   { name: "Start the Pig King event", types: ["PK"] },

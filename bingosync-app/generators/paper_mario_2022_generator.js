@@ -2,7 +2,7 @@ var bingoGenerator = require("./generators/generator_bases/srl_generator_v5.js")
 
 var bingoList = [];
 bingoList[1] = [
-  { name: "Dolly", types: ["dolly"] }, 
+  { name: "Dolly", types: ["dolly"] },
   { name: "Dried Shroom", types: ["driedshroom"] },
   { name: "Egg", types: ["egg"] },
   { name: "Fire Flower", types: ["fireflower"] },
@@ -23,7 +23,7 @@ bingoList[1] = [
   { name: "Snowman Doll", types: ["snowmandoll"] },
   { name: "Dizzy Dial", types: ["dizzydial"] },
   { name: "Coconut", types: ["jungle"] },
-  { name: "HP Plus", types: ["hp"] }
+  { name: "HP Plus", types: ["hp"] },
 ];
 bingoList[2] = [
   { name: "Quake Hammer", types: ["quakehammer"] },
@@ -42,7 +42,7 @@ bingoList[2] = [
   { name: "Spicy Soup", types: ["spicysoup"] },
   { name: "Lyrics", types: ["fxd"] },
   { name: "Fire Shield", types: ["volcano"] },
-  { name: "Thunder Bolt", types: ["thunderbolt"] }
+  { name: "Thunder Bolt", types: ["thunderbolt"] },
 ];
 bingoList[3] = [
   { name: "Refund", types: ["refund"] },
@@ -60,7 +60,7 @@ bingoList[3] = [
   { name: "Chill Out (Badge)", types: ["starpiece"] },
   { name: "Dizzy Stomp", types: ["volcano"] },
   { name: "1 Quizmo", types: ["starpiece"] },
-  { name: "Yummy Meal", types: ["cookbook"] }
+  { name: "Yummy Meal", types: ["cookbook"] },
 ];
 bingoList[4] = [
   { name: "At Least 5 Letters", types: ["letters"] },
@@ -73,7 +73,7 @@ bingoList[4] = [
   { name: "First Attack", types: ["rowf"] },
   { name: "Pretty Lucky", types: ["starpiece"] },
   { name: "Kill Whacka", types: ["wakkabump"] },
-  { name: "Multibounce", types: ["rowf"] }
+  { name: "Multibounce", types: ["rowf"] },
 ];
 bingoList[5] = [
   { name: "Dried Pasta", types: ["desert"] },
@@ -92,7 +92,7 @@ bingoList[5] = [
   { name: "Defend Plus", types: ["toybox"] },
   { name: "Happy Heart", types: ["jungle"] },
   { name: "3 Quizmos", types: ["starpiece"] },
-  { name: "Power Quake", types: ["jungle"] }
+  { name: "Power Quake", types: ["jungle"] },
 ];
 bingoList[6] = [
   { name: "Second Degree Card", types: ["dojo"] },
@@ -109,7 +109,7 @@ bingoList[6] = [
   { name: "Ruins Key", types: ["ruins"] },
   { name: "Attack FX C", types: ["desert"] },
   { name: "Power Smash", types: ["blooper", "hammer"] },
-  { name: "2x HP Plus", types: ["hp"] }
+  { name: "2x HP Plus", types: ["hp"] },
 ];
 bingoList[7] = [
   { name: "Dodge Master", types: ["calculator"] },
@@ -119,7 +119,7 @@ bingoList[7] = [
   { name: "Sleep Stomp", types: ["calculator"] },
   { name: "Defeat a Lava Bubble", types: ["volcano"] },
   { name: "Strange Leaf", types: ["mansion"] },
-  { name: "Frying Pan", types: ["toybox"] }
+  { name: "Frying Pan", types: ["toybox"] },
 ];
 bingoList[8] = [
   { name: "Bland Meal", types: ["cookbook"] },
@@ -133,7 +133,7 @@ bingoList[8] = [
   { name: "Maple Shroom", types: ["cookbook"] },
   { name: "Happy Flower", types: ["starpiece", "flowerfields"] },
   { name: "Maple Super", types: ["cookbook"] },
-  { name: "Jump Charge", types: ["calculator"] }
+  { name: "Jump Charge", types: ["calculator"] },
 ];
 bingoList[9] = [
   { name: "Big Cookie", types: ["cookbook", "toybox"] },
@@ -154,7 +154,7 @@ bingoList[9] = [
   { name: "Coco Pop", types: ["cookbook", "toybox", "jungle"] },
   { name: "Record", types: ["mansion", "bow", "boots"] },
   { name: "Weight", types: ["mansion", "bow", "boots"] },
-  { name: "Kookie Cookie", types: ["cookbook", "toybox"] }
+  { name: "Kookie Cookie", types: ["cookbook", "toybox"] },
 ];
 bingoList[10] = [
   { name: "Ultra-Rank Bombette", types: ["upgrades"] },
@@ -164,7 +164,7 @@ bingoList[10] = [
   { name: "Sweet Shroom", types: ["cookbook"] },
   { name: "2x FP Plus", types: ["fp"] },
   { name: "Peekaboo", types: ["starpiece"] },
-  { name: "Zap Tap", types: ["starpiece"] }
+  { name: "Zap Tap", types: ["starpiece"] },
 ];
 bingoList[11] = [
   { name: "Ultra-Rank Goombario", types: ["upgrades"] },
@@ -175,7 +175,7 @@ bingoList[11] = [
   { name: "Apple", types: ["mansion"] },
   { name: "Volcano Vase", types: ["ch5"] },
   { name: "Koopasta", types: ["cookbook", "desert"] },
-  { name: "3 Repel Gels", types: ["gulch"] }
+  { name: "3 Repel Gels", types: ["gulch"] },
 ];
 bingoList[12] = [
   { name: "Defeat Buzzar", types: ["buzzar"] },
@@ -190,7 +190,7 @@ bingoList[12] = [
   { name: "Pyramid Stone", types: ["ruins"] },
   { name: "Artifact", types: ["ruins"] },
   { name: "Melon", types: ["ch5"] },
-  { name: "Maple Ultra", types: ["cookbook", "desert"] }
+  { name: "Maple Ultra", types: ["cookbook", "desert"] },
 ];
 bingoList[13] = [
   { name: "Defeat an Anti Guy", types: ["toybox"] },
@@ -202,7 +202,7 @@ bingoList[13] = [
   { name: "Bow", types: ["mansion", "bow"] },
   { name: "Special Shake", types: ["cookbook"] },
   { name: "Healthy Juice", types: ["cookbook"] },
-  { name: "Lunar Stone", types: ["ruins"] }
+  { name: "Lunar Stone", types: ["ruins"] },
 ];
 bingoList[14] = [
   { name: "Super Hammer", types: ["ruins", "hammer", "ch2"] },
@@ -212,7 +212,7 @@ bingoList[14] = [
   { name: "Wallet", types: ["koopakoot"] },
   { name: "All 4 Magical Seeds", types: ["ch5"] },
   { name: "Defeat Kent C. Koopa", types: ["ch5"] },
-  { name: "3x HP Plus", types: ["hp"] }
+  { name: "3x HP Plus", types: ["hp"] },
 ];
 bingoList[15] = [
   { name: "Strange Cake", types: ["cookbook", "mansion", "toybox"] },
@@ -220,7 +220,7 @@ bingoList[15] = [
   { name: "Tubba Bubba's Castle Key", types: ["gulch", "boots"] },
   { name: "D-Down Jump", types: ["gulch", "boots"] },
   { name: "At Least 25 HP", types: ["levels", "hp"] },
-  { name: "At Least 25 FP", types: ["levels", "fp"] }
+  { name: "At Least 25 FP", types: ["levels", "fp"] },
 ];
 bingoList[16] = [
   { name: "Defeat Lava Piranha", types: ["volcano", "ch5"] },
@@ -229,7 +229,7 @@ bingoList[16] = [
   { name: "Stinky Herb", types: ["flowerfields", "ch5"] },
   { name: "Red Berry", types: ["flowerfields", "ch5"] },
   { name: "Defeat Super Blooper", types: ["blooper", "hammer"] },
-  { name: "At Least 15 BP", types: ["levels"] }
+  { name: "At Least 15 BP", types: ["levels"] },
 ];
 bingoList[17] = [
   { name: "Complete Chapter 5", types: ["volcano", "ch5"] },
@@ -238,17 +238,17 @@ bingoList[17] = [
   { name: "Last Stand", types: ["ch2", "ch3", "ch4", "ch5"] },
   { name: "Power Rush", types: ["ch2", "ch3", "ch4", "ch5"] },
   { name: "Crystal Ball", types: ["koopakoot", "desert"] },
-  { name: "2 Jammin’ Jellies", types: ["jamminjelly", "flowerfields", "ch5"]},
-  { name: "Money Money", types: ["starpiece"] }
+  { name: "2 Jammin’ Jellies", types: ["jamminjelly", "flowerfields", "ch5"] },
+  { name: "Money Money", types: ["starpiece"] },
 ];
 bingoList[18] = [
-  { name: "Defeat a Chain Chomp", types: ["ruins"] }, 
+  { name: "Defeat a Chain Chomp", types: ["ruins"] },
   { name: "Mystical Key", types: ["gulch", "boots"] },
   { name: "Ultra-Rank Bow", types: ["bow", "upgrades", "mansion"] },
   { name: "Mystery Note", types: ["bow", "toybox"] },
   { name: "Fourth-Degree Card", types: ["dojo"] },
   { name: "Ultra-Rank 3 Partners", types: ["upgrades"] },
-  { name: "Defeat Tutankoopa", types: ["ruins", "ch2"] }
+  { name: "Defeat Tutankoopa", types: ["ruins", "ch2"] },
 ];
 bingoList[19] = [
   { name: "Complete Chapter 2", types: ["ruins", "ch2"] },
@@ -270,14 +270,14 @@ bingoList[20] = [
   { name: "Mega Quake", types: ["calculator", "ch5"] },
   { name: "S. Smash Charge", types: ["calculator", "ch5"] },
   { name: "2x Damage Dodge", types: ["calculator", "damagedodge", "ch5"] },
-  { name: "Yoshi Cookie", types: ["cookbook", "toybox", "ch5"] }
+  { name: "Yoshi Cookie", types: ["cookbook", "toybox", "ch5"] },
 ];
 bingoList[21] = [
   { name: "Defeat Lakilester", types: ["flowerfields", "ch5"] },
   { name: "Gold Credit", types: ["koopakoot", "desert"] },
   { name: "Defeat Tubba Blubba", types: ["gulch", "boots", "ch3"] },
   { name: "Ultra-Rank 4 Partners", types: ["upgrades"] },
-  { name: "Complete Chapter 1", types: ["ch1"] }
+  { name: "Complete Chapter 1", types: ["ch1"] },
 ];
 bingoList[22] = [
   { name: "Crystal Berry", types: ["flowerfields", "ch5"] },
@@ -285,26 +285,41 @@ bingoList[22] = [
   { name: "2x Flower Saver", types: ["flowerfields", "starpiece", "ch5"] },
   { name: "Complete Chapter 3", types: ["gulch", "boots", "ch3"] },
   { name: "Ultra Boots", types: ["flowerfields", "boots", "sushie", "ch5"] },
-  { name: "Ultra-Rank Lakilester", types: ["flowerfields", "upgrades", "sushie", "ch5"] }
+  {
+    name: "Ultra-Rank Lakilester",
+    types: ["flowerfields", "upgrades", "sushie", "ch5"],
+  },
 ];
 bingoList[23] = [
   { name: "Bubble Berry", types: ["flowerfields", "sushie", "ch5"] },
   { name: "Water Stone", types: ["flowerfields", "ch5"] },
   { name: "Old Photo", types: ["koopakoot", "desert", "mansion"] },
-  { name: "Defeat Jr. Troopa 4 Times", types: ["jungle","ch1"] },
-  { name: "S. Jump Charge", types: ["flowerfields", "sushie", "ch5"] }
+  { name: "Defeat Jr. Troopa 4 Times", types: ["jungle", "ch1"] },
+  { name: "S. Jump Charge", types: ["flowerfields", "sushie", "ch5"] },
 ];
 bingoList[24] = [
-  { name: "Break the Puff-Puff Machine", types: ["boots", "flowerfields", "ch5"] },
-  { name: "Defeat 2 Different Chapter Bosses", types: ["ch1", "ch2", "ch3", "ch4", "ch5"] },
+  {
+    name: "Break the Puff-Puff Machine",
+    types: ["boots", "flowerfields", "ch5"],
+  },
+  {
+    name: "Defeat 2 Different Chapter Bosses",
+    types: ["ch1", "ch2", "ch3", "ch4", "ch5"],
+  },
   { name: "Obtain a Letter for Frost T.", types: ["mansion", "desert"] },
-  { name: "Obtain All Partners", types: ["bow", "watt", "ch5", "flowerfields"] },
-  { name: "Defeat a Koopatrol", types: ["boots", "toybox", "ch3"] }
+  {
+    name: "Obtain All Partners",
+    types: ["bow", "watt", "ch5", "flowerfields"],
+  },
+  { name: "Defeat a Koopatrol", types: ["boots", "toybox", "ch3"] },
 ];
 bingoList[25] = [
   { name: "Jade Raven", types: ["jungle", "watt", "FigureFresh"] },
   { name: "Diploma", types: ["dojo"] },
   { name: "Glasses", types: ["koopakoot", "desert", "mansion", "ch5"] },
-  { name: "At Least 10 Letters", types: ["letters", "ch5", "flowerfields", "boots"] },
-  { name: "Iced Potato", types: ["ch5"] }
+  {
+    name: "At Least 10 Letters",
+    types: ["letters", "ch5", "flowerfields", "boots"],
+  },
+  { name: "Iced Potato", types: ["ch5"] },
 ];

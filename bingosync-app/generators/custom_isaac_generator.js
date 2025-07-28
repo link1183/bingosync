@@ -4,7 +4,7 @@ _bingoGenerator = require("./generators/generator_bases/isaac_generator.js");
 // from the options is used instead
 bingoList = [];
 
-bingoGenerator = function(ignoredBingoList, opts) {
-    realBingoList = opts.custom_board;
-    return _bingoGenerator(realBingoList, opts);
+bingoGenerator = function (ignoredBingoList, opts) {
+  realBingoList = opts.custom_board;
+  return _bingoGenerator(realBingoList, opts);
 };

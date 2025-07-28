@@ -14,7 +14,7 @@ bingoList[1] = [
   { name: "Kill Moe", types: ["kill, blk"] },
   { name: "Kill Mean Sonofabitch", types: ["kill, westside"] },
   { name: "Collect a Ping Pong Ball", types: ["items, freeside"] },
-  { name: "Obtain a Counterfeit Passport", types: ["items"] }
+  { name: "Obtain a Counterfeit Passport", types: ["items"] },
 ];
 bingoList[2] = [
   { name: "Collect the CZ57 Avenger", types: ["weapon, east"] },
@@ -27,7 +27,7 @@ bingoList[2] = [
   { name: "Obtain a Brahmin Wellington", types: ["items"] },
   { name: "Collect Mr. RADical's Journal", types: ["notes"] },
   { name: "Deface the Boulder City memorial", types: ["meme"] },
-  { name: "Obtain the Jake Juice", types: ["items, house"] }
+  { name: "Obtain the Jake Juice", types: ["items, house"] },
 ];
 bingoList[3] = [
   { name: "Have at least 10000 caps", types: ["money"] },
@@ -40,7 +40,7 @@ bingoList[3] = [
   { name: "Collect the Pretty Pretty Horsies book", types: ["items"] },
   { name: "Recruit Lily", types: ["companion, jacob"] },
   { name: "Collect the 'Flour'", types: ["items"] },
-  { name: "Obtain a Wood Chipper", types: ["items, wood"] }
+  { name: "Obtain a Wood Chipper", types: ["items, wood"] },
 ];
 bingoList[4] = [
   { name: "Discover at least 30 locations", types: ["location"] },
@@ -52,7 +52,7 @@ bingoList[4] = [
   { name: "Collect 5 Sporks", types: ["items"] },
   { name: "Kill Mr Janitor", types: ["kill"] },
   { name: "Obtain the Sherriff's Duster", types: ["items, primm"] },
-  { name: "Obtain a Schematics - billboard", types: ["items, strip"] }
+  { name: "Obtain a Schematics - billboard", types: ["items, strip"] },
 ];
 bingoList[5] = [
   { name: "Become Idolized with at least 2 factions", types: ["rep"] },
@@ -66,7 +66,7 @@ bingoList[5] = [
   { name: "Heal Snuffles' wounds", types: ["meme, sloan"] },
   { name: "Collect 18 Counterfeit Bottle Caps", types: ["items"] },
   { name: "Collect Pew Pew", types: ["weapon"] },
-  { name: "Obtain Cuddles' Toy Car", types: ["items, blk"] }
+  { name: "Obtain Cuddles' Toy Car", types: ["items, blk"] },
 ];
 bingoList[6] = [
   { name: "Kill the Legendary Deathclaw", types: ["kill"] },
@@ -82,21 +82,24 @@ bingoList[6] = [
   { name: "Cook a Trail Mix", types: ["crafting"] },
   { name: "Kill a Mr Steel", types: ["kill"] },
   { name: "Obtain the Naughty Nightwear", types: ["items"] },
-  { name: "Obtain a Rum & Nuka", types: ["items, freeside"] }
+  { name: "Obtain a Rum & Nuka", types: ["items, freeside"] },
 ];
 bingoList[7] = [
   { name: "Defeat 3 different opponents in Caravan", types: ["game"] },
   { name: "Become addicted to at least 10 substances", types: ["items"] },
   { name: "Raise a skill to 100", types: ["skill"] },
   { name: "Collect 100 Pinto Bean Pods", types: ["items"] },
-  { name: "Collect the Vault 34 Overseer's Journal Fragments", types: ["vault34"] },
+  {
+    name: "Collect the Vault 34 Overseer's Journal Fragments",
+    types: ["vault34"],
+  },
   { name: "Kill The King", types: ["kill, freeside"] },
   { name: "Collect a Thermic Lance", types: ["weapon"] },
   { name: "Collect The Screams of Brahmin holotape", types: ["novac"] },
   { name: "Have Captain Parker murder Keith", types: ["quest"] },
   { name: "Collect the 3 pages of the Die-ary of Trash", types: ["notes"] },
   { name: "Complete the quest That Lucky Old Sun", types: ["quest"] },
-  { name: "Obtain the Ranger Takedown perk", types: ["perk, novac, charlie"] }
+  { name: "Obtain the Ranger Takedown perk", types: ["perk, novac, charlie"] },
 ];
 bingoList[8] = [
   { name: "Complete the quest Volare!", types: ["quest"] },
@@ -110,7 +113,7 @@ bingoList[8] = [
   { name: "Obtain a Wasteland Omelet", types: ["items, sloan"] },
   { name: "Collect the 4 Torn Diary pages", types: ["notes"] },
   { name: "Complete the quest Three Card Bounty", types: ["quest"] },
-  { name: "Obtain Mr Cuddles", types: ["items"] }
+  { name: "Obtain Mr Cuddles", types: ["items"] },
 ];
 bingoList[9] = [
   { name: "Become Vilified with at least 4 factions", types: ["rep"] },
@@ -123,7 +126,10 @@ bingoList[9] = [
   { name: "Kill the Legendary Fire Gecko", types: ["kill, gecko"] },
   { name: "Complete the quest Bye Bye Love", types: ["items, byelove"] },
   { name: "Activate all the Mojave Express postboxes", types: ["location"] },
-  { name: "Complete the quest Wang Dang Atomic Tango", types: ["quest, freeside"] }
+  {
+    name: "Complete the quest Wang Dang Atomic Tango",
+    types: ["quest, freeside"],
+  },
 ];
 bingoList[10] = [
   { name: "Discover at least 50 locations", types: ["location"] },
@@ -135,19 +141,22 @@ bingoList[10] = [
   { name: "Claim Motor-Runner's bounty", types: ["vault3"] },
   { name: "Upgrade Raul to a Tier 2 outfit", types: ["companion"] },
   { name: "Obtain the Monocyte Breeder implant", types: ["items"] },
-  { name: "Obtain the Evil Gnome", types: ["items, gecko"] }
+  { name: "Obtain the Evil Gnome", types: ["items, gecko"] },
 ];
 bingoList[11] = [
   { name: "Have at least 30000 caps", types: ["money"] },
   { name: "Kill Gabban", types: ["kill, vulpes"] },
   { name: "Kill Alerio", types: ["kill, vulpes"] },
-  { name: "Complete the quest How Little We Know", types: ["quest, strip, byelove"] },
+  {
+    name: "Complete the quest How Little We Know",
+    types: ["quest, strip, byelove"],
+  },
   { name: "Obtain the Chinese Stealth Armor", types: ["items"] },
   { name: "Get Bryce Anders to Camp McCarran alive", types: ["vault3"] },
   { name: "Complete the quest There Stands The Grass", types: ["quest"] },
   { name: "Obtain a Ruby's Casserole", types: ["items, primm"] },
   { name: "Kill the Lakelurk King", types: ["kill"] },
-  { name: "Complete the quest Anywhere I Wander", types: ["quest"] }
+  { name: "Complete the quest Anywhere I Wander", types: ["quest"] },
 ];
 bingoList[12] = [
   { name: "Collect at least 25 Blue Star caps", types: ["star"] },
@@ -159,7 +168,7 @@ bingoList[12] = [
   { name: "Complete the quest Aba Daba Honeymoon", types: ["quest, khan"] },
   { name: "Obtain the Big Boomer", types: ["weapon, novac"] },
   { name: "Return the Missing Laser Pistol", types: ["brotherhood"] },
-  { name: "Obtain Ambassador Crocker's Suit", types: ["items, strip"] }
+  { name: "Obtain Ambassador Crocker's Suit", types: ["items, strip"] },
 ];
 bingoList[13] = [
   { name: "Obtain the Brotherhood Elder's robe", types: ["items"] },
@@ -171,7 +180,7 @@ bingoList[13] = [
   { name: "Obtain 10 Legion Denarius, mangled", types: ["crafting"] },
   { name: "Discover all the Vaults", types: ["location"] },
   { name: "Complete the quest Oh My Papa", types: ["quest, khan"] },
-  { name: "Kill the Legendary Cazador", types: ["kill"] }
+  { name: "Kill the Legendary Cazador", types: ["kill"] },
 ];
 bingoList[14] = [
   { name: "Complete the quest ED-E My Love", types: ["quest"] },
@@ -182,7 +191,7 @@ bingoList[14] = [
   { name: "Complete the quest G.I. Blues", types: ["quest, freeside"] },
   { name: "Obtain Sergeant Teddy", types: ["items"] },
   { name: "Obtain the Perk Fast Times", types: ["perk"] },
-  { name: "Collect 11 Strip Letters", types: ["notes"] }
+  { name: "Collect 11 Strip Letters", types: ["notes"] },
 ];
 bingoList[15] = [
   { name: "Collect Euology Jones hat", types: ["items, freeside"] },
@@ -193,7 +202,7 @@ bingoList[15] = [
   { name: "Complete the quest Restoring Hope", types: ["quest, forlorn"] },
   { name: "Complete the quest Nothin' But a Hound Dog", types: ["quest"] },
   { name: "Get a discount with Dr. Kemp", types: ["quest"] },
-  { name: "Complete the quest I Put a Spell on You", types: ["quest"] }
+  { name: "Complete the quest I Put a Spell on You", types: ["quest"] },
 ];
 bingoList[16] = [
   { name: "Complete the quest Come Fly With Me", types: ["quest"] },
@@ -205,16 +214,22 @@ bingoList[16] = [
   { name: "Collect 10 Chessboards", types: ["items"] },
   { name: "Collect 15 Red Plates", types: ["items"] },
   { name: "Obtain the Automated Solution Response holotape", types: ["items"] },
-  { name: "Complete the quest Volare!", types: ["quest"] }
+  { name: "Complete the quest Volare!", types: ["quest"] },
 ];
 bingoList[17] = [
-  { name: "Complete the quest I Forgot To Remember To Forget", types: ["quest"] },
+  {
+    name: "Complete the quest I Forgot To Remember To Forget",
+    types: ["quest"],
+  },
   { name: "Complete the quest Someone to Watch Over Me", types: ["quest"] },
   { name: "Permanently raise 3 skills to 100", types: ["skill"] },
   { name: "Craft a Mother Darkness", types: ["crafting"] },
   { name: "Complete all of William Farber's tasks", types: ["meme"] },
-  { name: "Complete the quest Heartache by the Number", types: ["quest", "cass"] },
-  { name: "Complete the quest Why Can't We Be Friends", types: ["quest"] }
+  {
+    name: "Complete the quest Heartache by the Number",
+    types: ["quest", "cass"],
+  },
+  { name: "Complete the quest Why Can't We Be Friends", types: ["quest"] },
 ];
 bingoList[18] = [
   { name: "Complete the quest No, Not Much", types: ["quest"] },
@@ -222,7 +237,7 @@ bingoList[18] = [
   { name: "Kill 2 Radscorpion Queens", types: ["kill"] },
   { name: "Collect at least 10 unique weapons", types: ["weapon"] },
   { name: "Collect 10 bottles of Nuka-Cola Quartz", types: ["items"] },
-  { name: "Complete the quest Hard Luck Blues", types: ["quest, vault34"] }
+  { name: "Complete the quest Hard Luck Blues", types: ["quest, vault34"] },
 ];
 bingoList[19] = [
   { name: "Obtain the All-Purpose Science Suit", types: ["safehouse"] },
@@ -232,28 +247,67 @@ bingoList[19] = [
   { name: "Acquire the Automatic Surgical Unit", types: ["legion"] },
   { name: "Collect 3 Motorcycle Gas Tanks", types: ["items"] },
   { name: "Complete the quest I Could Make You Care", types: ["quest"] },
-  { name: "Collect at least 50 Blue Star caps", types: ["caps"] }
+  { name: "Collect at least 50 Blue Star caps", types: ["caps"] },
 ];
 bingoList[20] = [
   { name: "Complete the quest Bleed Me Dry", types: ["quest, thorn"] },
   { name: "Win 3 rounds in the Legion Arena", types: ["legion"] },
   { name: "Craft a Tremble", types: ["crafting"] },
-  { name: "Collect all Big Book of Science skill books", types: ["items, skillbook"] },
-  { name: "Collect all Chinese Army: Special Ops Training Manual skill books", types: ["items, skillbook"] },
-  { name: "Collect all D.C. Journal of Internal Medicine skill books", types: ["items, skillbook"] },
-  { name: "Collect all Dean's Electronics skill books", types: ["items, skillbook"] },
-  { name: "Collect all Duck and Cover! skill books", types: ["items, skillbook"] },
-  { name: "Collect all Grognak the Barbarian skill books", types: ["items, skillbook"] },
-  { name: "Collect all Guns and Bullets skill books", types: ["items, skillbook"] },
-  { name: "Collect all Lying, Congressional Style skill books", types: ["items, skillbook"] },
-  { name: "Collect all Nikola Tesla and You skill books", types: ["items, skillbook"] },
-  { name: "Collect all Pugilism Illustrated skill books", types: ["items, skillbook, vault11"] },
-  { name: "Collect all Tales of a Junktown Jerky Vendor skill books", types: ["items, skillbook"] },
-  { name: "Collect all Tumblers Today skill books", types: ["items, skillbook"] },
-  { name: "Collect all Wasteland Survival Guide skill books", types: ["items, skillbook"] },
+  {
+    name: "Collect all Big Book of Science skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Chinese Army: Special Ops Training Manual skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all D.C. Journal of Internal Medicine skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Dean's Electronics skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Duck and Cover! skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Grognak the Barbarian skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Guns and Bullets skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Lying, Congressional Style skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Nikola Tesla and You skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Pugilism Illustrated skill books",
+    types: ["items, skillbook, vault11"],
+  },
+  {
+    name: "Collect all Tales of a Junktown Jerky Vendor skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Tumblers Today skill books",
+    types: ["items, skillbook"],
+  },
+  {
+    name: "Collect all Wasteland Survival Guide skill books",
+    types: ["items, skillbook"],
+  },
   { name: "Sell Arcade Gannon into slavery", types: ["auld"] },
   { name: "Obtain the Lucky Shades", types: ["safehouse"] },
-  { name: "Complete the quest Birds of a Feather", types: ["quest", "cass"] }
+  { name: "Complete the quest Birds of a Feather", types: ["quest", "cass"] },
 ];
 bingoList[21] = [
   { name: "Unlock the Brotherhood Safehouse", types: ["safehouse"] },
@@ -263,7 +317,7 @@ bingoList[21] = [
   { name: "Have sex with at least 9 different people", types: ["sex"] },
   { name: "Collect 3 different kinds of Dog Brains", types: ["kill"] },
   { name: "Kill Paladin Todd", types: ["kill"] },
-  { name: "Craft a Dog Tag Fist", types: ["crafting"] }
+  { name: "Craft a Dog Tag Fist", types: ["crafting"] },
 ];
 bingoList[22] = [
   { name: "Get banned from all strip casinos", types: ["game"] },
@@ -271,7 +325,7 @@ bingoList[22] = [
   { name: "Complete the Tough Guy challenge", types: ["challenge"] },
   { name: "Collect a full set of T-51b Power Armor", types: ["items"] },
   { name: "Collect at least 100 Blue Star caps", types: ["caps"] },
-  { name: "Collect at least 15 Unique Weapons", types: ["weapon"] }
+  { name: "Collect at least 15 Unique Weapons", types: ["weapon"] },
 ];
 bingoList[23] = [
   { name: "Obtain the Beautiful Beatdown perk", types: ["challenge"] },
@@ -280,26 +334,35 @@ bingoList[23] = [
   { name: "Collect a Shishkebab", types: ["weapon"] },
   { name: "Obtain the Slayer perk", types: ["perk"] },
   { name: "Collect 3 Wood Chippers", types: ["items, wood"] },
-  { name: "Collect 10 bottles of Nuka-Cola Victory", types: ["items"] }
+  { name: "Collect 10 bottles of Nuka-Cola Victory", types: ["items"] },
 ];
 bingoList[24] = [
   { name: "Complete the quest Arizona Killer", types: ["quest", "president"] },
-  { name: "Complete the quest You'll Know It When It Happens", types: ["quest", "president"] },
+  {
+    name: "Complete the quest You'll Know It When It Happens",
+    types: ["quest", "president"],
+  },
   { name: "Kill all companions", types: ["companion, kill"] },
   { name: "Collect 10 Basketballs", types: ["items"] },
   { name: "Obtain the Friendly Help perk", types: ["challenge"] },
-  { name: "Complete the All Things in Modder Nation challenge once", types: ["challenge"] },
+  {
+    name: "Complete the All Things in Modder Nation challenge once",
+    types: ["challenge"],
+  },
   { name: "Obtain General Oliver's Uniform", types: ["ending"] },
-  { name: "Obtain the Blade of the East", types: ["weapon", "ending"] }
+  { name: "Obtain the Blade of the East", types: ["weapon", "ending"] },
 ];
 bingoList[25] = [
   { name: "Complete the Lord Death challenge", types: ["challenge"] },
   { name: "Discover at least 100 locations", types: ["location"] },
   { name: "Defeat 3 Deathclaws in a Thorn arena match", types: ["thorn"] },
   { name: "Complete the At a Loss for Words challenge", types: ["challenge"] },
-  { name: "Solve Sloan's Deathclaw problem (Claws Out unmarked quest)", types: ["quest, sloan"] },
+  {
+    name: "Solve Sloan's Deathclaw problem (Claws Out unmarked quest)",
+    types: ["quest, sloan"],
+  },
   { name: "Complete the Healthy Glow challenge", types: ["challenge"] },
   { name: "Complete the quest Veni, Vidi, Vici", types: ["ending"] },
   { name: "Obtain the Meat of Champions perk", types: ["perk, challenge"] },
-  { name: "Unlock the NCR Safehouse", types: ["safehouse"] }
+  { name: "Unlock the NCR Safehouse", types: ["safehouse"] },
 ];

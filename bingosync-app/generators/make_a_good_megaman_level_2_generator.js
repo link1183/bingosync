@@ -39,13 +39,16 @@ bingoList[6] = [
 bingoList[7] = [
   { name: "JaIL - No Hit OR Buster Only", types: ["choice"] },
   { name: "Defeat Spiked Wall Man", types: ["detour"] },
-  { name: "Deplete Door Man's health without using any tanks", types: ["detour"] },
+  {
+    name: "Deplete Door Man's health without using any tanks",
+    types: ["detour"],
+  },
   { name: "Duwang - No Hit OR Buster Only", types: ["choice"] },
   { name: "Donut Observation Center - Buster Only", types: ["buster"] },
 ];
 bingoList[8] = [
   { name: "Collect 17 Nickels from Tier 3", types: ["n3"] },
-  { name: "Defeat 4 Tier Bosses", types: ["tierboss","tour"] },
+  { name: "Defeat 4 Tier Bosses", types: ["tierboss", "tour"] },
   { name: "Snow Man - No Hit OR Buster Only (no skips)", types: ["choice"] },
   { name: "Jet Man - Perfect Run", types: ["perfectrun"] },
 ];
@@ -58,7 +61,10 @@ bingoList[9] = [
 bingoList[10] = [
   { name: "Collect 7 Elements from Tier 4", types: ["e4"] },
   { name: "Colorful Hall - Buster Only (any element)", types: ["buster"] },
-  { name: "Cardinal Man Element 2 - Buster Only (no skips)", types: ["buster"] },
+  {
+    name: "Cardinal Man Element 2 - Buster Only (no skips)",
+    types: ["buster"],
+  },
 ];
 bingoList[11] = [
   { name: "Collect 11 Nickels from Tier 6", types: ["n6"] },
@@ -85,7 +91,7 @@ bingoList[14] = [
 ];
 bingoList[15] = [
   { name: "Poorly Named Level - No Hit OR Buster Only", types: ["choice"] },
-  { name: "Clear the Arena", types: ["arena","chtent"] },
+  { name: "Clear the Arena", types: ["arena", "chtent"] },
   { name: "Spiky Situation - Buster Only", types: ["buster"] },
 ];
 bingoList[16] = [
@@ -100,14 +106,17 @@ bingoList[17] = [
   { name: "Collect 7 Skippable Elements (no skips)", types: ["skipless"] },
 ];
 bingoList[18] = [
-  { name: "Collect all SU6 Nickels (no skips)", types: ["su6","5n"] },
-  { name: "Collect 1 Element from every Judge Favorite", types: ["fav","e10"] },
+  { name: "Collect all SU6 Nickels (no skips)", types: ["su6", "5n"] },
+  {
+    name: "Collect 1 Element from every Judge Favorite",
+    types: ["fav", "e10"],
+  },
   { name: "Unlock 5 Costumes", types: ["costume"] },
 ];
 bingoList[19] = [
   { name: "Collect 7 Elements from Tier 6", types: ["e6"] },
   { name: "Collect 14 Nickels from Tier 8", types: ["n8"] },
-  { name: "Defeat 8 Tier Bosses", types: ["tierboss","tour"] },
+  { name: "Defeat 8 Tier Bosses", types: ["tierboss", "tour"] },
   { name: "Collect 1 Element from each Tier", types: ["tour"] },
 ];
 bingoList[20] = [

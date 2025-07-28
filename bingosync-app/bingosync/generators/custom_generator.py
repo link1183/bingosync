@@ -20,32 +20,49 @@ class InvalidBoardException(Exception):
 
 
 def _make_jsonlint_link(custom_json):
-    href = 'https://jsonlint.com/?' + urllib.parse.urlencode({'json': custom_json}, quote_via=urllib.parse.quote)
+    href = "https://jsonlint.com/?" + urllib.parse.urlencode(
+        {"json": custom_json}, quote_via=urllib.parse.quote
+    )
     return '<a href="{}" target="_blank">jsonlint</a>'.format(href)
 
 
 def _validate_square(i, square):
     if "name" not in square:
         raise InvalidBoardException(
-                'Square {} ({}) is missing a "name" attribute'.format(i + 1, json.dumps(square)))
+            'Square {} ({}) is missing a "name" attribute'.format(
+                i + 1, json.dumps(square)
+            )
+        )
     elif square["name"] == "":
         raise InvalidBoardException(
-                'Square {} ({}) has an empty "name" attribute'.format(i + 1, json.dumps(square)))
+            'Square {} ({}) has an empty "name" attribute'.format(
+                i + 1, json.dumps(square)
+            )
+        )
     elif len(square["name"]) > 255:
         raise InvalidBoardException(
-                'Square {} ({}) has a "name" that is longer than 255 characters'.format(i + 1, json.dumps(square)))
+            'Square {} ({}) has a "name" that is longer than 255 characters'.format(
+                i + 1, json.dumps(square)
+            )
+        )
 
 
 def _parse_simple_list(custom_board, game_type):
     if not isinstance(custom_board, list):
-        raise InvalidBoardException('Board must be a list')
+        raise InvalidBoardException("Board must be a list")
 
     if game_type == GameType.custom and len(custom_board) != 25:
         raise InvalidBoardException(
-                'A fixed board must have exactly 25 goals (found {})'.format(len(custom_board)))
+            "A fixed board must have exactly 25 goals (found {})".format(
+                len(custom_board)
+            )
+        )
     elif game_type == GameType.custom_randomized and len(custom_board) < 25:
         raise InvalidBoardException(
-                'A randomized board must have at least 25 goals (found {})'.format(len(custom_board)))
+            "A randomized board must have at least 25 goals (found {})".format(
+                len(custom_board)
+            )
+        )
 
     for i, square in enumerate(custom_board):
         _validate_square(i, square)
@@ -56,60 +73,86 @@ def _parse_simple_list(custom_board, game_type):
 def _validate_difficulty_tier(goals, tier):
     if not isinstance(goals, list):
         raise InvalidBoardException(
-                'Element at difficulty tier {} was not a list (found {})'.format(tier, json.dumps(goals)))
+            "Element at difficulty tier {} was not a list (found {})".format(
+                tier, json.dumps(goals)
+            )
+        )
 
     if not goals:
         raise InvalidBoardException(
-                'Goal list at difficulty tier {} was empty'.format(tier))
+            "Goal list at difficulty tier {} was empty".format(tier)
+        )
 
     for i, goal in enumerate(goals):
         if "name" not in goal:
             raise InvalidBoardException(
-                    'Goal {} ({}) in difficulty tier {} is missing a "name" attribute'
-                    .format(i+1, json.dumps(goal), tier))
+                'Goal {} ({}) in difficulty tier {} is missing a "name" attribute'.format(
+                    i + 1, json.dumps(goal), tier
+                )
+            )
         if goal["name"] == "":
             raise InvalidBoardException(
-                    'Goal {} ({}) in difficulty tier {} has an empty "name" attribute'
-                    .format(i+1, json.dumps(goal), tier))
+                'Goal {} ({}) in difficulty tier {} has an empty "name" attribute'.format(
+                    i + 1, json.dumps(goal), tier
+                )
+            )
 
 
 def _parse_srl_v5_list(custom_board):
     if not isinstance(custom_board, list):
-        raise InvalidBoardException('Board must be a list')
+        raise InvalidBoardException("Board must be a list")
 
     if len(custom_board) != 25:
         raise InvalidBoardException(
-                'An SRL goal list must have exactly 25 tiers (found {})'.format(len(custom_board)))
+            "An SRL goal list must have exactly 25 tiers (found {})".format(
+                len(custom_board)
+            )
+        )
 
     for i, goals in enumerate(custom_board):
-        _validate_difficulty_tier(goals, i+1)
+        _validate_difficulty_tier(goals, i + 1)
 
     return [None] + custom_board
 
 
 def _parse_isaac_list(custom_board):
     if not isinstance(custom_board, list):
-        raise InvalidBoardException('Board must be a list')
+        raise InvalidBoardException("Board must be a list")
 
     if len(custom_board) != 4:
         raise InvalidBoardException(
-                'An Isaac goal list must have exactly 4 tiers (found {})'.format(len(custom_board)))
+            "An Isaac goal list must have exactly 4 tiers (found {})".format(
+                len(custom_board)
+            )
+        )
 
     for i, goals in enumerate(custom_board):
-        _validate_difficulty_tier(goals, i+1)
+        _validate_difficulty_tier(goals, i + 1)
 
     if len(custom_board[0]) < 10:
         raise InvalidBoardException(
-                'An Isaac goal list must have at least 10 easy goals (found {})'.format(len(custom_board[0])))
+            "An Isaac goal list must have at least 10 easy goals (found {})".format(
+                len(custom_board[0])
+            )
+        )
     if len(custom_board[1]) < 10:
         raise InvalidBoardException(
-                'An Isaac goal list must have at least 10 medium goals (found {})'.format(len(custom_board[1])))
+            "An Isaac goal list must have at least 10 medium goals (found {})".format(
+                len(custom_board[1])
+            )
+        )
     if len(custom_board[2]) < 4:
         raise InvalidBoardException(
-                'An Isaac goal list must have at least 4 hard goals (found {})'.format(len(custom_board[2])))
+            "An Isaac goal list must have at least 4 hard goals (found {})".format(
+                len(custom_board[2])
+            )
+        )
     if len(custom_board[3]) < 1:
         raise InvalidBoardException(
-                'An Isaac goal list must have at least 1 very hard goal (found {})'.format(len(custom_board[3])))
+            "An Isaac goal list must have at least 1 very hard goal (found {})".format(
+                len(custom_board[3])
+            )
+        )
 
     return [None] + custom_board
 
@@ -119,15 +162,23 @@ class CustomGenerator:
     def __init__(self, game_type):
         if not game_type.is_custom:
             raise Exception(
-                    'Tried to instantiate CustomGenerator with invalid GameType: {}'.format(game_type))
+                "Tried to instantiate CustomGenerator with invalid GameType: {}".format(
+                    game_type
+                )
+            )
         self.game_type = game_type
 
     def validate_custom_json(self, custom_json):
         try:
             custom_board = json.loads(custom_json)
-        except json.decoder.JSONDecodeError as e:
-            raise InvalidBoardException(safestring.mark_safe(
-                'Couldn\'t parse board json, try {}'.format(_make_jsonlint_link(custom_json))))
+        except json.decoder.JSONDecodeError:
+            raise InvalidBoardException(
+                safestring.mark_safe(
+                    "Couldn't parse board json, try {}".format(
+                        _make_jsonlint_link(custom_json)
+                    )
+                )
+            )
 
         if self.game_type in (GameType.custom, GameType.custom_randomized):
             return _parse_simple_list(custom_board, self.game_type)
@@ -136,16 +187,18 @@ class CustomGenerator:
         elif self.game_type == GameType.custom_isaac:
             return _parse_isaac_list(custom_board)
 
-        raise Exception('Unrecognized custom game type: {}'.format(self.game_type))
+        raise Exception("Unrecognized custom game type: {}".format(self.game_type))
 
     def get_card(self, seed, custom_board):
         if self.game_type == GameType.custom:
             return custom_board
-        elif self.game_type in (GameType.custom_randomized, GameType.custom_srl_v5, GameType.custom_isaac):
-            return BingoGenerator.instance(str(self.game_type.name)).get_card(seed, custom_board)
+        elif self.game_type in (
+            GameType.custom_randomized,
+            GameType.custom_srl_v5,
+            GameType.custom_isaac,
+        ):
+            return BingoGenerator.instance(str(self.game_type.name)).get_card(
+                seed, custom_board
+            )
 
-        raise Exception('Unrecognized custom game type: {}'.format(self.game_type))
-
-
-
-
+        raise Exception("Unrecognized custom game type: {}".format(self.game_type))

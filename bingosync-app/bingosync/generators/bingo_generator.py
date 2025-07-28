@@ -51,9 +51,15 @@ class BingoGenerator:
         full_command = self.generator_js_bytes + js_eval.encode("utf-8")
 
         try:
-            out = subprocess.check_output(["node", "-"], input=full_command, timeout=GENERATOR_TIMEOUT_SECONDS)
+            out = subprocess.check_output(
+                ["node", "-"], input=full_command, timeout=GENERATOR_TIMEOUT_SECONDS
+            )
         except subprocess.TimeoutExpired:
-            error_message = "Took too long to generate a bingo board for game '" + self.game_name + "'"
+            error_message = (
+                "Took too long to generate a bingo board for game '"
+                + self.game_name
+                + "'"
+            )
             logging.error(error_message)
             raise GeneratorException(error_message)
 

@@ -30,9 +30,12 @@ bingoList[4] = [
 ];
 
 bingoList[5] = [
-  { name: "10 Bloodstones", types: ["bloodstone", "collect"]},
-  { name: "All Gillfolk's Grotto Bloodstones", types: ["bloodstone", "collect"] },
-  { name: "All Sewers Bloodstones", types: ["bloodstone", "collect"]},
+  { name: "10 Bloodstones", types: ["bloodstone", "collect"] },
+  {
+    name: "All Gillfolk's Grotto Bloodstones",
+    types: ["bloodstone", "collect"],
+  },
+  { name: "All Sewers Bloodstones", types: ["bloodstone", "collect"] },
   { name: "1 Area Overlook", types: ["overlook"] },
 ];
 
@@ -165,7 +168,7 @@ bingoList[23] = [
 bingoList[24] = [
   { name: "19 Daggers", types: ["dagger", "collect"] },
   { name: "6 Hunted Bosses", types: ["boss"] },
-  { name: "40 Bloodstones", types: ["bloodstone", "collect"]},
+  { name: "40 Bloodstones", types: ["bloodstone", "collect"] },
   { name: "Bomb Elevator Citadel Skip", types: ["glitch"] },
 ];
 

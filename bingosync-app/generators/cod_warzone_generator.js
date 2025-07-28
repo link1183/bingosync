@@ -31,8 +31,14 @@ bingoList[5] = [
 ];
 bingoList[6] = [
   { name: "1 Knock/Finish with a Custer/Air Strike", types: ["strike"] },
-  { name: "Blow Up 1 Occupied Vehicle with Lethal Equipment", types: ["lethal"] },
-  { name: "Kill a Player with a Bolt Action Rifle that is Less Than 10m Away", types: [] },
+  {
+    name: "Blow Up 1 Occupied Vehicle with Lethal Equipment",
+    types: ["lethal"],
+  },
+  {
+    name: "Kill a Player with a Bolt Action Rifle that is Less Than 10m Away",
+    types: [],
+  },
 ];
 bingoList[7] = [
   { name: "Complete 2 King Contracts", types: ["king"] },
@@ -40,8 +46,14 @@ bingoList[7] = [
   { name: "Kill 1 Enemy with a Melee", types: ["melee"] },
 ];
 bingoList[8] = [
-  { name: "Kill 1 Enemy out of a Moving Vehicle with a Sniper", types: ["moving_vehicle"] },
-  { name: "Kill 1 Enemy while a Passenger of a Moving Vehicle", types: ["kill_from_moving_vehicle"] },
+  {
+    name: "Kill 1 Enemy out of a Moving Vehicle with a Sniper",
+    types: ["moving_vehicle"],
+  },
+  {
+    name: "Kill 1 Enemy while a Passenger of a Moving Vehicle",
+    types: ["kill_from_moving_vehicle"],
+  },
   { name: "Get 2 Kills with a single Dead Silence", types: [] },
 ];
 bingoList[9] = [
@@ -81,29 +93,50 @@ bingoList[15] = [
   { name: "Kill 2 Enemies with Lethal Equipment", types: ["lethal"] },
 ];
 bingoList[16] = [
-  { name: "Blow Up 2 Occupied Vehicles with Lethal Equipment", types: ["lethal"] },
-  { name: "Kill 2 Enemies out of Moving Vehicles with a Sniper", types: ["moving_vehicle"] },
-  { name: "Place Top 20 with at least 1 Squadmate in a Vehicle at all Times", types: [] },
+  {
+    name: "Blow Up 2 Occupied Vehicles with Lethal Equipment",
+    types: ["lethal"],
+  },
+  {
+    name: "Kill 2 Enemies out of Moving Vehicles with a Sniper",
+    types: ["moving_vehicle"],
+  },
+  {
+    name: "Place Top 20 with at least 1 Squadmate in a Vehicle at all Times",
+    types: [],
+  },
 ];
 bingoList[17] = [
-  { name: "Kill 2 Enemies while a Passenger of a Moving Vehicle", types: ["kill_from_moving_vehicle"] },
+  {
+    name: "Kill 2 Enemies while a Passenger of a Moving Vehicle",
+    types: ["kill_from_moving_vehicle"],
+  },
   { name: "Self-revive 6 Times", types: ["heal"] },
   { name: "Get a Kill Over 200m", types: [] },
 ];
 bingoList[18] = [
   { name: "Completely Use Up 3 Gas Masks", types: ["gas_masks"] },
   { name: "Complete 6 Scavenger Contracts", types: ["scavenger"] },
-  { name: "Have Both Players Survive Until Gluag Closes without Entering the Gulag", types: [] },
+  {
+    name: "Have Both Players Survive Until Gluag Closes without Entering the Gulag",
+    types: [],
+  },
   { name: "Get 2 Advanced UAVs", types: ["advanced_uav"] },
 ];
 bingoList[19] = [
-  { name: "Kill 4 Enemies while a Passenger of a Moving Vehicle", types: ["kill_from_moving_vehicle"] },
+  {
+    name: "Kill 4 Enemies while a Passenger of a Moving Vehicle",
+    types: ["kill_from_moving_vehicle"],
+  },
   { name: "Complete 6 Recon Contracts", types: ["recon"] },
   { name: "Kill 2 Enemies with Melees", types: ["melee"] },
 ];
 bingoList[20] = [
   { name: "Collect Loadout 10 Times", types: ["loadouts"] },
-  { name: "Blow Up 4 Occupied Vehicles with Lethal Equipment", types: ["lethal"] },
+  {
+    name: "Blow Up 4 Occupied Vehicles with Lethal Equipment",
+    types: ["lethal"],
+  },
   { name: "Get 2 Kills with Throwing Knives", types: ["knife"] },
 ];
 bingoList[21] = [
@@ -132,6 +165,9 @@ bingoList[24] = [
 bingoList[25] = [
   { name: "7 Kills with Vehicles", types: ["vehicle_kills"] },
   { name: "Unlock 5 Bunkers", types: ["bunkers"] },
-  { name: "Kill 4 Enemies out of Moving Vehicles with a Sniper", types: ["moving_vehicle"] },
+  {
+    name: "Kill 4 Enemies out of Moving Vehicles with a Sniper",
+    types: ["moving_vehicle"],
+  },
   { name: "Win the Gulag Without Killing the Enemy", types: [] },
 ];

@@ -18,11 +18,11 @@ def _get_log_func_for_status_code(status_code):
 
 
 def _get_ip_from_request(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
     if x_forwarded_for:
         return x_forwarded_for
     else:
-        return request.META.get('REMOTE_ADDR')
+        return request.META.get("REMOTE_ADDR")
 
 
 class RequestLoggingMiddleware:
@@ -40,14 +40,35 @@ class RequestLoggingMiddleware:
             user_ip = _get_ip_from_request(request)
             log_func = _get_log_func_for_status_code(response.status_code)
             if request.method in ["PUT", "POST"] and response.status_code == 404:
-                log_func('"%s %s" %s %s (%s)\nrequest: %s', request.method, request.get_full_path(),
-                         response.status_code, len(response.content), user_ip, request.body)
+                log_func(
+                    '"%s %s" %s %s (%s)\nrequest: %s',
+                    request.method,
+                    request.get_full_path(),
+                    response.status_code,
+                    len(response.content),
+                    user_ip,
+                    request.body,
+                )
             elif request.method in ["PUT", "POST"] and response.status_code >= 400:
-                log_func('"%s %s" %s %s (%s)\nrequest: %s\nresponse: %s', request.method, request.get_full_path(),
-                         response.status_code, len(response.content), user_ip, request.body, response.content)
+                log_func(
+                    '"%s %s" %s %s (%s)\nrequest: %s\nresponse: %s',
+                    request.method,
+                    request.get_full_path(),
+                    response.status_code,
+                    len(response.content),
+                    user_ip,
+                    request.body,
+                    response.content,
+                )
             else:
-                log_func('"%s %s" %s %s (%s)', request.method, request.get_full_path(), response.status_code,
-                        len(response.content), user_ip)
+                log_func(
+                    '"%s %s" %s %s (%s)',
+                    request.method,
+                    request.get_full_path(),
+                    response.status_code,
+                    len(response.content),
+                    user_ip,
+                )
         except Exception as e:
             logger.exception("Exception when logging request")
 

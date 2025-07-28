@@ -3,9 +3,15 @@ bingoGenerator = require("./generators/generator_bases/srl_generator_v5.js");
 var bingoList = [];
 bingoList[1] = [
   { name: "Go to 5 Main Cities", types: ["location"] },
-  { name: "Activate a Standing Stone that isn't the First 3", types: ["location"] },
+  {
+    name: "Activate a Standing Stone that isn't the First 3",
+    types: ["location"],
+  },
   { name: "Get 3 Alteration and 3 Conjuration Spells", types: ["spell"] },
-  { name: "Pickpocket 1 Thing Off of 10 People in Riverwood", types: ["simplecollect"] },
+  {
+    name: "Pickpocket 1 Thing Off of 10 People in Riverwood",
+    types: ["simplecollect"],
+  },
 ];
 bingoList[2] = [
   { name: "Die 12 Times", types: ["death"] },
@@ -38,15 +44,18 @@ bingoList[6] = [
   { name: "Kill 5 Civilians", types: ["combat"] },
 ];
 bingoList[7] = [
-  { name: "Run from Whiterun to Markarth", types: ["running","location"] },
+  { name: "Run from Whiterun to Markarth", types: ["running", "location"] },
   { name: "Join the Thieves Guild", types: ["bigquest"] },
   { name: "Make Steamed Mudcrab Legs", types: ["cooking"] },
-  { name: "Eat 15 Different Types of Food", types: ["cooking","simplecollect"] },
+  {
+    name: "Eat 15 Different Types of Food",
+    types: ["cooking", "simplecollect"],
+  },
 ];
 bingoList[8] = [
-  { name: "Kill 3 Dragons", types: ["dragons","combat"] },
+  { name: "Kill 3 Dragons", types: ["dragons", "combat"] },
   { name: "Have 15 Spells", types: ["spell"] },
-  { name: "Go to Solstheim", types: ["bigquest","location"] },
+  { name: "Go to Solstheim", types: ["bigquest", "location"] },
   { name: "Create any 4 Poisons", types: ["potion"] },
 ];
 bingoList[9] = [
@@ -59,10 +68,10 @@ bingoList[10] = [
   { name: "Buy any House", types: ["housing"] },
   { name: "Complete the Initiation Civil War Quest", types: ["bigquest"] },
   { name: "Die to 5 different Giants", types: ["death"] },
-  { name: "Discover 5 Dragon Lairs", types: ["dragon","location"] },
+  { name: "Discover 5 Dragon Lairs", types: ["dragon", "location"] },
 ];
 bingoList[11] = [
-  { name: "Clear 5 Bandit Locations", types: ["combat","location"] },
+  { name: "Clear 5 Bandit Locations", types: ["combat", "location"] },
   { name: "Join the Dark Brotherhood", types: ["bigquest"] },
   { name: "Create an Invisibility Potion", types: ["potion"] },
   { name: "Cook 3 Different Soups", types: ["cooking"] },
@@ -71,24 +80,30 @@ bingoList[12] = [
   { name: "Get Level 60 in any Skill", types: ["skill"] },
   { name: "Kill 5 Spriggans", types: ["combat"] },
   { name: "Get 10 Stones of Barenziah", types: ["hardcollect"] },
-  { name: "Collect 4 Dragon Claws", types: ["hardcollect","dungeon"] },
+  { name: "Collect 4 Dragon Claws", types: ["hardcollect", "dungeon"] },
 ];
 bingoList[13] = [
   { name: "Go into Castle Volkihar", types: ["bigquest"] },
-  { name: "Spend 5 Dragon Souls", types: ["shout","dragons"] },
+  { name: "Spend 5 Dragon Souls", types: ["shout", "dragons"] },
   { name: "Get Married", types: ["sidequest"] },
   { name: "Clear Ragnvald", types: ["dungeon"] },
 ];
 bingoList[14] = [
   { name: "Get the Horn of Jurgen Windcaller", types: ["mainquest"] },
-  { name: "Get all 3 Words of Unrelenting Force", types: ["mainquest","shout"] },
+  {
+    name: "Get all 3 Words of Unrelenting Force",
+    types: ["mainquest", "shout"],
+  },
   { name: "Get Level 50 in a Spell Skill", types: ["skill"] },
   { name: "Have 10 Adept Level Spells", types: ["spell"] },
 ];
 bingoList[15] = [
   { name: "Get a Daedric Artifact", types: ["hardcollect"] },
-  { name: "Get 10 Dragon Scales", types: ["hardcollect","dragon"] },
-  { name: "Complete the Quest Tending the Flames", types: ["dungeon","sidequest"] },
+  { name: "Get 10 Dragon Scales", types: ["hardcollect", "dragon"] },
+  {
+    name: "Complete the Quest Tending the Flames",
+    types: ["dungeon", "sidequest"],
+  },
   { name: "Discover 15 Tombs", types: ["location"] },
 ];
 bingoList[16] = [
@@ -107,10 +122,10 @@ bingoList[18] = [
   { name: "Complete the Loud and Clear Quest", types: ["bigquest"] },
   { name: "Get all 3 Words of Whirlwind Sprint", types: ["shout"] },
   { name: "Collect 40 Tankards", types: ["simplecollect"] },
-  { name: "Get an Elder Scroll", types: ["mainquest","hardcollect"] },
+  { name: "Get an Elder Scroll", types: ["mainquest", "hardcollect"] },
 ];
 bingoList[19] = [
-  { name: "Run from Markarth to Riften", types: ["running","location"] },
+  { name: "Run from Markarth to Riften", types: ["running", "location"] },
   { name: "Complete 20 Side Quests", types: ["sidequest"] },
   { name: "Complete Diplomatic Immunity", types: ["mainquest"] },
   { name: "Buy and Kill 5 Horses", types: ["money"] },
@@ -122,16 +137,16 @@ bingoList[20] = [
   { name: "Get Level 55 in Any Weapon Skill", types: ["skill"] },
 ];
 bingoList[21] = [
-  { name: "Learn Dragonrend", types: ["mainquest","shout"] },
+  { name: "Learn Dragonrend", types: ["mainquest", "shout"] },
   { name: "Cast an Expert Level Spell", types: ["spell"] },
   { name: "Build an Arcane Enchanter in a Home", types: ["housing"] },
   { name: "Kill 4 Giants", types: ["combat"] },
 ];
 bingoList[22] = [
-  { name: "Summon Arvak", types: ["spell","bigquest"] },
+  { name: "Summon Arvak", types: ["spell", "bigquest"] },
   { name: "Create the Gauldur Amulet", types: ["hardcollect"] },
   { name: "Find 200 Locations", types: ["location"] },
-  { name: "Eat 150 Pieces of Food", types: ["cooking","simplecollect"] },
+  { name: "Eat 150 Pieces of Food", types: ["cooking", "simplecollect"] },
 ];
 bingoList[23] = [
   { name: "Become Thane in 3 Cities", types: ["sidequest"] },
@@ -140,7 +155,7 @@ bingoList[23] = [
   { name: "Sleep 300 Hours", types: ["simplecollect"] },
 ];
 bingoList[24] = [
-  { name: "Run to 5 Major Cities", types: ["running","location"] },
+  { name: "Run to 5 Major Cities", types: ["running", "location"] },
   { name: "Build a Trophy Hall and 3 Trophies", types: ["housing"] },
   { name: "Find 250 Locations", types: ["location"] },
   { name: "Read 35 Skill Books", types: ["simplecollect"] },

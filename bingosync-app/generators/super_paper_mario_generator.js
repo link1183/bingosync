@@ -79,7 +79,7 @@ bingoList[11] = [
   { name: "Reach level 30 of the Flipside Pit", types: ["pit"] },
 ];
 bingoList[12] = [
-  { name: "Use a Trial Stew", types: ["item","recipe"] },
+  { name: "Use a Trial Stew", types: ["item", "recipe"] },
   { name: "Purchase all items from the itty bits in 7-4", types: ["shop"] },
   { name: "Obtain 750 coins", types: ["misc"] },
   { name: "Use 3 Unique Mega Stars", types: ["mega"] },
@@ -157,8 +157,14 @@ bingoList[22] = [
 ];
 bingoList[23] = [
   { name: "Put 4 Cooking Disks in the Cooking Specializer", types: ["disk"] },
-  { name: "Purchase all items from the itty bits in Flipside", types: ["shop"] },
-  { name: "Purchase all items from the itty bits in Flopside", types: ["shop"] },
+  {
+    name: "Purchase all items from the itty bits in Flipside",
+    types: ["shop"],
+  },
+  {
+    name: "Purchase all items from the itty bits in Flopside",
+    types: ["shop"],
+  },
   { name: "Complete All Chapter 2 Maps", types: ["map"] },
   { name: "Put 2 Cooking Disks in the Cooking Specializer", types: ["disk"] },
 ];

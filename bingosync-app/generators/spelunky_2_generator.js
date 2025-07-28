@@ -38,7 +38,7 @@ bingoList[6] = [
   { name: "Sacrifice 3 mounts", types: ["Favor"] },
 ];
 bingoList[7] = [
-  { name: "Buy out Yang's pet shop", types: ["Yang","Gold"] },
+  { name: "Buy out Yang's pet shop", types: ["Yang", "Gold"] },
   { name: "Kill Tun", types: [] },
   { name: "Keep a mount alive for 4 levels consecutively", types: [] },
   { name: "Feed the same Mantrap 4 bodies", types: [] },
@@ -46,7 +46,10 @@ bingoList[7] = [
 bingoList[8] = [
   { name: "Enter Ghist's shop", types: [] },
   { name: "Snap a Shopkeeper in a Bear Trap", types: [] },
-  { name: "Complete 4 levels consecutively without collecting items, HP, weapons, or mounts", types: [] },
+  {
+    name: "Complete 4 levels consecutively without collecting items, HP, weapons, or mounts",
+    types: [],
+  },
   { name: "Keep a Hired Help alive for 4 levels consecutively", types: ["HH"] },
 ];
 bingoList[9] = [
@@ -59,13 +62,16 @@ bingoList[10] = [
   { name: "Carry Yang's key to rescue Van Horsing", types: ["Yang"] },
   { name: "Befriend the Golden Monkey", types: [] },
   { name: "Survive an explosion", types: ["HP"] },
-  { name: "Never obtain the Kapala", types: ["Restriction","Favor"] },
+  { name: "Never obtain the Kapala", types: ["Restriction", "Favor"] },
 ];
 bingoList[11] = [
   { name: "Kill a Witch Doctor while cursed", types: [] },
   { name: "Obtain the Punish Ball / Ball and Chain", types: ["Favor"] },
   { name: "Swap back items for Vlad's Cape", types: [] },
-  { name: "Obtain a total of 5 Hired Hands at once (Not all alive required)", types: ["HH"] },
+  {
+    name: "Obtain a total of 5 Hired Hands at once (Not all alive required)",
+    types: ["HH"],
+  },
 ];
 bingoList[12] = [
   { name: "Teleport into a vault", types: [] },
@@ -89,12 +95,15 @@ bingoList[15] = [
   { name: "Clone Waddler", types: ["Clone Gun"] },
   { name: "Unleash the Boulder", types: [] },
   { name: "Kill a Salad Sister in the Ice Caves", types: [] },
-  { name: "Carry Eggplant through 4 levels consecutively", types: ["Eggplant"] },
+  {
+    name: "Carry Eggplant through 4 levels consecutively",
+    types: ["Eggplant"],
+  },
 ];
 bingoList[16] = [
   { name: "Complete City of Gold", types: [] },
   { name: "Be cursed twice in one run", types: [] },
-  { name: "Never obtain Kali favor", types: ["Restriction","Favor"] },
+  { name: "Never obtain Kali favor", types: ["Restriction", "Favor"] },
   { name: "Defeat the Yeti Queen and Yeti King", types: [] },
 ];
 bingoList[17] = [
@@ -106,7 +115,7 @@ bingoList[17] = [
 bingoList[18] = [
   { name: "Obtain the Alien Compass", types: [] },
   { name: "Die to Anubis' Scepter's special attack", types: ["Death"] },
-  { name: "Steal the Tusk Idol", types: ["Sparrow","Gold"] },
+  { name: "Steal the Tusk Idol", types: ["Sparrow", "Gold"] },
   { name: "Ride all 3 living mounts at least once", types: [] },
 ];
 bingoList[19] = [
@@ -122,15 +131,24 @@ bingoList[20] = [
   { name: "Remain cursed for 8 levels in one run", types: [] },
 ];
 bingoList[21] = [
-  { name: "Defeat Tiamat and leave the level with a mount", types: ["Victory"] },
+  {
+    name: "Defeat Tiamat and leave the level with a mount",
+    types: ["Victory"],
+  },
   { name: "Befriend Qilin on a Volcana/Tide Pool run", types: [] },
   { name: "Obtain 1.5 million score in one run", types: ["Gold"] },
   { name: "Steal from 4 Shopkeeper vaults in one run", types: ["Gold"] },
 ];
 bingoList[22] = [
-  { name: "Split Madame Tusk's vault with Sparrow", types: ["Sparrow","Gold"] },
+  {
+    name: "Split Madame Tusk's vault with Sparrow",
+    types: ["Sparrow", "Gold"],
+  },
   { name: "Awaken the Eggplant Child", types: ["Eggplant"] },
-  { name: "Kill 7 NPCs in one run, excluding HH, Shopkeeps, and Bodyguards", types: [] },
+  {
+    name: "Kill 7 NPCs in one run, excluding HH, Shopkeeps, and Bodyguards",
+    types: [],
+  },
   { name: "Befriend Qilin on a Jungle/Temple run", types: [] },
 ];
 bingoList[23] = [
@@ -140,14 +158,17 @@ bingoList[23] = [
   { name: "Slay Hundun and return to the surface", types: ["Victory"] },
 ];
 bingoList[24] = [
-  { name: "Never collect gold", types: ["Restriction","Clone Gun","Gold"] },
-  { name: "Complete 10 levels with the Punish Ball / Ball and Chain in one run", types: ["Favor"] },
+  { name: "Never collect gold", types: ["Restriction", "Clone Gun", "Gold"] },
+  {
+    name: "Complete 10 levels with the Punish Ball / Ball and Chain in one run",
+    types: ["Favor"],
+  },
   { name: "Destroy 5 Altars in one run", types: ["Favor"] },
   { name: "Never use the whip", types: ["Restriction"] },
 ];
 bingoList[25] = [
   { name: "Open the portal to the Cosmic Ocean", types: ["Victory"] },
   { name: "Don the Eggplant Crown", types: ["Eggplant"] },
-  { name: "Never increase your HP", types: ["Restriction","HP"] },
+  { name: "Never increase your HP", types: ["Restriction", "HP"] },
   { name: "Defeat Hundun while cursed", types: ["Victory"] },
 ];
